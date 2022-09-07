@@ -122,9 +122,9 @@
     <div class="row">
 
 <div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
-  <h1 class="display-1 fw-bold mt-5">Sell more useless stuff faster!</h1>
-  <p class="lead">To be honest, this is just a stupid placeholder text. We don´t know how to sell anything, not even lesser or slower as you.</p>
-  <a href="#" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">Get started free</a>
+  <h1 class="display-1 fw-bold mt-5">介紹文字!</h1>
+  <p class="lead">關於產品的介紹</p>
+  <a href="#" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">訂購</a>
 </div>
 
 
