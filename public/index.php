@@ -77,32 +77,27 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
     <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
-      Services
+      服務
     </a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#aboutus">
-      About us
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#numbers">
-      Numbers
+      關於我們
     </a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#gallery">
-      Gallery
+      介紹
     </a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#workwithus">
-      Work with us
+      訂購
     </a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#testimonials">
-      Testimonials
+      聯絡我們
     </a>
   </li>
 
@@ -287,10 +282,7 @@
     <div class="row d-flex justify-content-center">
       <div class="row d-flex justify-content-center text-center">
   <div class="col-lg-8 text-center" data-aos="fade">
-      <form class="form-floating">
-        <input type="email" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </form>
+    
   </div>
   <div class="col-12">
     <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Get in contact</a>
