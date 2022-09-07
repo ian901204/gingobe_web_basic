@@ -282,7 +282,21 @@
     <div class="row d-flex justify-content-center">
       <div class="row d-flex justify-content-center text-center">
   <div class="col-lg-8 text-center" data-aos="fade">
-    
+  <div class="row">
+    <div class="col">
+      <form class="form-floating">
+        <input type="text" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">姓名</label>
+        <input type="text" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">地址</label>
+        <input type="number" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">電話號碼</label>
+      </form>
+    </div>
+    <div class="col-auto">
+      <a href="#" class="btn btn-dark py-3 px-5">Subscribe</a>
+    </div>
+  </div>
   </div>
   <div class="col-12">
     <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Get in contact</a>
@@ -305,8 +319,8 @@
       </svg>
     </div>
     <div class="col-md-9 flex-fill">
-      <h3 class="h5 my-2">Delivery Service</h3>
-      <p>If we had any physical goods we would deliver them to your door steps. Of course in time and to the right adress. But we have no products...</p>
+      <h3 class="h5 my-2">功能介紹</h3>
+      <p>功能內容</p>
     </div>
   </div>
 </div>
@@ -319,8 +333,8 @@
       </svg>
     </div>
     <div class="col-md-9 flex-fill">
-      <h3 class="h5 my-2">Independently Checked</h3>
-      <p>Maybe we would do something to ensure that you get what you ordered. But you can´t order anything here, so we can give you a 100% gurantee that anything would be great!</p>
+    <h3 class="h5 my-2">功能介紹</h3>
+      <p>功能內容</p>
     </div>
   </div>
 </div>
@@ -334,8 +348,8 @@
       </svg>
     </div>
     <div class="col-md-9 flex-fill">
-      <h3 class="h5 my-2">Online Support</h3>
-      <p>Okay, we have this crazy online support form. Fill it out and the content will be mailed to you as PDF. Print it out. Than send it via Fax to our super duper hidden Fax number.</p>
+      <h3 class="h5 my-2">功能介紹</h3>
+      <p>功能內容</p>
     </div>
   </div>
 </div>
