@@ -286,10 +286,10 @@
     <div class="col">
       <form class="form-floating">
         <input type="text" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">姓名</label>
+        <label for="floatingInput"><span>姓名</span></label>
         <input type="text" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">地址</label>
-        <input type="number" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">電話號碼</label>
       </form>
     </div>
