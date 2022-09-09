@@ -91,7 +91,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#workwithus">
+    <a class="nav-link" href="#order">
       訂購
     </a>
   </li>
@@ -277,7 +277,7 @@
   </div>
 </div>
 
-<div class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden" id="workwithus">
+<div class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden" id="order">
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="row d-flex justify-content-center text-center">
@@ -285,12 +285,18 @@
   <div class="row">
     <div class="col">
       <form class="form-floating">
-        <input type="text" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput"><span>姓名</span></label>
-        <input type="text" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
+        <div class="col">
+          <input type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
+        </div>
+        <label for="floatingInput">姓名</label>
+        <input type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
         <label for="floatingInput">地址</label>
-        <input type="text" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
         <label for="floatingInput">電話號碼</label>
+        <select class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
+          <option value = 0>業務一</option>
+          <option value = 1>業務二</option>
+        </select>
       </form>
     </div>
     <div class="col-auto">
