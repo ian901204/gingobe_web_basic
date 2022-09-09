@@ -288,15 +288,18 @@
         <div class="col">
           <input type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
         </div>
-        <label for="floatingInput">姓名</label>
-        <input type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
-        <label for="floatingInput">地址</label>
-        <input type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
-        <label for="floatingInput">電話號碼</label>
+        <div class = "col">
+          <input type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
+        </div>
+        <div class = 'col'>
+          <input type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
+        </div>
+        <div class = 'col'>
         <select class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
           <option value = 0>業務一</option>
           <option value = 1>業務二</option>
         </select>
+        </div>
       </form>
     </div>
     <div class="col-auto">
