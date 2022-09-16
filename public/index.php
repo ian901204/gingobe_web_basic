@@ -12,48 +12,48 @@
   <title>產品介紹</title>
   <link rel="stylesheet" href="css/theme.min.css">
 
-   <style>
+<style>
 
-/* inter-200 - latin */
-@font-face {
+  /* inter-200 - latin */
+  @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 200;
   font-display: swap;
   src: local(''),
-       url('../fonts/inter-v11-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/inter-v11-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* inter-300 - latin */
-@font-face {
+      url('../fonts/inter-v11-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/inter-v11-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-300 - latin */
+  @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
   src: local(''),
-       url('../fonts/inter-v11-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/inter-v11-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* inter-regular - latin */
-@font-face {
+      url('../fonts/inter-v11-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/inter-v11-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-regular - latin */
+  @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local(''),
-       url('../fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* inter-500 - latin */
-@font-face {
+      url('../fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-500 - latin */
+  @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
   src: local(''),
-       url('../fonts/inter-v11-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/inter-v11-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+      url('../fonts/inter-v11-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/inter-v11-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
 
 </style>
 
@@ -127,7 +127,7 @@
 <div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
   <h1 class="display-1 fw-bold mt-5">介紹文字!</h1>
   <p class="lead">關於產品的介紹</p>
-  <a href="#" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">訂購</a>
+  <a href="#order" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">訂購</a>
 </div>
 
 
@@ -409,64 +409,11 @@
     <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/>
   </svg>
   <address class="text-secondary mt-3">
-    <strong>Stride, Inc.</strong><br>
-    1355 Market St, Suite 900<br>
-    San Francisco, CA 94103<br>
+    <strong>金勾杯股份有限公司</strong><br>
+    臺中市南屯區溝墘里大業路241號3樓之1<br>
     <abbr title="Phone">P:</abbr>
-    (123) 456-7890
+    0972-742-963
   </address>
-</div>
-<div class="col-12 col-lg-6 col-xl-3 border-end p-5">
-  <h3 class="h6 mb-3">Company</h3>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" aria-current="page" href="#">Lorem ipsum</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Dolor sitam est</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Sed odio cras</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Commodo tortor ac</a>
-    </li>
-  </ul>
-</div>
-<div class="col-12 col-lg-6 col-xl-3 border-end p-5">
-  <h3 class="h6 mb-3">Products</h3>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" aria-current="page" href="#">Fusce dapibus est</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Donec sed dui</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Tortor mauris</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Ut fermentum massa</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Magna mollis</a>
-    </li>
-  </ul>
-</div>
-<div class="col-12 col-lg-6 col-xl-3 p-5">
-  <h3 class="h6 mb-3">Support</h3>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" aria-current="page" href="#">Contact</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">FAQ</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Support Center</a>
-    </li>
-  </ul>
 </div>
 </div>
 </div>
