@@ -265,12 +265,16 @@
 <div class="container py-vh-4 w-100 overflow-hidden">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-lg-5">
-  <h3 class="py-5 border-top border-dark" data-aos="fade-right">What our clients say</h3>
+  <h3 class="py-5 border-top border-dark" data-aos="fade-right">關於我們</h3>
 </div>
 <div class="col-md-7" data-aos="fade-left">
   <blockquote>
-    <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">“I´am the CEO of this company. So maybe you think "he will tell us something super awesome about it only". But no. Its a really strange place to work with creepy people all around.
-      They do some computer stuff I don´t understand. But I wear expensive Glasses and a Patagonia Hoodie. So I´am fine with it.”</div>
+    <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">本公司（金勾盃股份有限公司）為皇盃國際塑膠廠的總代理商，
+雖然本公司上市未達１年，但本公司保持著以客至上、客為優先的態度在營運，所以客戶可以完全的放心交給我們！
+我們的塑膠環保杯為前所未見得新開發產品，
+專利擁有者在２０２１年的某一天，在等紅燈的途中，看了一下飲料店擁有美貌的飲料店服務員，正在欣賞的途中，突然看到了正在買飲料的客人買了袋子準備裝飲料，頓時腦海中浮出了「為何不在飲料杯上多做一個提環，店家、客人都方便且還環保！！」於是專利擁有者開始動身，經過了許多挫折、壓力、測試、意見不合等，
+於是，燈愣～「金勾杯」就誕生了。
+</div>
     <img src="img/person11.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
     <span><span class="fw-bold">John Doe,</span>
       CEO of Stride Ltd.</span>
@@ -404,7 +408,7 @@
   <div class="container small border-top">
     <div class="row py-5 d-flex justify-content-between">
 
-<div class="col-12 col-lg-8 text-center"">
+<div class="col-12 text-center">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half" viewbox="0 0 16 16">
     <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/>
   </svg>
@@ -413,8 +417,11 @@
     臺中市南屯區溝墘里大業路241號3樓之1<br>
     <abbr title="Phone">P:</abbr>
     0972-742-963
+    <abbr title="email">Email:</abbr>
+    domo58816@gmail.com
   </address>
 </div>
+
 </div>
 </div>
 </footer>
