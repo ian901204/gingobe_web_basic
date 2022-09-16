@@ -126,13 +126,7 @@
 
 <div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
   <h1 class="display-1 fw-bold mt-5">環保塑膠杯</h1>
-  <p class="lead">    公司利用BADP+PP材質，
-製作成環保塑膠杯，
-在大自然露天環境4-6月風化，
-風化後在730天內礦化為CO2、水及其他生質，
-傳統塑料+BADP-Icycle Pro降解速度不如 PLA快，
-較PLA緩慢，生質塑料及工業堆肥業者為保障其利益，
-容易被人以此點質疑我們， 說傳統塑料是無法降解的！！<br>
+  <p class="lead"> 
     本產品一體成形、手提專利飲料杯，BADP生物可降解塑料、PP材質食品級原料可回收再生能源，愛護地球、守護海洋從不拿塑膠袋開始！
 高透明、清晰，可以清楚看見杯子內的配料，可承受拉力為8公斤！！拿著飲料怎麼甩怎麼跑都不會斷，且耐高溫120°C，讓客人不用因為釋出塑化劑而喝下肚，有SGS材質及拉力檢驗證明，少拿一個塑膠袋，省錢又環保的好選擇！！
 </p>
@@ -149,15 +143,15 @@
 <div class="py-vh-5 w-100 overflow-hidden" id="services">
   <div class="container">
       <div class="row d-flex justify-content-end">
-<div class="col-lg-8" data-aos="fade-down"><h2 class="display-6">Okay, there are three really good reasons for us. There are no more than three, but we think three is a reasonable good number of good stuff.</h2></div>
+<div class="col-lg-8" data-aos="fade-down"><h2 class="display-6">我們的產品 BADP-icycle Pro + PP 所製成的環保塑膠杯與傳統 PLA 所製成的塑膠杯相比，有以下幾種優點</h2></div>
 </div>
 <div class="row d-flex align-items-center">
 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
   <span class="h5 fw-lighter">01.</span>
-  <h3 class="py-5 border-top border-dark">We rented this fancy startup office in an old factory building.</h3>
+  <h3 class="py-5 border-top border-dark">原料來源與成本價格</h3>
   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
+  <!--<a href="#" class="link-fancy">Learn more
+  </a>-->
 </div>
 
 <div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
