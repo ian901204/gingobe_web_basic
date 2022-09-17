@@ -414,7 +414,7 @@
 
 <div class="col-12 text-center">
   <?php
-    include "footer.php";
+    include "footer.php"
   ?>
 </div>
 
