@@ -73,7 +73,7 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col" >品項</th>
+                                    <th scope="col" colspan = "1">品項</th>
                                     <th scope="col" colspan = "2">PLA</th>
                                     <th scope="col" colspan = "2">BADP-icycle Pro + PP (透明料)</th>
                                 </tr>
