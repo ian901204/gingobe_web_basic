@@ -121,7 +121,7 @@
         <h3 class="py-5 border-top border-dark" data-aos="fade-right">與傳統環保塑膠杯差異</h3>
     </div>
     <div class="col-md-7" data-aos="fade-left">
-            <div class ="table">
+            <table class = "table">
                 <thead>
                     <tr>
                         <th colspan="2">The table header</th>
@@ -133,7 +133,7 @@
                         <td>with two columns</td>
                     </tr>
                 </tbody>
-</div>
+            </table>
         <!--<img src="img/person11.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
         <span><span class="fw-bold">John Doe,</span>
         CEO of Stride Ltd.</span>-->
