@@ -81,19 +81,78 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">原料来源</th>
-                                    <td colspan = "2">玉米澱粉, 貨源不穩定、有搶奪人類糧食的疑慮</td>
-                                    <td colspan = "2">供應充足穩定</td>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">成本價格</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">添加劑的搭配</th>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">耐熱性</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">改性</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">生產設備</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">保存期</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">可回收性</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">焚化</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">降解時間</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">生物降解方式</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">優, 劣勢分析(一)</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">優, 劣勢分析(二)</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">優, 劣勢分析(三)</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">優, 劣勢分析(四)</th>
+                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td scope="row" colspan = "2">供應充足穩定</td>
                                 </tr>
                             </tbody>
                         </table>
