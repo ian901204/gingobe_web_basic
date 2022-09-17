@@ -296,16 +296,18 @@
     <div class="col center">
       <form class="form-floating">
         <div class="col">
-          <input type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
+          <input data-aos="fade-down" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
         </div>
         <div class = "col">
-          <input type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
+          <input data-aos="fade-down" type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
         </div>
         <div class = 'col'>
-          <input type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
+          <input data-aos="fade-down" type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
         </div>
         <div class = 'col'>
-        <select class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
+        </div>
+        <div class = 'col'>
+        <select data-aos="fade-down" class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
           <option value = 0>業務一</option>
           <option value = 1>業務二</option>
         </select>
@@ -315,7 +317,7 @@
   </div>
   </div>
   <div class="col-12">
-    <button href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">訂購</a>
+    <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">訂購</a>
   </div>
   </form>
 </div>
