@@ -1,145 +1,93 @@
 <!doctype html>
 <html class="h-100" lang="en">
 
-  <head>
-      <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
-  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon.png">
-  <meta name="author" content="Holger Koenemann">
-  <meta name="generator" content="Eleventy v2.0.0">
-  <meta name="HandheldFriendly" content="true">
-  <title>金勾杯股份有限公司</title>
-  <link rel="stylesheet" href="css/theme.min.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon.png">
+    <meta name="author" content="Holger Koenemann">
+    <meta name="generator" content="Eleventy v2.0.0">
+    <meta name="HandheldFriendly" content="true">
+    <title>金勾杯股份有限公司</title>
+    <link rel="stylesheet" href="css/theme.min.css">
+    <style>
 
-<style>
+        .table-stats table {
+        font-family: 'Open Sans'; }
+        .table-stats table th,
+        .table-stats table td {
+            border: none;
+            border-bottom: 1px solid #e8e9ef;
+            color: #868e96;
+            font-size: 12px;
+            font-weight: normal;
+            padding: .75em 1.25em;
+            text-transform: uppercase; }
+            .table-stats table th img,
+            .table-stats table td img {
+            margin-right: 10px;
+            max-width: 45px; }
+            .table-stats table th .name,
+            .table-stats table td .name {
+            color: #343a40;
+            font-size: 14px;
+            text-transform: capitalize; }
+        .table-stats table td {
+            color: #343a40;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: capitalize;
+            vertical-align: middle; }
 
-.table-stats table {
-  font-family: 'Open Sans'; }
-  .table-stats table th,
-  .table-stats table td {
-    border: none;
-    border-bottom: 1px solid #e8e9ef;
-    color: #868e96;
-    font-size: 12px;
-    font-weight: normal;
-    padding: .75em 1.25em;
-    text-transform: uppercase; }
-    .table-stats table th img,
-    .table-stats table td img {
-      margin-right: 10px;
-      max-width: 45px; }
-    .table-stats table th .name,
-    .table-stats table td .name {
-      color: #343a40;
-      font-size: 14px;
-      text-transform: capitalize; }
-  .table-stats table td {
-    color: #343a40;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: capitalize;
-    vertical-align: middle; }
+        /* inter-200 - latin */
+        @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: local(''),
+            url('../fonts/inter-v11-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/inter-v11-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+        /* inter-300 - latin */
+        @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: local(''),
+            url('../fonts/inter-v11-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/inter-v11-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+        /* inter-regular - latin */
+        @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local(''),
+            url('../fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+        /* inter-500 - latin */
+        @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: local(''),
+            url('../fonts/inter-v11-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/inter-v11-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
 
-  /* inter-200 - latin */
-  @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local(''),
-      url('../fonts/inter-v11-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/inter-v11-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* inter-300 - latin */
-  @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local(''),
-      url('../fonts/inter-v11-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/inter-v11-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* inter-regular - latin */
-  @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local(''),
-      url('../fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* inter-500 - latin */
-  @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local(''),
-      url('../fonts/inter-v11-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/inter-v11-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
+    </style>
+</head>
 
-</style>
-
-  </head>
-
-  <body data-bs-spy="scroll" data-bs-target="#navScroll">
-
-    <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
-  <div class="container">
-
-  <!--web icon positioin-->
-   <a class="navbar-brand pe-4 fs-3 border-end" href="/">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-layers-half" viewbox="0 0 16 16">
-    <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/>
-  </svg>
-  <span class="ms-1 fw-bold">金勾杯股份有限公司</span>
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
-      服務
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#aboutus">
-      關於我們
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#gallery">
-      介紹
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#order">
-      訂購
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#testimonials">
-      聯絡我們
-    </a>
-  </li>
-
-    </ul>
-    <!-- 原 icon -->
-      <!--<a href="#" aria-label="Link to the customers profil page" class="link-dark bg-white-95 p-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person" viewbox="0 0 16 16">
-          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-        </svg>
-        <span class="d-none">Profil</span>
-      </a>-->
-    </div>
-</div>
-</nav>
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+<?php
+    include "menu.php";
+?>
 
 <main>
 <div class="container py-vh-4 w-100 overflow-hidden">
