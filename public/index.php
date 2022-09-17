@@ -296,6 +296,7 @@
     <div class="col center">
       <form class="form-floating">
         <div class="col">
+          <h3 class="h5 my-2">請輸入您的大名</h3>
           <input data-aos="fade-down" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
         </div>
         <br>
