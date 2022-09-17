@@ -63,8 +63,8 @@
 
 <main>
 <div class="container py-vh-4 w-100 overflow-hidden">
-    <div class="col-lg-2">
-        <h3 class="py-5 border-top border-dark" data-aos="fade-right">與傳統環保塑膠杯差異</h3>
+    <div class="col-lg-12">
+        <h3 class="py-5 text-center border-top border-dark" data-aos="fade-right">與傳統環保塑膠杯差異</h3>
     </div>
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-lg-12" data-aos="fade-left">
