@@ -13,33 +13,7 @@
     <link rel="stylesheet" href="css/theme.min.css">
     <style>
 
-        .table-stats table {
-        font-family: 'Open Sans'; }
-        .table-stats table th,
-        .table-stats table td {
-            border: none;
-            border-bottom: 1px solid #e8e9ef;
-            color: #868e96;
-            font-size: 12px;
-            font-weight: normal;
-            padding: .75em 1.25em;
-            text-transform: uppercase; }
-            .table-stats table th img,
-            .table-stats table td img {
-            margin-right: 10px;
-            max-width: 45px; }
-            .table-stats table th .name,
-            .table-stats table td .name {
-            color: #343a40;
-            font-size: 14px;
-            text-transform: capitalize; }
-        .table-stats table td {
-            color: #343a40;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: capitalize;
-            vertical-align: middle; }
-
+       
         /* inter-200 - latin */
         @font-face {
         font-family: 'Inter';
