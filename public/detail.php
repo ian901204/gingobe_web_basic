@@ -81,8 +81,8 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">原料来源</th>
-                                    <td>玉米澱粉, 貨源不穩定、有搶奪人類糧食的疑慮</td>
-                                    <td>供應充足穩定</td>
+                                    <td colspan = "2">玉米澱粉, 貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td colspan = "2">供應充足穩定</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">成本價格</th>
