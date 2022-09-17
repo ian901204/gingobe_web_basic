@@ -69,17 +69,13 @@
     </div>
     <div class="col-md-7" data-aos="fade-left">
     <div class="card">
-                    <div class="card-header">
-                        <strong class="card-title">Bordered Table</strong>
-                    </div>
                     <div class="card-body">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col" >品項</th>
+                                    <th scope="col" colspan = "2">PLA</th>
+                                    <th scope="col" colspan = "2">BADP-icycle Pro + PP (透明料</th>
                                 </tr>
                             </thead>
                             <tbody>
