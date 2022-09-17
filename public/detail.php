@@ -64,10 +64,10 @@
 <main>
 <div class="container py-vh-4 w-100 overflow-hidden">
   <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-lg-5">
+    <div class="col-lg-2">
         <h3 class="py-5 border-top border-dark" data-aos="fade-right">與傳統環保塑膠杯差異</h3>
     </div>
-    <div class="col-md-7" data-aos="fade-left">
+    <div class="col-md-10" data-aos="fade-left">
     <div class="card">
                     <div class="card-body">
                         <table class="table table-bordered">
