@@ -298,6 +298,7 @@
         <div class="col">
           <input data-aos="fade-down" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
         </div>
+        <br>
         <div class = "col">
           <input data-aos="fade-down" type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
         </div>
