@@ -96,39 +96,39 @@
         <h3 class="py-5 border-top border-dark" data-aos="fade-right">與傳統環保塑膠杯差異</h3>
     </div>
     <div class="col-md-7" data-aos="fade-left">
-            <div class = "card">
+        <div class = "card">
             <div class="card-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th >#</th>
+                            <th >First</th>
+                            <th >Last</th>
+                            <th >Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th >1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+        </div>
         <!--<img src="img/person11.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
         <span><span class="fw-bold">John Doe,</span>
         CEO of Stride Ltd.</span>-->
