@@ -114,45 +114,28 @@
 </div>
 </nav>
 
-    <main>
-      <div class="w-100 overflow-hidden bg-gray-100" id="top">
-  
-<div class="container position-relative">
-  <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/interior11.jpg);">
-    
-  </div>
-    <div class="row">
-
-<div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
-  <h1 class="display-1 fw-bold mt-5">環保塑膠杯</h1>
-  <p class="lead"> 
-    本產品一體成形、手提專利飲料杯，BADP生物可降解塑料、PP材質食品級原料可回收再生能源，愛護地球、守護海洋從不拿塑膠袋開始！
-高透明、清晰，可以清楚看見杯子內的配料，可承受拉力為8公斤！！拿著飲料怎麼甩怎麼跑都不會斷，且耐高溫120°C，讓客人不用因為釋出塑化劑而喝下肚，有SGS材質及拉力檢驗證明，少拿一個塑膠袋，省錢又環保的好選擇！！
-</p>
-  <a href="#order" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">訂購</a>
-</div>
-
-
-
-</div>
-</div>
-
-</div>
-
-
-
+<main>
 <div class="container py-vh-4 w-100 overflow-hidden">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-lg-5">
-  <h3 class="py-5 border-top border-dark" data-aos="fade-right">關於我們</h3>
+  <h3 class="py-5 border-top border-dark" data-aos="fade-right">與傳統環保塑膠杯差異</h3>
 </div>
 <div class="col-md-7" data-aos="fade-left">
   <blockquote>
-    <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">本公司（金勾盃股份有限公司）為皇盃國際塑膠廠的總代理商，
-雖然本公司上市未達１年，但本公司保持著以客至上、客為優先的態度在營運，所以客戶可以完全的放心交給我們！
-我們的塑膠環保杯為前所未見得新開發產品，
-專利擁有者在２０２１年的某一天，在等紅燈的途中，看了一下飲料店擁有美貌的飲料店服務員，正在欣賞的途中，突然看到了正在買飲料的客人買了袋子準備裝飲料，頓時腦海中浮出了「為何不在飲料杯上多做一個提環，店家、客人都方便且還環保！！」於是專利擁有者開始動身，經過了許多挫折、壓力、測試、意見不合等，
-於是，燈愣～「金勾杯」就誕生了。
+    <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">
+    <table>
+    <thead>
+        <tr>
+            <th colspan="2">The table header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+        </tr>
+    </tbody>
+</table>
 </div>
     <!--<img src="img/person11.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
     <span><span class="fw-bold">John Doe,</span>
