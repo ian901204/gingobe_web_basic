@@ -278,9 +278,9 @@
 專利擁有者在２０２１年的某一天，在等紅燈的途中，看了一下飲料店擁有美貌的飲料店服務員，正在欣賞的途中，突然看到了正在買飲料的客人買了袋子準備裝飲料，頓時腦海中浮出了「為何不在飲料杯上多做一個提環，店家、客人都方便且還環保！！」於是專利擁有者開始動身，經過了許多挫折、壓力、測試、意見不合等，
 於是，燈愣～「金勾杯」就誕生了。
 </div>
-    <img src="img/person11.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
+    <!--<img src="img/person11.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
     <span><span class="fw-bold">John Doe,</span>
-      CEO of Stride Ltd.</span>
+      CEO of Stride Ltd.</span>-->
   </blockquote>
 </div>
 
@@ -293,7 +293,7 @@
       <div class="row d-flex justify-content-center text-center">
   <div class="col-lg-8 text-center" data-aos="fade">
   <div class="row">
-    <div class="col">
+    <div class="col center">
       <form class="form-floating">
         <div class="col">
           <input type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
@@ -310,16 +310,14 @@
           <option value = 1>業務二</option>
         </select>
         </div>
-      </form>
-    </div>
-    <div class="col-auto">
-      <a href="#" class="btn btn-dark py-3 px-5">Subscribe</a>
+      
     </div>
   </div>
   </div>
   <div class="col-12">
-    <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Get in contact</a>
+    <button href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">訂購</a>
   </div>
+  </form>
 </div>
 
     </div>
