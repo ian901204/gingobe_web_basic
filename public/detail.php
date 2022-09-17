@@ -98,7 +98,7 @@
     <div class="col-md-7" data-aos="fade-left">
         <div class = "card">
             <div class="card-body">
-                <table class="table table-bordered">
+                <table class="table ">
                     <thead>
                         <tr>
                             <th >#</th>
