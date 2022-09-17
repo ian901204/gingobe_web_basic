@@ -75,24 +75,23 @@
                                 <tr>
                                     <th scope="col" >品項</th>
                                     <th scope="col" colspan = "2">PLA</th>
-                                    <th scope="col" colspan = "2">BADP-icycle Pro + PP (透明料</th>
+                                    <th scope="col" colspan = "2">BADP-icycle Pro + PP (透明料)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <th scope="row">原料来源</th>
+                                    <td>玉米澱粉, 貨源不穩定、有搶奪人類糧食的疑慮</td>
+                                    <td>供應充足穩定</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
+                                    <th scope="row">成本價格</th>
                                     <td>Jacob</td>
                                     <td>Thornton</td>
                                     <td>@fat</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">3</th>
+                                    <th scope="row">添加劑的搭配</th>
                                     <td colspan="2">Larry the Bird</td>
                                     <td>@twitter</td>
                                 </tr>
