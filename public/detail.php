@@ -67,7 +67,7 @@
     <div class="col-lg-2">
         <h3 class="py-5 border-top border-dark" data-aos="fade-right">與傳統環保塑膠杯差異</h3>
     </div>
-    <div class="col-md-10" data-aos="fade-left">
+    <div class="col-lg-10" data-aos="fade-left">
     <div class="card">
                     <div class="card-body">
                         <table class="table table-bordered">
