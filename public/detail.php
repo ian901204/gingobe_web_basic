@@ -73,49 +73,49 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col" colspan = "1">品項</th>
+                                    <th scope="col" colspan = "2">品項</th>
                                     <th scope="col" colspan = "2">PLA</th>
                                     <th scope="col" colspan = "2">BADP-icycle Pro + PP (透明料)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">原料来源</th>
+                                    <th scope="row" colspan = "2">原料来源</th>
                                     <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
                                     <td scope="row" colspan = "2">供應充足穩定</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">成本價格</th>
+                                    <th scope="row" colspan = "2">成本價格</th>
                                     <td scope="row" colspan = "2">目前價格非常高</td>
                                     <td scope="row" colspan = "2">成本普通.</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">添加劑的搭配</th>
+                                    <th scope="row" colspan = "2">添加劑的搭配</th>
                                     <td scope="row" colspan = "2">直接使用比較困難，太脆,  韌性不夠,<br>需改性. 經常和PBAT一起使用</td>
                                     <td scope="row" colspan = "2">直接添加到傳統塑料PE、PP中</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">耐熱性</th>
+                                    <th scope="row" colspan = "2">耐熱性</th>
                                     <td scope="row" colspan = "2">耐熱性差(60-70C),  需用改性劑改善</td>
                                     <td scope="row" colspan = "2">與傳統塑料相同，優於PLA,  PP可耐110C.</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">改性</th>
+                                    <th scope="row" colspan = "2">改性</th>
                                     <td scope="row" colspan = "2">和其他軟質降解材料混合改性.</td>
                                     <td scope="row" colspan = "2">PP, PE 不需要改質.</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">生產設備</th>
+                                    <th scope="row" colspan = "2">生產設備</th>
                                     <td scope="row" colspan = "2">專用設備</td>
                                     <td scope="row" colspan = "2">通用設備.</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">保存期</th>
+                                    <th scope="row" colspan = "2">保存期</th>
                                     <td scope="row" colspan = "2">大約一年,產品存放久了會變脆</td>
                                     <td scope="row" colspan = "2">保質期正常設定為二年,  可以調控保存期.</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">可回收性</th>
+                                    <th scope="row" colspan = "2">可回收性</th>
                                     <td scope="row" colspan = "2">不適合回收</td>
                                     <td scope="row" colspan = "2">可以回收再利用.</td>
                                 </tr>
