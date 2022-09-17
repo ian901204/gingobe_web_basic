@@ -10,7 +10,7 @@
   <meta name="generator" content="Eleventy v2.0.0">
   <meta name="HandheldFriendly" content="true">
   <title>金勾杯股份有限公司</title>
-  <link rel="stylesheet" href="css/theme.min.css">
+  <link rel="stylesheet" href="css/theme.css">
 
 <style>
 
@@ -145,29 +145,9 @@
 <div class="col-lg-8" data-aos="fade-down"><h2 class="display-6">我們的產品 BADP-icycle Pro + PP 所製成的環保塑膠杯與傳統 PLA 所製成的塑膠杯相比，有以下幾種優點</h2></div>
 </div>
 <div class="row d-flex align-items-center">
-<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-  <span class="h5 fw-lighter">01.</span>
-  <h3 class="py-5 border-top border-dark">原料來源與成本價格</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <!--<a href="#" class="link-fancy">Learn more
-  </a>-->
-</div>
-
-<div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
-  <span class="h5 fw-lighter">02.</span>
-  <h3 class="py-5 border-top border-dark">We don´t know exactly what we are doing. But thats good because we can´t break something intentionally.</h3>
-  <p>Lorem, ipsum dolor sit  adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
-</div>
-
-<div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
-  <span class="h5 fw-lighter">03.</span>
-  <h3 class="py-5 border-top border-dark">There is no real number three reason. So please read again number one and two.</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
-</div>
+<?php
+  include "detail.php";
+?>
 </div>
 
   </div>
