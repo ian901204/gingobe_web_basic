@@ -86,13 +86,15 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">成本價格</th>
-                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
-                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                    <td scope="row" colspan = "2">目前價格非常高</td>
+                                    <td scope="row" colspan = "2">成本普通.</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">添加劑的搭配</th>
-                                    <td scope="row" colspan = "2">玉米澱粉, <br>貨源不穩定、有搶奪人類糧食的疑慮</td>
-                                    <td scope="row" colspan = "2">供應充足穩定</td>
+                                    <td scope="row" colspan = "2">直接使用比較困難，太脆,  韌性不夠,
+需改性. 經常和PBAT一起使用
+</td>
+                                    <td scope="row" colspan = "2">直接添加到傳統塑料PE、PP中</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">耐熱性</th>
