@@ -10,7 +10,7 @@
     <meta name="generator" content="Eleventy v2.0.0">
     <meta name="HandheldFriendly" content="true">
     <title>金勾杯股份有限公司</title>
-    <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/theme.css">
     <style>
         /* inter-200 - latin */
         @font-face {
