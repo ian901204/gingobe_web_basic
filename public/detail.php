@@ -118,29 +118,28 @@
 <div class="container py-vh-4 w-100 overflow-hidden">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-lg-5">
-  <h3 class="py-5 border-top border-dark" data-aos="fade-right">與傳統環保塑膠杯差異</h3>
-</div>
-<div class="col-md-7" data-aos="fade-left">
-    <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">
-        <table>
-    <thead>
-        <tr>
-            <th colspan="2">The table header</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>The table body</td>
-            <td>with two columns</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-    <!--<img src="img/person11.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
-    <span><span class="fw-bold">John Doe,</span>
-      CEO of Stride Ltd.</span>-->
-</div>
-
+        <h3 class="py-5 border-top border-dark" data-aos="fade-right">與傳統環保塑膠杯差異</h3>
+    </div>
+    <div class="col-md-7" data-aos="fade-left">
+        <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">The table header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The table body</td>
+                        <td>with two columns</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--<img src="img/person11.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
+        <span><span class="fw-bold">John Doe,</span>
+        CEO of Stride Ltd.</span>-->
+    </div>
   </div>
 </div>
     </main>
