@@ -88,7 +88,7 @@
 
 </div>
 
-<div class="py-vh-0 w-100 overflow-hidden" id="services">
+<div class="py-vh-5 w-100 overflow-hidden" id="services">
   <div class="container">
       <div class="row d-flex justify-content-center">
 <div class="col-lg-10 aos-init border-bottom border-dark aos-animate" data-aos="fade-down"><h2 class="display-6">我們的產品 BADP-icycle Pro + PP 所製成的環保塑膠杯與傳統 PLA 所製成的塑膠杯相比，有以下幾種優點</h2><br></div>
@@ -215,7 +215,7 @@
   </div>
 </div>
 
-<div class="py-vh-4 bg-gray-900 text-light w-100 overflow-hidden" id="order">
+<div class="py-vh-2 bg-gray-900 text-light w-100 overflow-hidden" id="order">
   <div class="container">
     <div class="row d-flex justify-content-center text-center">
       <div class="col-lg-8 text-center" data-aos="fade">
