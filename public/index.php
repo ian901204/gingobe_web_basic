@@ -72,7 +72,7 @@
   </div>
     <div class="row">
 
-<div class="col-lg-7 bg-gray-900 py-vh-3 position-relative" data-aos="fade-right">
+<div class="col-lg-7 py-vh-3 position-relative" data-aos="fade-right">
   <h1 class="display-1 fw-bold mt-5">環保塑膠杯</h1>
   <p class="lead"> 
     本產品一體成形、手提專利飲料杯，BADP生物可降解塑料、PP材質食品級原料可回收再生能源，愛護地球、守護海洋從不拿塑膠袋開始！
@@ -88,7 +88,7 @@
 
 </div>
 
-<div class="py-vh-3 w-100 overflow-hidden" id="services">
+<div class="py-vh-3 bg-gray-200 w-100 overflow-hidden" id="services">
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="col-lg-10 aos-init border-bottom border-dark aos-animate" data-aos="fade-down"><h2 class="display-6">我們的產品 BADP-icycle Pro + PP 所製成的環保塑膠杯與傳統 PLA 所製成的塑膠杯相比，有以下幾種優點</h2><br>
