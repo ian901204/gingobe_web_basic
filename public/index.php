@@ -276,20 +276,37 @@
     <div class="col center">
       <form class="form-floating">
         <div class="col">
-          <h3 class="h5 my-2">請輸入您的大名</h3>
-          <input data-aos="fade-down" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
+          <h3 class="h5 my-2" data-aos="fade-left">請輸入您的大名</h3>
+          <input data-aos="fade-left" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
         </div>
         <br>
         <div class = "col">
-          <input data-aos="fade-down" type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
+        <h3 class="h5 my-2" data-aos="fade-left">請輸入您的地址</h3>
+          <input data-aos="fade-right" type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
         </div>
+        <br>
         <div class = 'col'>
-          <input data-aos="fade-down" type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
+        <h3 class="h5 my-2" data-aos="fade-left">請輸入您的電話</h3>
+          <input data-aos="fade-left" type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
         </div>
+        <br>
         <div class = 'col'>
+        <h3 class="h5 my-2" data-aos="fade-left">請輸入欲訂購的尺寸</h3>
+        <select data-aos="fade-right" class = "form-control p-3" id = "size" placeholder = "請選擇尺寸">
+          <option value = 700>PP700</option>
+          <option value = 660>PP660</option>
+          <option value = 500>PP500</option>
+        </select>
         </div>
+        <br>
         <div class = 'col'>
-        <select data-aos="fade-down" class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
+        <h3 class="h5 my-2" data-aos="fade-left">請輸入欲訂購的箱數(1000杯/箱)</h3>
+          <input data-aos="fade-left" type="number" class="form-control p-3" id="amount" placeholder="箱數">
+        </div>
+        <br>
+        <div class = 'col'>
+        <h3 class="h5 my-2" data-aos="fade-left">請選擇業務員名稱</h3>
+        <select data-aos="fade-right" class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
           <option value = 0>業務一</option>
           <option value = 1>業務二</option>
         </select>
@@ -299,7 +316,7 @@
   </div>
   </div>
   <div class="col-12">
-    <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">訂購</a>
+    <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up">訂購</a>
   </div>
   </form>
 </div>
@@ -355,34 +372,6 @@
   </div>
 </div>
 
-    </div>
-  </div>
-</div>
-
-<div class="container py-vh-3 border-top" data-aos="fade" data-aos-delay="200">
-  <div class="row d-flex justify-content-center">
-    <div class="col-12 col-lg-8 text-center">
-      <h3 class="fs-2 fw-light">Stay in touch with our<span class="fw-bold">
-          monthly and free</span>
-        newsletter!
-    </h3></div>
-    <div class="col-12 col-lg-8 text-center">
-      <div class="row">
-        <div class="grouped-inputs border bg-light p-2">
-  <div class="row">
-    <div class="col">
-      <form class="form-floating">
-        <input type="email" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </form>
-    </div>
-    <div class="col-auto">
-      <a href="#" class="btn btn-dark py-3 px-5">Subscribe</a>
-    </div>
-  </div>
-</div>
-
-      </div>
     </div>
   </div>
 </div>
