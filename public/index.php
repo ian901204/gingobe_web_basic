@@ -217,53 +217,51 @@
 
 <div class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden" id="order">
   <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="row d-flex justify-content-center text-center">
-        <div class="col-lg-8 text-center" data-aos="fade">
-          <div class="row">
-            <div class="col center">
-              <form class="form-floating">
-              <div class="col">
-                <h3 class="h5 my-2" data-aos="fade-left">請輸入您的大名</h3>
-                <input data-aos="fade-left" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
-              </div>
-              <br>
-              <div class = "col">
-              <h3 class="h5 my-2" data-aos="fade-left">請輸入您的地址</h3>
-                <input data-aos="fade-right" type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
-              </div>
-              <br>
-              <div class = 'col'>
-              <h3 class="h5 my-2" data-aos="fade-left">請輸入您的電話</h3>
-                <input data-aos="fade-left" type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
-              </div>
-              <br>
-              <div class = 'col'>
-              <h3 class="h5 my-2" data-aos="fade-left">請輸入欲訂購的尺寸</h3>
-              <select data-aos="fade-right" class = "form-control p-3" id = "size" placeholder = "請選擇尺寸">
-                <option value = 700>PP700</option>
-                <option value = 660>PP660</option>
-                <option value = 500>PP500</option>
-              </select>
-              </div>
-              <br>
-              <div class = 'col'>
-              <h3 class="h5 my-2" data-aos="fade-left">請輸入欲訂購的箱數(1000杯/箱)</h3>
-                <input data-aos="fade-left" type="number" class="form-control p-3" id="amount" placeholder="箱數">
-              </div>
-              <br>
-              <div class = 'col'>
-              <h3 class="h5 my-2" data-aos="fade-left">請選擇業務員名稱</h3>
-              <select data-aos="fade-right" class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
-                <option value = 0>業務一</option>
-                <option value = 1>業務二</option>
-              </select>
-              </div>
-              <div class="col-12">
-                <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up">訂購</a>
-              </div>
-              </form>
+    <div class="row d-flex justify-content-center text-center">
+      <div class="col-lg-8 text-center" data-aos="fade">
+        <div class="row">
+          <div class="col center">
+            <form class="form-floating">
+            <div class="col">
+              <h3 class="h5 my-2" data-aos="fade-left">請輸入您的大名</h3>
+              <input data-aos="fade-left" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
             </div>
+            <br>
+            <div class = "col">
+            <h3 class="h5 my-2" data-aos="fade-left">請輸入您的地址</h3>
+              <input data-aos="fade-right" type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
+            </div>
+            <br>
+            <div class = 'col'>
+            <h3 class="h5 my-2" data-aos="fade-left">請輸入您的電話</h3>
+              <input data-aos="fade-left" type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
+            </div>
+            <br>
+            <div class = 'col'>
+            <h3 class="h5 my-2" data-aos="fade-left">請輸入欲訂購的尺寸</h3>
+            <select data-aos="fade-right" class = "form-control p-3" id = "size" placeholder = "請選擇尺寸">
+              <option value = 700>PP700</option>
+              <option value = 660>PP660</option>
+              <option value = 500>PP500</option>
+            </select>
+            </div>
+            <br>
+            <div class = 'col'>
+            <h3 class="h5 my-2" data-aos="fade-left">請輸入欲訂購的箱數(1000杯/箱)</h3>
+              <input data-aos="fade-left" type="number" class="form-control p-3" id="amount" placeholder="箱數">
+            </div>
+            <br>
+            <div class = 'col'>
+            <h3 class="h5 my-2" data-aos="fade-left">請選擇業務員名稱</h3>
+            <select data-aos="fade-right" class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
+              <option value = 0>業務一</option>
+              <option value = 1>業務二</option>
+            </select>
+            </div>
+            <div class="col-12">
+              <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up">訂購</a>
+            </div>
+            </form>
           </div>
         </div>
       </div>
