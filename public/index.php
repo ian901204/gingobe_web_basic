@@ -59,33 +59,26 @@
 
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target="#navScroll">
-    <?php
-      include "menu.php";
-    ?>
-    <main>
-      <div class="w-100 overflow-hidden bg-gray-100" id="top">
-  
-<div class="container position-relative">
-  <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/interior11.jpg);">
-    
-  </div>
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+<?php
+  include "menu.php";
+?>
+<main>
+<div class="w-100 overflow-hidden bg-gray-100" id="top">
+  <div class="container position-relative">
+    <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/interior11.jpg);">
+    </div>
     <div class="row">
-
-<div class="col-lg-7 py-vh-3 position-relative" data-aos="fade-right">
-  <h1 class="display-1 fw-bold mt-5">環保塑膠杯</h1>
-  <p class="lead"> 
-    本產品一體成形、手提專利飲料杯，BADP生物可降解塑料、PP材質食品級原料可回收再生能源，愛護地球、守護海洋從不拿塑膠袋開始！
-高透明、清晰，可以清楚看見杯子內的配料，可承受拉力為8公斤！！拿著飲料怎麼甩怎麼跑都不會斷，且耐高溫120°C，讓客人不用因為釋出塑化劑而喝下肚，有SGS材質及拉力檢驗證明，少拿一個塑膠袋，省錢又環保的好選擇！！
-</p>
-  <a href="#order" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">訂購</a>
-</div>
-
-
-
-</div>
-</div>
-
+      <div class="col-lg-7 py-vh-3 position-relative" data-aos="fade-right">
+        <h1 class="display-1 fw-bold mt-5">環保塑膠杯</h1>
+        <p class="lead"> 
+          本產品一體成形、手提專利飲料杯，BADP生物可降解塑料、PP材質食品級原料可回收再生能源，愛護地球、守護海洋從不拿塑膠袋開始！
+      高透明、清晰，可以清楚看見杯子內的配料，可承受拉力為8公斤！！拿著飲料怎麼甩怎麼跑都不會斷，且耐高溫120°C，讓客人不用因為釋出塑化劑而喝下肚，有SGS材質及拉力檢驗證明，少拿一個塑膠袋，省錢又環保的好選擇！！
+        </p>
+        <a href="#order" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">訂購</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="py-vh-3 bg-gray-200 w-100 overflow-hidden" id="services">
@@ -100,6 +93,7 @@
         include "detail.php";
       ?>
     </div>
+    <br>
   </div>
 </div>
 
