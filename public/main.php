@@ -216,7 +216,7 @@
         <div class="col-lg-8 text-center" data-aos="fade">
           <div class="row">
             <div class="col center">
-              <form class="form-floating">
+              <form class="form-floating" action = "/order" method = "POST">
               <div class="col">
                 <h3 class="h5 my-2" data-aos="fade-left">請輸入您的大名</h3>
                 <input data-aos="fade-left" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
