@@ -24,7 +24,7 @@ $app -> get('/', function ($request, $response, array $args) {
 	$response->getBody() -> write(include "main.php");
 	return $response -> withStatus(200);
 });
-$app -> get('/order', function ($request, $response) {
+$app -> post('/order', function ($request, $response) {
 	$response -> getBody() -> write($request);
 	return $response -> withStatus(200);
 });
