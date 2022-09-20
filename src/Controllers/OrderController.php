@@ -1,7 +1,6 @@
 <?php
 	namespace App\Controllers;
 
-	use App\Middleware\corsMiddleware;
 	use Psr\Http\Message\ResponseInterface;
 	use Psr\Http\Message\ServerRequestInterface;
 	use App\Models\DB\Order;
