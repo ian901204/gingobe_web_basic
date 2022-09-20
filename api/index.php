@@ -1,7 +1,6 @@
 <?php
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
 use API\Middleware\corsMiddleware;
@@ -16,6 +15,11 @@ $app->options("/{routes:.+}", function (ServerRequestInterface $request, Respons
 });
 $app->add(corsMiddleware::class);
 
+$app->get('/', function (ServerRequestInterface $request, ResponseInterface $response): Response {
+    $response->getBody()->write('List all users');
+
+    return $response;
+});
 
 
 
