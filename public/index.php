@@ -6,6 +6,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
 use Slim\Routing\RouteContext;
+use App\Middleware\corsMiddleware;
 require __DIR__.'/../vendor/autoload.php';
 
 $app = AppFactory::create();
@@ -20,7 +21,7 @@ $app->options("/{routes:.+}", function (ServerRequestInterface $request, Respons
 // CORS Headers
 $app->add(corsMiddleware::class);
 $app -> get('/', function ($request, $response, array $args) {
-	$response->getBody() -> write(include "blank.php");
+	$response->getBody() -> write(include "main.php");
 	return $response -> withStatus(200);
 });
 $app -> get('/order', function ($request, $response) {

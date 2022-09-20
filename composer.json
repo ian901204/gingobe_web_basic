@@ -9,9 +9,7 @@
     },
     "autoload":{
 	"psr-4":{
-    		"Backend\\":"backend\\src",
-            "API\\":"api\\src\\",
-            "Pubcli\\":"public\\src"
+            "App\\":"src\\"
 	}
     }
 }
