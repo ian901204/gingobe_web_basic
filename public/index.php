@@ -25,7 +25,7 @@ $app -> get('/', function ($request, $response, array $args) {
 	return $response -> withStatus(200);
 });
 $app -> get('/order', function ($request, $response) {
-	
+	$response -> getBody() -> write($request);
 	return $response -> withStatus(200);
 });
 
