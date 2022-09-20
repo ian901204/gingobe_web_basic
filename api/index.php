@@ -1,6 +1,6 @@
 <?php
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
@@ -16,15 +16,7 @@ $app->options("/{routes:.+}", function (ServerRequestInterface $request, Respons
 });
 $app->add(corsMiddleware::class);
 
-// The RoutingMiddleware should be added after our CORS middleware so routing is performed first
-$app->addRoutingMiddleware();
-$app -> get('/', function ($request, $response, array $args) {
-	$response->getBody() -> write(include "blank.php");
-	return $response -> withStatus(200);
-});
-$app -> get('/order', function ($request, $response) {
-	$response->getBody() -> write(include "order.php");
-	return $response -> withStatus(200);
-});
+
+
 
 $app->run();
