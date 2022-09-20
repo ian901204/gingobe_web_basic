@@ -25,7 +25,7 @@ $app -> get('/', function ($request, $response, array $args) {
 	return $response -> withStatus(200);
 });
 $app->group("/order", function (RouteCollectorProxy $group) {
-    $group->post('/add', 'App\Controllers\OrderControllers:add');
+    $group->post('/add', 'App\Controllers\OrderController:add');
 });
 
 $app->run();
