@@ -15,9 +15,8 @@ $app->options("/{routes:.+}", function (ServerRequestInterface $request, Respons
 });
 $app->add(corsMiddleware::class);
 
-$app->get('/', function (ServerRequestInterface $request, ResponseInterface $response): Response {
+$app->get('/', function (ServerRequestInterface $request, ResponseInterface $response){
     $response->getBody()->write('List all users');
-
     return $response;
 });
 
