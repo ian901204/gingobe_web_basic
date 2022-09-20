@@ -24,8 +24,8 @@ $app -> get('/', function ($request, $response, array $args) {
 	$response->getBody() -> write(include "main.php");
 	return $response -> withStatus(200);
 });
-$app -> post('/order', function ($request, $response) {
-	$json = json_decode($request->getBody()->getContents(), true)
+$app -> post('/order', function (ServerRequestInterface $request, ResponseInterface $response) {
+	$json = json_decode($request->getBody()->getContents(), true);
 	$response -> getBody() -> write($json);
 	return $response -> withStatus(200);
 });
