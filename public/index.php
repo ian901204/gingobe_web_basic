@@ -27,7 +27,8 @@ $app -> get('/', function ($request, $response, array $args) {
 $app -> post('/order', function ($request, $response) {
 	$data = $request->getParsedBody();
     $json = var_export($data, true);
-	$response -> getBody() -> write($json);
+	
+	$response -> getBody() -> write();
 	return $response -> withStatus(200);
 });
 
