@@ -219,22 +219,22 @@
               <form class="form-floating" action = "/order" method = "POST">
               <div class="col">
                 <h3 class="h5 my-2" data-aos="fade-left">請輸入您的大名</h3>
-                <input data-aos="fade-left" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
+                <input data-aos="fade-left" type="text" class="form-control p-3" name="name" placeholder="請輸入姓名">
               </div>
               <br>
               <div class = "col">
               <h3 class="h5 my-2" data-aos="fade-left">請輸入您的地址</h3>
-                <input data-aos="fade-right" type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
+                <input data-aos="fade-right" type="text" class="form-control p-3" name="address" placeholder="請輸入地址">
               </div>
               <br>
               <div class = 'col'>
               <h3 class="h5 my-2" data-aos="fade-left">請輸入您的電話</h3>
-                <input data-aos="fade-left" type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
+                <input data-aos="fade-left" type="text" class="form-control p-3" name="phone" placeholder="09XXXXXXXX">
               </div>
               <br>
               <div class = 'col'>
               <h3 class="h5 my-2" data-aos="fade-left">請輸入欲訂購的尺寸</h3>
-              <select data-aos="fade-right" class = "form-control p-3" id = "size" placeholder = "請選擇尺寸">
+              <select data-aos="fade-right" class = "form-control p-3" name = "size" placeholder = "請選擇尺寸">
                 <option value = 700>PP700</option>
                 <option value = 660>PP660</option>
                 <option value = 500>PP500</option>
@@ -248,7 +248,7 @@
               <br>
               <div class = 'col'>
               <h3 class="h5 my-2" data-aos="fade-left">請選擇業務員名稱</h3>
-              <select data-aos="fade-right" class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
+              <select data-aos="fade-right" class = "form-control p-3" name = "seller" placeholder = "請選擇業務姓名">
                 <option value = 0>業務一</option>
                 <option value = 1>業務二</option>
               </select>
