@@ -25,7 +25,7 @@ $app -> get('/', function ($request, $response, array $args) {
 	return $response -> withStatus(200);
 });
 $app -> post('/order', function ($request, $response) {
-	$json = json_decode($request->getBody()->getContents(), true);
+	$json = json_decode($request->getBody()->getContents(), true)
 	$response -> getBody() -> write($json);
 	return $response -> withStatus(200);
 });
