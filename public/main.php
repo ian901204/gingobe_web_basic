@@ -254,7 +254,7 @@
               </select>
               </div>
               <div class="col-12">
-                <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up">訂購</a>
+                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up">訂購</button>
               </div>
               </form>
             </div>
