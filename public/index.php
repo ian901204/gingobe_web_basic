@@ -24,12 +24,8 @@ $app -> get('/', function ($request, $response, array $args) {
 	$response->getBody() -> write(include "main.php");
 	return $response -> withStatus(200);
 });
-$app -> post('/order', function ($request, $response) {
-	$data = $request->getParsedBody();
-    $json = var_export($data, true);
-	
-	$response -> getBody() -> write();
-	return $response -> withStatus(200);
+$app->group("/order", function (RouteCollectorProxy $group) {
+    $group->post('/add', 'App\Controllers\OrderControllers:add');
 });
 
 $app->run();
