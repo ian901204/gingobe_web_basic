@@ -26,6 +26,7 @@ $app -> get('/', function ($request, $response, array $args) {
 });
 $app -> post('/order', function (ServerRequestInterface $request, ResponseInterface $response) {
 	$json = json_decode($request->getBody()->getContents(), true);
+	debug_zval_dump($json);
 	$response -> getBody() -> write($json);
 	return $response -> withStatus(200);
 });
