@@ -216,7 +216,7 @@
         <div class="col-lg-8 text-center" data-aos="fade">
           <div class="row">
             <div class="col center">
-              <form class="form-floating" action = "/order/add" method = "POST">
+              <form class="form-floating">
               <div class="col">
                 <h3 class="h5 my-2" data-aos="fade-left">請輸入您的大名</h3>
                 <input data-aos="fade-left" type="text" class="form-control p-3" name="name" placeholder="請輸入姓名">
@@ -254,7 +254,7 @@
               </select>
               </div>
               <div class="col-12">
-                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up">訂購</button>
+                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" onclick="myFunction()">訂購</button>
               </div>
               </form>
             </div>
@@ -334,7 +334,21 @@
    duration: 800, // values from 0 to 3000, with step 50ms
  });
  </script>
+<script>
+  function sendRequest() {
+    var data = {
+        name: "helloworld",
+        age: 123
+    };
 
+    var json = JSON.stringify(data);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "admin.ian-shen.live/order/add");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(json);
+}
+</script>
  <script>
   let scrollpos = window.scrollY
   const header = document.querySelector(".navbar")
