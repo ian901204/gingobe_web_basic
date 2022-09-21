@@ -254,7 +254,7 @@
               </select>
               </div>
               <div class="col-12">
-                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" onclick="myFunction()">訂購</button>
+                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" onclick="sendRequest()">訂購</button>
               </div>
               </form>
             </div>
