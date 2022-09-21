@@ -37,7 +37,16 @@ $capsule->addConnection($dbSettings);
 $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
+$app -> get("/",  function (ServerRequestInterface $request, ResponseInterface $response) {
+    $response -> getBody() -> write(include __DIR__."/backend/blank.php");
+    return $response -> withStatus(200);
+});
+
 $app->group("/order", function (RouteCollectorProxy $group) {
+    $group -> get("/", function (ServerRequestInterface $request, ResponseInterface $response){
+        $response -> getBody() -> write(include __DIR__."./backend/order.php");
+        return $response -> withStatus(200);
+    });
     $group->post('/add', 'App\Controllers\OrderController:add');
 });
 $app->run();
