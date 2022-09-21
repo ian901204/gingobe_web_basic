@@ -37,13 +37,7 @@ $capsule->addConnection($dbSettings);
 $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
-$app -> get('/', function ($request, $response, array $args) {
-	$response->getBody() -> write(include "blank.php");
-	return $response -> withStatus(200);
+$app->group("/order", function (RouteCollectorProxy $group) {
+    $group->post('/add', 'App\Controllers\OrderController:add');
 });
-$app -> get('/order', function ($request, $response) {
-	$response->getBody() -> write(include "order.php");
-	return $response -> withStatus(200);
-});
-
 $app->run();
