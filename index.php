@@ -20,7 +20,7 @@ $app->options("/{routes:.+}", function (ServerRequestInterface $request, Respons
 $app->add(corsMiddleware::class);
 
 
-$dotenv = \Dotenv\Dotenv::createImmutable();
+$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 $dbSettings = [
     "driver" => "mysql",
