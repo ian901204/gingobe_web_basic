@@ -6,7 +6,6 @@ use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
 use App\Middlewares\corsMiddleware;
 require __DIR__.'/vendor/autoload.php';
-$app->setBasePath(__DIR__);
 $app = AppFactory::create();
 $app->addErrorMiddleware(true, true, true);
 
