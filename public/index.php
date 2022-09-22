@@ -335,18 +335,13 @@
  });
  </script>
 <script>
-$(document).ready(function(){
   $("button[name='order']").click(function(){
-    $.post("https://admin.ian-shen.live/order/add",
-    {
-      size: "pp500",
-      seller: 2
-    },
-    function(data,status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
-  });
+    $.post('http://example.com/form.php', {category:'client', type:'premium'}, function(response){ 
+      alert("success");
+      $("#mypar").html(response.amount);
 });
+  });
+
 </script>
  <script>
   let scrollpos = window.scrollY
