@@ -17,7 +17,7 @@
 					"salesperson_id" => 1,
 				]);
 			$order -> save();
-			$response -> getBody() -> write("ok");
+			$response -> getBody() -> write(json_encode(["Status"=> "Success"]));
 			return $response -> withStatus(200);
 		}
 	}
