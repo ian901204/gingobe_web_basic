@@ -344,11 +344,10 @@
     dataType: "json",
     contentType: "application/json;charset=utf-8",
     success: function(returnData){
-        console.log(returnData);
+        alert("Success");
     },
     error: function(xhr, ajaxOptions, thrownError){
-        console.log(xhr.status);
-        console.log(thrownError);
+        alert("failed!");
     }
 });
   });
