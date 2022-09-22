@@ -4,7 +4,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
-use Slim\Routing\RouteContext;
+use App\Middlewares\corsMiddleware;
 require __DIR__.'/vendor/autoload.php';
 
 $app = AppFactory::create();
