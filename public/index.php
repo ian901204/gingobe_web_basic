@@ -347,6 +347,10 @@
     xhr.open("POST", "admin.ian-shen.live/order/add");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(json);
+    xhr.onload = function () {
+    // do something to response
+    console.log(this.responseText);
+};
 }
 </script>
  <script>
