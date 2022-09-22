@@ -11,7 +11,7 @@
   <meta name="HandheldFriendly" content="true">
   <title>金勾杯股份有限公司</title>
   <link rel="stylesheet" href="css/theme.css">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style>
 
   /* inter-200 - latin */
@@ -254,7 +254,7 @@
               </select>
               </div>
               <div class="col-12">
-                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" onclick="sendRequest()">訂購</button>
+                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" name = "order">訂購</button>
               </div>
               </form>
             </div>
@@ -335,23 +335,18 @@
  });
  </script>
 <script>
-  function sendRequest() {
-    var data = {
-        size: "helloworld",
-        seller: 123
-    };
-
-    var json = JSON.stringify(data);
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "admin.ian-shen.live/order/add");
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(json);
-    xhr.onload = function () {
-    // do something to response
-    console.log(this.responseText);
-};
-}
+$(document).ready(function(){
+  $("button[name='order']").click(function(){
+    $.post("https://admin.ian-shen.live/order/add",
+    {
+      size: "pp500",
+      seller: 2
+    },
+    function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
 </script>
  <script>
   let scrollpos = window.scrollY
