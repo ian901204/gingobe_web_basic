@@ -253,7 +253,7 @@
               </select>
               </div>
               <div class="col-12">
-                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" id = "snedOrder">訂購</button>
+                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" id = "sendOrder">訂購</button>
               </div>
             </div>
           </div>
@@ -336,7 +336,7 @@
   var dataJSON = {};
   dataJSON["size"] = "iPhone";
   dataJSON["seller"] = "Apple";
-  $( "#sendOrder").click(function(e){
+  $("#sendOrder").click(function(e){
   $.ajax({
     url: "https://admin.ian-shen.live/order/add",
     data: JSON.stringify(dataJSON),
