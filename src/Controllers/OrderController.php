@@ -11,7 +11,6 @@
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$order = Order:: create(
 				[
-					"client_id" => 0,
 					"description" => $data["size"],
 					"detail" => $data["seller"],
 					"salesperson_id" => 1,
