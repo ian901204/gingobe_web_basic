@@ -216,7 +216,6 @@
         <div class="col-lg-8 text-center" data-aos="fade">
           <div class="row">
             <div class="col center">
-              <form class="form-floating">
               <div class="col">
                 <h3 class="h5 my-2" data-aos="fade-left">請輸入您的大名</h3>
                 <input data-aos="fade-left" type="text" class="form-control p-3" name="name" placeholder="請輸入姓名">
@@ -256,7 +255,6 @@
               <div class="col-12">
                 <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" name = "order">訂購</button>
               </div>
-              </form>
             </div>
           </div>
         </div>
