@@ -46,6 +46,6 @@ $app->group("/order", function (RouteCollectorProxy $group) {
         $response -> getBody() -> write(include __DIR__."./backend/order.php");
         return $response -> withStatus(200);
     });
-    $group -> put('/add', 'App\Controllers\OrderController:add');
+    $group -> post('/add', 'App\Controllers\OrderController:add');
 });
 $app->run();
