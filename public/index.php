@@ -333,13 +333,23 @@
  });
  </script>
 <script>
-$("button[name='order']").click(function(){
-    $.post('https://admin.ian-shen.live/order/add', {size:'data', seller:2}, function(response){ 
-      alert("success");
-      $("#mypar").html(response.amount);
+  var dataJSON = {};
+  dataJSON["size"] = "iPhone";
+  dataJSON["seller"] = "Apple";
+  $.ajax({
+    url: "https://admin.ian-shen.live/order/add",
+    data: JSON.stringify(dataJSON),
+    type: "POST",
+    dataType: "json",
+    contentType: "application/json;charset=utf-8",
+    success: function(returnData){
+        console.log(returnData);
+    },
+    error: function(xhr, ajaxOptions, thrownError){
+        console.log(xhr.status);
+        console.log(thrownError);
+    }
 });
-  });
-
 </script>
  <script>
   let scrollpos = window.scrollY
