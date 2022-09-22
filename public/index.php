@@ -337,8 +337,8 @@
 <script>
   function sendRequest() {
     var data = {
-        name: "helloworld",
-        age: 123
+        size: "helloworld",
+        seller: 123
     };
 
     var json = JSON.stringify(data);

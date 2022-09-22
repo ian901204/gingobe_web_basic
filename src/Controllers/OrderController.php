@@ -8,8 +8,7 @@
 	class OrderController
 	{
 		public function add(ServerRequestInterface $request, ResponseInterface $response){
-			$data = $request -> getParsedBody();
-			$data = var_export($data, true);
+			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$order = Order:: create(
 				[
 					"client_id" => 0,
