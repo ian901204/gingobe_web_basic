@@ -14,7 +14,7 @@
 					"client_id" => 0,
 					"description" => $data["size"],
 					"detail" => $data["seller"],
-					"salesperson_id" => 0,
+					"salesperson_id" => 1,
 				]);
 			$order -> save();
 			$response -> getBody() -> write("ok");
