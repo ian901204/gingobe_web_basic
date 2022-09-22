@@ -335,8 +335,8 @@
  });
  </script>
 <script>
-  $("button[name='order']").click(function(){
-    $.post('http://example.com/form.php', {category:'client', type:'premium'}, function(response){ 
+$("button[name='order']").click(function(){
+    $.post('https://admin.ian-shen.live/order/add', {size:'data', seller:2}, function(response){ 
       alert("success");
       $("#mypar").html(response.amount);
 });
