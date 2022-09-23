@@ -217,23 +217,23 @@
             <div class="col center">
               <div class="col" data-aos="fade-left">
                 <h3 class="h5 my-2">請輸入您的大名</h3>
-                <input ≈ type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
+                <input ≈ type="text" class="form-control p-3" id="name" placeholder="請輸入姓名" required>
               </div>
               <te>
               <br>
               <div class = "col" data-aos="fade-right">
               <h3 class="h5 my-2" >請輸入您的地址</h3>
-                <input type="text" class="form-control p-3" id="address" placeholder="請輸入地址">
+                <input type="text" class="form-control p-3" id="address" placeholder="請輸入地址" required>
               </div>
               <br>
               <div class = 'col'data-aos="fade-left">
               <h3 class="h5 my-2" >請輸入您的電話</h3>
-                <input type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX">
+                <input type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX" required>
               </div>
               <br>
               <div class = 'col' data-aos="fade-right">
               <h3 class="h5 my-2" >請輸入欲訂購的尺寸</h3>
-              <select  class = "form-control p-3" id = "size" placeholder = "請選擇尺寸">
+              <select  class = "form-control p-3" id = "size" placeholder = "請選擇尺寸" required>
                 <option value = 700>PP700</option>
                 <option value = 660>PP660</option>
                 <option value = 500>PP500</option>
@@ -242,20 +242,20 @@
               <br>
               <div class = 'col' data-aos="fade-left">
               <h3 class="h5 my-2" >請輸入欲訂購的箱數(1000杯/箱)</h3>
-                <input  type="number" class="form-control p-3" id="amount" placeholder="箱數">
+                <input  type="number" class="form-control p-3" id="amount" placeholder="箱數" required>
               </div>
               <br>
               <div class = 'col' data-aos="fade-right">
               <h3 class="h5 my-2" >請選擇業務員名稱</h3>
-              <select  class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
+              <select  class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名" required>
                 <option value = 0>業務一</option>
                 <option value = 1>業務二</option>
               </select>
               </div>
               <div class="col-12">
-                <h3 class="h5 my-2" id = "warrningText"></h3>
                 <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" id = "sendOrder">訂購</button>
               </div>
+              <h3 class="h5 my-2" id = "warrningText"></h3>
             </div>
           </div>
         </div>
