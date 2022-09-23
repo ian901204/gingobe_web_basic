@@ -217,23 +217,24 @@
             <div class="col center">
               <div class="col" data-aos="fade-left">
                 <h3 class="h5 my-2">請輸入您的大名</h3>
-                <input ≈ type="text" class="form-control p-3" id="name" placeholder="請輸入姓名" required>
+                <input ≈ type="text" class="form-control p-3" id="name" placeholder="姓名">
               </div>
               <te>
               <br>
               <div class = "col" data-aos="fade-right">
               <h3 class="h5 my-2" >請輸入您的地址</h3>
-                <input type="text" class="form-control p-3" id="address" placeholder="請輸入地址" required>
+                <input type="text" class="form-control p-3" id="address"  placeholder="訂單地址">
               </div>
               <br>
               <div class = 'col'data-aos="fade-left">
               <h3 class="h5 my-2" >請輸入您的電話</h3>
-                <input type="text" class="form-control p-3" id="phone" placeholder="09XXXXXXXX" required>
+                <input type="text" class="form-control p-3" id="phone" placeholder="電話號碼 (ex: 09xxxxxxxx)">
               </div>
               <br>
               <div class = 'col' data-aos="fade-right">
               <h3 class="h5 my-2" >請輸入欲訂購的尺寸</h3>
-              <select  class = "form-control p-3" id = "size" placeholder = "請選擇尺寸" required>
+              <select  class = "form-control p-3" id = "size" placeholder = "尺寸">
+                <option value = -1>請選擇尺寸<option>
                 <option value = 700>PP700</option>
                 <option value = 660>PP660</option>
                 <option value = 500>PP500</option>
@@ -242,12 +243,13 @@
               <br>
               <div class = 'col' data-aos="fade-left">
               <h3 class="h5 my-2" >請輸入欲訂購的箱數(1000杯/箱)</h3>
-                <input  type="number" class="form-control p-3" id="amount" placeholder="箱數" required>
+                <input  type="number" class="form-control p-3" id="amount" placeholder="箱數">
               </div>
               <br>
               <div class = 'col' data-aos="fade-right">
               <h3 class="h5 my-2" >請選擇業務員名稱</h3>
-              <select  class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名" required>
+              <select  class = "form-control p-3" id = "seller" placeholder = "請選擇業務姓名">
+                <option value = -1>無</option>
                 <option value = 0>業務一</option>
                 <option value = 1>業務二</option>
               </select>
@@ -336,17 +338,19 @@
 <script>
   var dataJSON = {};
   $("#sendOrder").click(function(e){
-    if ($("#name").val() == ""){
-      $("#warrningText").text("請輸入");
-      $("#warrningText").css("color", 'red');
-      return false;
-    }
     dataJSON["name"] = $("#name").val();
     dataJSON["phone"] = $("#phone").val();
     dataJSON["address"] = $("#address").val();
     dataJSON["size"] = $("#size").val();
     dataJSON["amount"] = $("#amount").val();
     dataJSON["seller"] = $("#seller").val();
+    $.each(dataJSON, function(index, value)){
+      if (value == ""){
+      $("#warrningText").text($("#" + index).placeholder() + "資料缺少 請確認完整後在送出！");
+      $("#warrningText").css("color", 'red');
+      return false;
+      }
+    }
     $.ajax({
       url: "https://admin.ian-shen.live/order/add",
       data: JSON.stringify(dataJSON),
