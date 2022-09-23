@@ -234,6 +234,7 @@
               <div class = 'col' data-aos="fade-right">
               <h3 class="h5 my-2" >請輸入欲訂購的尺寸</h3>
               <select  class = "form-control p-3" id = "size" placeholder = "尺寸">
+                <option value = -1 selected disabled>請選擇尺寸</option>
                 <option value = 700>PP700</option>
                 <option value = 660>PP660</option>
                 <option value = 500>PP500</option>
@@ -336,10 +337,9 @@
  });
  </script>
 <script>
-  
   var dataJSON = {};
-  var data_missing = 0;
   $("#sendOrder").click(function(e){
+    var data_missing = 0;
     dataJSON["name"] = $("#name").val();
     dataJSON["address"] = $("#address").val();
     dataJSON["phone"] = $("#phone").val();
