@@ -350,6 +350,7 @@
         $("#warrningText").text($("#" + index).attr('placeholder') + "資料缺少 請確認完整後在送出！");
         $("#warrningText").css("color", 'red');
         data_missing = 1;
+        return false;
       }
     });
     if (data_missing == 0){
