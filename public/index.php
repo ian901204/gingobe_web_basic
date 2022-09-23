@@ -242,14 +242,14 @@
               <br>
               <div class = 'col' data-aos="fade-left">
               <h3 class="h5 my-2" >請輸入欲訂購的箱數(1000杯/箱)</h3>
-                <input  type="number" class="form-control p-3" id="amount" placeholder="箱數">
+                <input  type="number" class="form-control p-3" id="amount" value = 0 placeholder="箱數">
               </div>
               <br>
               <div class = 'col' data-aos="fade-right">
               <h3 class="h5 my-2" >請選擇業務員名稱</h3>
               <select  class = "form-control p-3" id = "seller" placeholder = "業務">
-                <option value = 0 selected disabled>請選擇業務員名稱</option>
-                <option value = -1>無</option>
+                <option value = -1 selected disabled>請選擇業務員名稱</option>
+                <option value = 0>無</option>
                 <option value = 1>業務一</option>
                 <option value = 2>業務二</option>
               </select>
@@ -257,7 +257,7 @@
               <div class="col-12">
                 <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" id = "sendOrder">訂購</button>
               </div>
-              <h3 class="h5 my-2" id = "warrningText"></h3>
+              <h3 class="h5 my-2" data-aos="fade-up" id = "warrningText"></h3>
             </div>
           </div>
         </div>
@@ -341,8 +341,8 @@
   var data_missing = 0;
   $("#sendOrder").click(function(e){
     dataJSON["name"] = $("#name").val();
-    dataJSON["phone"] = $("#phone").val();
     dataJSON["address"] = $("#address").val();
+    dataJSON["phone"] = $("#phone").val();
     dataJSON["size"] = $("#size").val();
     dataJSON["amount"] = $("#amount").val();
     dataJSON["seller"] = $("#seller").val();
