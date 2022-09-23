@@ -336,6 +336,7 @@
  });
  </script>
 <script>
+  
   var dataJSON = {};
   var data_missing = 0;
   $("#sendOrder").click(function(e){
