@@ -344,14 +344,16 @@
     dataJSON["size"] = $("#size").val();
     dataJSON["amount"] = $("#amount").val();
     dataJSON["seller"] = $("#seller").val();
+    var data_missing = FALSE;
     $.each(dataJSON, function(index, value){
       if (value == ""){
         $("#warrningText").text($("#" + index).attr('placeholder') + "資料缺少 請確認完整後在送出！");
         $("#warrningText").css("color", 'red');
-        return false;
+        data_missing = TRUE;
       }
     });
-    $.ajax({
+    if (!date_missing){
+      $.ajax({
       url: "https://admin.ian-shen.live/order/add",
       data: JSON.stringify(dataJSON),
       type: "POST",
@@ -364,6 +366,7 @@
           alert("failed!");
       }
     });
+    }
   });
   
 </script>
