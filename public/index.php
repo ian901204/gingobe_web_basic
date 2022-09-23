@@ -348,7 +348,7 @@
     dataJSON["seller"] = $("#seller").val();
     console.log(dataJSON["seller"]);
     $.each(dataJSON, function(index, value){
-      if ((value == "") || (value == -1)){
+      if ((value == "") || (value == null)){
         console.log(index + ":" + value);
         $("#warrningText").text($("#" + index).attr('placeholder') + "資料缺少 請確認完整後在送出！");
         $("#warrningText").css("color", 'red');
