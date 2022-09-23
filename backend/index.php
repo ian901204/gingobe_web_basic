@@ -42,7 +42,7 @@ $app -> get("/",  function (Request $request, Response $response) {
 });
 
 $app -> group("/order", function (RouteCollectorProxy $group) {
-    $group -> get("/", function (Request $request, Response $response){
+    $group -> get("/list", function (Request $request, Response $response){
         $response -> getBody() -> write(include "order.php");
         return $response -> withStatus(200);
     });
