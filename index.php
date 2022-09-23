@@ -10,13 +10,13 @@ $app = AppFactory::create();
 $app->addErrorMiddleware(true, true, true);
 
 // CORS
-$app->options("/{routes:.+}", function (ServerRequestInterface $request, ResponseInterface $response) {
-    $response->getBody()->write("OK");
-    return $response;
-});
+//$app->options("/{routes:.+}", function (ServerRequestInterface $request, ResponseInterface $response) {
+//    $response->getBody()->write("OK");
+//    return $response;
+//});
 
 // CORS Headers
-$app->add(corsMiddleware::class);
+//$app->add(corsMiddleware::class);
 
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
