@@ -255,9 +255,9 @@
                 <option value = 2>業務二</option>
               </select>
               </div>
-              <div class="col-12">
-                <button class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-up" id = "sendOrder">訂購</button>
-                <h3 class="h5 my-2" data-aos="fade-up" id = "warrningText"></h3>
+              <div class="col-12" data-aos="fade-up">
+                <button class="btn btn-warning btn-xl shadow me-3 mt-4"  id = "sendOrder">訂購</button>
+                <h3 class="h5 my-2"  id = "warrningText"></h3>
               </div>
             </div>
           </div>
