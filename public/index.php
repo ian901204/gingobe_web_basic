@@ -243,7 +243,7 @@
               <br>
               <div class = 'col' data-aos="fade-left">
               <h3 class="h5 my-2" >請輸入欲訂購的箱數(1000杯/箱)</h3>
-                <input  type="number" class="form-control p-3" id="amount" value = 0 placeholder="箱數">
+                <input  type="number" class="form-control p-3" id="amount" placeholder="箱數">
               </div>
               <br>
               <div class = 'col' data-aos="fade-right">
