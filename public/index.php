@@ -345,7 +345,7 @@
 
   dataJSON["seller"] = $("#seller").val();
   $("#sendOrder").click(function(e){
-    console.log(JSON.stringify(dataJSON));
+    console.log(dataJSON["name"]);
     $.ajax({
       url: "https://admin.ian-shen.live/order/add",
       data: JSON.stringify(dataJSON),
