@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="css/theme.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style>
-
+  .warnningText {
+    color: red;
+  }
   /* inter-200 - latin */
   @font-face {
   font-family: 'Inter';
@@ -216,11 +218,12 @@
         <div class="col-lg-8 text-center" data-aos="fade">
           <div class="row">
             <div class="col center">
-              <div class="col">
-                <h3 class="h5 my-2" data-aos="fade-left">請輸入您的大名</h3>
-                <input data-aos="fade-left" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
+              <div class="col" data-aos="fade-left">
+                <h3 class="h5 my-2" >請輸入您的大名</h3>
+                <input ≈ type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
+                <warnningText id = "warnningText"></warnningText>
               </div>
-              <h3 class = "h6 my-2" id = "nameWarnning"></h3>
+              <te>
               <br>
               <div class = "col">
               <h3 class="h5 my-2" data-aos="fade-left">請輸入您的地址</h3>
@@ -337,7 +340,7 @@
   var dataJSON = {};
   $("#sendOrder").click(function(e){
     if ($("#name").val() == "")){
-      $("#nameWarnning".val("請輸入"));
+      $("#nameWarnning").text("請輸入"));
       return false;
     }
     dataJSON["name"] = $("#name").val();
