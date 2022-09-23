@@ -5,7 +5,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
 use App\Middlewares\corsMiddleware;
-require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 $app = AppFactory::create();
 $app->addErrorMiddleware(true, true, true);
 
@@ -37,13 +37,13 @@ $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
 $app -> get("/",  function (Request $request, Response $response) {
-    $response -> getBody() -> write(include __DIR__."/backend/blank.php");
+    $response -> getBody() -> write(include "blank.php");
     return $response -> withStatus(200);
 });
 
 $app -> group("/order", function (RouteCollectorProxy $group) {
     $group -> get("/", function (Request $request, Response $response){
-        $response -> getBody() -> write(include __DIR__."./backend/order.php");
+        $response -> getBody() -> write(include "order.php");
         return $response -> withStatus(200);
     });
     $group -> post('/add', 'App\Controllers\OrderController:add');
