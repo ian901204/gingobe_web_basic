@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
     <?php
-        include "head.php";
+        include __DIR__."/head.php";
     ?>
 </head>
 
@@ -14,7 +14,7 @@
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
             <?php
-                include "menu.php";
+                include __DIR__."/menu.php";
             ?>
         </nav>
     </aside>
@@ -24,7 +24,7 @@
         <!-- Header-->
         <header id="header" class="header">
             <?php
-                include "header.php";
+                include __DIR__."/header.php";
             ?>
         </header>
         <!-- /#header -->
