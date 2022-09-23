@@ -334,18 +334,13 @@
  </script>
 <script>
   var dataJSON = {};
-  dataJSON["name"] = $("#name").val();
-  dataJSON["phone"] = $("#phone").val();
-
-  dataJSON["address"] = $("#address").val();
-
-  dataJSON["size"] = $("#size").val();
-
-  dataJSON["amount"] = $("#amount").val();
-
-  dataJSON["seller"] = $("#seller").val();
   $("#sendOrder").click(function(e){
-    console.log(dataJSON["name"]);
+    dataJSON["name"] = $("#name").val();
+    dataJSON["phone"] = $("#phone").val();
+    dataJSON["address"] = $("#address").val();
+    dataJSON["size"] = $("#size").val();
+    dataJSON["amount"] = $("#amount").val();
+    dataJSON["seller"] = $("#seller").val();
     $.ajax({
       url: "https://admin.ian-shen.live/order/add",
       data: JSON.stringify(dataJSON),
