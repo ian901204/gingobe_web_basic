@@ -220,6 +220,7 @@
                 <h3 class="h5 my-2" data-aos="fade-left">請輸入您的大名</h3>
                 <input data-aos="fade-left" type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
               </div>
+              <h3 class = "h6 my-2" id = "nameWarnning"></h3>
               <br>
               <div class = "col">
               <h3 class="h5 my-2" data-aos="fade-left">請輸入您的地址</h3>
@@ -335,6 +336,10 @@
 <script>
   var dataJSON = {};
   $("#sendOrder").click(function(e){
+    if ($("#nameWarnning".val() = "")){
+      $("#nameWarnning".val("請輸入"));
+      return false;
+    }
     dataJSON["name"] = $("#name").val();
     dataJSON["phone"] = $("#phone").val();
     dataJSON["address"] = $("#address").val();
