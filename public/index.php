@@ -336,7 +336,7 @@
 <script>
   var dataJSON = {};
   $("#sendOrder").click(function(e){
-    if ($("#nameWarnning".val() = "")){
+    if ($("#name".val() == "")){
       $("#nameWarnning".val("請輸入"));
       return false;
     }
