@@ -336,7 +336,7 @@
   var dataJSON = {};
   $("#sendOrder").click(function(e){
     if ($("#name").val() == "")){
-      $("#warrningText").text("請輸入"));
+      $("#warrningText").text("請輸入");
       return false;
     }
     dataJSON["name"] = $("#name").val();
