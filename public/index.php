@@ -344,13 +344,13 @@
     dataJSON["size"] = $("#size").val();
     dataJSON["amount"] = $("#amount").val();
     dataJSON["seller"] = $("#seller").val();
-    $.each(dataJSON, function(index, value)){
+    $.each(dataJSON, function(index, value){
       if (value == ""){
       $("#warrningText").text($("#" + index).placeholder() + "資料缺少 請確認完整後在送出！");
       $("#warrningText").css("color", 'red');
       return false;
       }
-    }
+    });
     $.ajax({
       url: "https://admin.ian-shen.live/order/add",
       data: JSON.stringify(dataJSON),
