@@ -249,6 +249,7 @@
               <h3 class="h5 my-2" >請選擇業務員名稱</h3>
               <select  class = "form-control p-3" id = "seller" placeholder = "業務">
                 <option value = 0 selected disabled>請選擇業務員名稱</option>
+                <option value = -1 selected disabled>無</option>
                 <option value = 1>業務一</option>
                 <option value = 2>業務二</option>
               </select>
