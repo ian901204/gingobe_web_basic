@@ -335,7 +335,7 @@
 <script>
   var dataJSON = {};
   dataJSON["name"] = $("#name").val();
-
+  alert($("#name").val());
   dataJSON["phone"] = $("#phone").val();
 
   dataJSON["address"] = $("#address").val();
