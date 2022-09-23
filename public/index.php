@@ -337,6 +337,7 @@
   $("#sendOrder").click(function(e){
     if ($("#name").val() == ""){
       $("#warrningText").text("請輸入");
+      $("#warrningText").css("color", 'red');
       return false;
     }
     dataJSON["name"] = $("#name").val();
