@@ -337,6 +337,7 @@
  </script>
 <script>
   var dataJSON = {};
+  var data_missing = 0;
   $("#sendOrder").click(function(e){
     dataJSON["name"] = $("#name").val();
     dataJSON["phone"] = $("#phone").val();
@@ -344,7 +345,6 @@
     dataJSON["size"] = $("#size").val();
     dataJSON["amount"] = $("#amount").val();
     dataJSON["seller"] = $("#seller").val();
-    var data_missing = 0;
     $.each(dataJSON, function(index, value){
       if (value == ""){
         $("#warrningText").text($("#" + index).attr('placeholder') + "資料缺少 請確認完整後在送出！");
@@ -352,7 +352,7 @@
         data_missing = 1;
       }
     });
-    if (date_missing == 0){
+    if (data_missing == 0){
       $.ajax({
       url: "https://admin.ian-shen.live/order/add",
       data: JSON.stringify(dataJSON),
