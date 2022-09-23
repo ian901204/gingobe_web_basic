@@ -37,7 +37,7 @@ $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
 $app -> get("/",  function (Request $request, Response $response) {
-    $response -> getBody() -> write(include "backend/blank.php");
+    $response -> getBody() -> write(include __DIR__."/backend/blank.php");
     return $response -> withStatus(200);
 });
 
