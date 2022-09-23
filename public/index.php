@@ -219,7 +219,7 @@
           <div class="row">
             <div class="col center">
               <div class="col" data-aos="fade-left">
-                <h3 class="h5 my-2" >請輸入您的大名</h3>
+                <h3 class="h5 my-2" id = "warrningText">請輸入您的大名</h3>
                 <input ≈ type="text" class="form-control p-3" id="name" placeholder="請輸入姓名">
                 <warnningText id = "warnningText"></warnningText>
               </div>
