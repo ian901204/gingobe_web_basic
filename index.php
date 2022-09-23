@@ -36,13 +36,13 @@ $capsule->addConnection($dbSettings);
 $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
-$app -> get("/",  function (ServerRequestInterface $request, ResponseInterface $response) {
+$app -> get("/",  function (Request $request, Response $response) {
     $response -> getBody() -> write(include __DIR__."/backend/blank.php");
     return $response -> withStatus(200);
 });
 
-$app->group("/order", function (RouteCollectorProxy $group) {
-    $group -> get("/list", function (ServerRequestInterface $request, ResponseInterface $response){
+$app -> group("/order", function (RouteCollectorProxy $group) {
+    $group -> get("/", function (ServerRequestInterface $request, ResponseInterface $response){
         $response -> getBody() -> write(include __DIR__."./backend/order.php");
         return $response -> withStatus(200);
     });
