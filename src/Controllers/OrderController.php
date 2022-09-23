@@ -11,12 +11,15 @@
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$order = Order:: create(
 				[
-					"description" => $data["size"],
-					"detail" => $data["seller"],
-					"salesperson_id" => 1,
+					"client_name" => $data["name"],
+					"client_phone" => $data["phone"],
+					"order_address" => $data["address"],
+					"product_size" => $data["size"],
+					"product_amount" => $data["amount"],
+					"seller_id" => $data["seller"]
 				]);
 			$order -> save();
-			$response -> getBody() -> write(json_encode(["Status"=> "Success"]));
+			$response -> getBody() -> write(json_encode(["Status"=> "Success", "id" => $order -> id]));
 			return $response -> withStatus(200);
 		}
 	}
