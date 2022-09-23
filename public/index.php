@@ -335,7 +335,6 @@
 <script>
   var dataJSON = {};
   dataJSON["name"] = $("#name").val();
-  alert($("#name").val());
   dataJSON["phone"] = $("#phone").val();
 
   dataJSON["address"] = $("#address").val();
@@ -346,19 +345,20 @@
 
   dataJSON["seller"] = $("#seller").val();
   $("#sendOrder").click(function(e){
-  $.ajax({
-    url: "https://admin.ian-shen.live/order/add",
-    data: JSON.stringify(dataJSON),
-    type: "POST",
-    dataType: "json",
-    contentType: "application/json;charset=utf-8",
-    success: function(returnData){
-        alert("Success");
-    },
-    error: function(xhr, ajaxOptions, thrownError){
-        alert("failed!");
-    }
-});
+    alert($("#name").val());
+    $.ajax({
+      url: "https://admin.ian-shen.live/order/add",
+      data: JSON.stringify(dataJSON),
+      type: "POST",
+      dataType: "json",
+      contentType: "application/json;charset=utf-8",
+      success: function(returnData){
+          alert("Success");
+      },
+      error: function(xhr, ajaxOptions, thrownError){
+          alert("failed!");
+      }
+    });
   });
   
 </script>
