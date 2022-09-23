@@ -346,6 +346,7 @@
     dataJSON["size"] = $("#size").val();
     dataJSON["amount"] = $("#amount").val();
     dataJSON["seller"] = $("#seller").val();
+    console.log(dataJSON["seller"]);
     $.each(dataJSON, function(index, value){
       if ((value == "") || (value == -1)){
         console.log(index + ":" + value);
