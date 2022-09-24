@@ -37,10 +37,13 @@ $capsule->addConnection($dbSettings);
 $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
-$app -> get("/",  function (Request $request, Response $response) {
+
+$app -> get("/login",  function (Request $request, Response $response) {
     $response -> getBody() -> write(include "login.php");
     return $response -> withStatus(200);
 });
+
+$app -> post("/login", "App\Controllers\AuthControoler:login");
 
 $app -> group("/order", function (RouteCollectorProxy $group) {
     $group -> get("/list", 'App\Controllers\OrderController:list');
