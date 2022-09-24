@@ -43,7 +43,7 @@ $app -> get("/login",  function (Request $request, Response $response) {
     return $response -> withStatus(200);
 });
 
-$app -> post("/login", "App\Controllers\AuthControoler:login");
+$app -> post("/login", "App\Controllers\AuthController:login");
 
 $app -> group("/order", function (RouteCollectorProxy $group) {
     $group -> get("/list", 'App\Controllers\OrderController:list');
