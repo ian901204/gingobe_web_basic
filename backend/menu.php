@@ -10,7 +10,7 @@
             <a href="/seller/list"><i class="menu-icon ti-id-badge"></i>業務列表</a>
         </li>
         <li>
-            <a href="/frontend/"><i class="menu-icon ti-layout"></i>前台管理</a>
+            <a onclick="verify_token()"><i class="menu-icon ti-layout"></i>前台管理</a>
         </li>
     </ul>
 </div><!-- /.navbar-collapse -->
