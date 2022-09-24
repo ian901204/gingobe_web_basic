@@ -5,6 +5,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
 use App\Middlewares\corsMiddleware;
+use App\Models\DB\Order;
 require __DIR__.'/../vendor/autoload.php';
 $app = AppFactory::create();
 $app->addErrorMiddleware(true, true, true);
@@ -43,9 +44,13 @@ $app -> get("/",  function (Request $request, Response $response) {
 
 $app -> group("/order", function (RouteCollectorProxy $group) {
     $group -> get("/list", function (Request $request, Response $response){
+
         $response -> getBody() -> write(include "order.php");
         return $response -> withStatus(200);
     });
+
+    
+
     $group -> post('/add', 'App\Controllers\OrderController:add');
 });
 $app->run();

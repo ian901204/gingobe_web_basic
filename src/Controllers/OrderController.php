@@ -22,5 +22,15 @@
 			$response -> getBody() -> write(json_encode(["Status"=> "Success", "id" => $order -> id]));
 			return $response -> withStatus(200);
 		}
+
+		public function list(ServerRequestInterface $request, ResponseInterface $response){
+			$order = Order::get();
+			$order_data = [];
+			foreach($order as $data){
+				array_push($order_data, ["order_id" => $order_data -> id, "client_name" => $data -> client_name, "product_size" => $data -> product_size, "product_amount" => $data -> product_amount]);
+			}
+			$response -> getBody() -> write(include __DIR__."/backend/order.php");
+			return $response -> withStatus(200);
+		}
 	}
 ?>

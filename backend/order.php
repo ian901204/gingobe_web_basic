@@ -41,11 +41,23 @@
                                             <th>ID</th>
                                             <th>Name</th>
                                             <th>Product Size</th>
-                                            <th>order quantity</th>
+                                            <th>Product Amount</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                            foreach($order_data as $data){
+                                                echo "<tr>";
+                                                echo "<td>".$data["order_id"]."</td>";
+                                                echo "<td> <span class='name'>".$data["client_name"]."</td>";
+                                                echo "<td> <span class='product'>".$data["product_size"]."</td>";
+                                                echo "<td> <span class='count'>".$data["product_amount"]."</td>";
+                                                echo "<td>"."<a href = 'https://admin.ian-shen.live/order/get".$data["order_id"]." class = 'btn btn-success'>顯示</a>";
+                                                echo "<td>"."<a href = 'https://admin.ian-shen.live/order/delete".$data["order_id"]." class = 'btn btn-danger'>刪除</a>";
+                                                echo "</tr>";
+                                            }
+                                        ?>
                                         <tr>
                                             <td> #5469 </td>
                                             <td>  <span class="name">Louis Stanley</span> </td>
