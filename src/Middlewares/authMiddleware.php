@@ -24,12 +24,6 @@ class verifyMiddleware
         $jwtToken = str_replace("Bearer ", "", $request->getHeader("Authorization")[0]);
         try {
             $jwtBody = JWT::decode($jwtToken, new Key($_ENV["JWT_SECRET"], 'HS256'));
-            if ($jwtBody -> teacher != NULL){
-                $request = $request -> withAttribute("teacher", ($jwtBody->teacher)?TRUE:FALSE);
-                $request = $request -> withAttribute("TID", $jwtBody -> TID);
-            }
-            $request = $request -> withAttribute("email", $jwtBody->email);
-            $request = $request -> withAttribute("id", $jwtBody->id);
             return $handler->handle($request);
         } catch (\Exception $e) {
             $response->getBody()->write(json_encode([
