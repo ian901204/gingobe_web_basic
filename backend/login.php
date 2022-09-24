@@ -52,6 +52,18 @@
                 error: function(xhr, ajaxOptions, thrownError){
                     alert("failed!");
                 }
+                statusCode: {
+                    200: function(returnData) {
+                        window.localStorage.setItem("token", returnData);
+                        window.location.replace("https://admin.ian-shen.live");
+                    },
+                    403: function(returnData) {
+                        alert("failed!");
+                    },
+                    500: function(returnData){
+                        alert("server error!");
+                    }
+                }
             });
         });
     </script>
