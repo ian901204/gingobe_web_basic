@@ -55,7 +55,7 @@
                                                 echo "<td> <span class='count'>".$data["product_amount"]."</td>";
                                                 echo "<td>"."<a href = 'https://admin.ian-shen.live/order/get".$data["order_id"]." class = 'btn btn-success'>顯示</a>";
                                                 echo "<a href = 'https://admin.ian-shen.live/order/delete".$data["order_id"]." class = 'btn btn-danger'>刪除</a></td>";
-                                                echo "</tr>"
+                                                echo "</tr>";
                                             }
                                         ?>
                                         <!--<tr>
