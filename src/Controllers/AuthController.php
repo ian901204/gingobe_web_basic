@@ -9,8 +9,8 @@
 	{
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
-			$order = admin::where([["account", "=", $data["account"]], ["password", "=", $data["password"]]])->get();
-            if ($order != null){
+			$user = admin::where([["account", "=", $data["account"]], ["password", "=", $data["password"]]])->get();
+            if ($user != null){
                 $jwt_data = [
                     "id"=>$user->getKey(),
                     "name"=>$user->name,
