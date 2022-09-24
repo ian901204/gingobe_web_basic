@@ -37,6 +37,11 @@ $capsule->addConnection($dbSettings);
 $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
+$app -> get("/",  function (Request $request, Response $response) {
+    $response -> getBody() -> write(include "login.php");
+    return $response -> withStatus(200);
+});
+
 
 $app -> get("/login",  function (Request $request, Response $response) {
     $response -> getBody() -> write(include "login.php");
