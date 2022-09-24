@@ -47,6 +47,6 @@ $app -> group("/order", function (RouteCollectorProxy $group) {
     
     $group -> post('/add', 'App\Controllers\OrderController:add');
 
-    $group -> get("/delete/[id]", 'App\Controllers\OrderController:delete');
+    $group -> get("/delete/{id}", 'App\Controllers\OrderController:delete');
 });
 $app->run();
