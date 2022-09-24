@@ -11,7 +11,9 @@
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$user = admin::where([["account", "=", $data["account"]], ["password", "=", $data["password"]]])->get(["id", "name"]);
             if ($user != null){
-                $jwt_data = $user + [
+                $jwt_data = [
+                    "id"=>$user->id,
+                    "name"=>$user->name,
                     "iat" => time(),
                     "exp" => time()+86400
                 ];
