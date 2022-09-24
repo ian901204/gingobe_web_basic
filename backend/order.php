@@ -53,8 +53,10 @@
                                                 echo "<td> <span class='name'>".$data["client_name"]."</td>";
                                                 echo "<td> <span class='product'>".$data["product_size"]."</td>";
                                                 echo "<td> <span class='count'>".$data["product_amount"]."</td>";
-                                                echo "<td>"."<a href = 'https://admin.ian-shen.live/order/get/" . $data["order_id"]. "' class = 'btn btn-success'>顯示</a>";
-                                                echo "<a href = 'https://admin.ian-shen.live/order/delete/" . $data["order_id"] . "' class = 'btn btn-danger'>刪除</a></td>";
+                                                echo "<td>";
+                                                echo "<a href = 'https://admin.ian-shen.live/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
+                                                echo "<a href = 'https://admin.ian-shen.live/order/delete/" . $data["id"] . "' class = 'btn btn-danger'>刪除</a>";
+                                                echo "</td>";
                                                 echo "</tr>";
                                             }
                                         ?>
