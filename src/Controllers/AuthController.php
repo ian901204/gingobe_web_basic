@@ -25,5 +25,28 @@
                 return $response -> withStatus(403);
             }
 		}
+
+        public function verify(ServerRequestInterface $request, ResponseInterface $response){
+			if(!isset($request->getHeader("Authorization")[0])){
+                $response->getBody()->write(json_encode([
+                    "message" => "No token provided!"
+                ]));
+                return $response
+                    ->withHeader('content-type', 'application/json')
+                    ->withStatus(403);
+            }
+            $jwtToken = str_replace("Bearer ", "", $request->getHeader("Authorization")[0]);
+            try {
+                $jwtBody = JWT::decode($jwtToken, new Key($_ENV["JWT_SECRET"], 'HS256'));
+                return $handler->handle($request);
+            } catch (\Exception $e) {
+                $response->getBody()->write(json_encode([
+                    "message" => "Token is invalid!",
+                ]));
+                return $response
+                    ->withHeader('content-type', 'application/json')
+                    ->withStatus(400);
+            }
+		}
 	}
 ?>

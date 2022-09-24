@@ -42,6 +42,7 @@ $app -> get("/",  function (Request $request, Response $response) {
     return $response -> withStatus(200);
 });
 
+$app -> post("/verify", "App\Controllers\AuthController:verify");
 
 $app -> get("/login",  function (Request $request, Response $response) {
     $response -> getBody() -> write(include "login.php");
@@ -49,6 +50,7 @@ $app -> get("/login",  function (Request $request, Response $response) {
 });
 
 $app -> post("/login", "App\Controllers\AuthController:login");
+
 
 $app -> group("/order", function (RouteCollectorProxy $group) {
     $group -> get("/list", 'App\Controllers\OrderController:list');
