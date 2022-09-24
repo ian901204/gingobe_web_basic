@@ -5,7 +5,7 @@
 	use Psr\Http\Message\ServerRequestInterface;
 	use App\Models\DB\admin;
 
-	class OrderController
+	class AuthController
 	{
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
