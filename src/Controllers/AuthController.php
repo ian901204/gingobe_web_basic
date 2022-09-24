@@ -1,6 +1,8 @@
 <?php
 	namespace App\Controllers;
-
+    
+    use Firebase\JWT\JWT;
+    use Firebase\JWT\Key;
 	use Psr\Http\Message\ResponseInterface;
 	use Psr\Http\Message\ServerRequestInterface;
 	use App\Models\DB\admin;
