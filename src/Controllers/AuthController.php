@@ -1,6 +1,6 @@
 <?php
 	namespace App\Controllers;
-    
+
     use Firebase\JWT\JWT;
     use Firebase\JWT\Key;
 	use Psr\Http\Message\ResponseInterface;
@@ -18,10 +18,6 @@
                     "exp" => time()+86400
                 ];
                 $jwtToken = JWT::encode($jwt_data, $_ENV["JWT_SECRET"], 'HS256');
-                if ($user -> password_reset != NULL){
-                    $user -> password_reset = NULL;
-                    $user -> save();
-                }
                 $response -> getBody() -> write(json_encode(["Status"=> $jwtToken]));
                 return $response -> withStatus(200);
             }else{
