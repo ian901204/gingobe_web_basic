@@ -49,7 +49,7 @@
                                         <?php
                                             foreach($order_data as $data){
                                                 echo "<tr>";
-                                                echo "<td>".$data["id"]."</td>";
+                                                echo "<td>#".$data["id"]."</td>";
                                                 echo "<td> <span class='name'>".$data["client_name"]."</td>";
                                                 echo "<td> <span class='product'>".$data["product_size"]."</td>";
                                                 echo "<td> <span class='count'>".$data["product_amount"]."</td>";
