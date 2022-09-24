@@ -55,7 +55,7 @@
                                                 echo "<td> <span class='count'>".$data["product_amount"]."</td>";
                                                 echo "<td>";
                                                 echo "<a href = 'https://admin.ian-shen.live/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
-                                                echo "<a href = 'https://admin.ian-shen.live/order/delete/" . $data["id"] . "' class = 'btn btn-danger'>刪除</a>";
+                                                echo "<a id = 'delete' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
@@ -76,6 +76,25 @@
     <!-- /#right-panel -->
 
     <!-- Scripts -->
+    <script>
+        $("#delete").click(function(){
+            if(confirm("確認要刪除訂單?")){
+                $.ajax({
+                    url: "https://admin.ian-shen.live/order/delete" + $(this).val(),
+                    data: JSON.stringify(dataJSON),
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    success: function(returnData){
+                        alert("Success");
+                    },
+                    error: function(xhr, ajaxOptions, thrownError){
+                        alert("failed!");
+                    }
+                });
+            }
+        });
+    </script>
     <?php
         include "buttom_script.php";
     ?>
