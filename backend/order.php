@@ -58,7 +58,7 @@
                                                 echo "</tr>";
                                             }
                                         ?>
-                                        <tr>
+                                        <!--<tr>
                                             <td> #5469 </td>
                                             <td>  <span class="name">Louis Stanley</span> </td>
                                             <td> <span class="product">iMax</span> </td>
@@ -66,7 +66,7 @@
                                             <td>
                                                     <a href = "#" class = "btn btn-success">顯示</a>
                                                     <a href = "#" class = "btn btn-danger">刪除</a>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                     </tbody>
                                 </table>
