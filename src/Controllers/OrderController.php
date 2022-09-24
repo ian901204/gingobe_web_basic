@@ -32,5 +32,15 @@
 			$response -> getBody() -> write(include __DIR__."/../../backend/order.php");
 			return $response -> withStatus(200);
 		}
+
+		public function delete(ServerRequestInterface $request, ResponseInterface $response, array $args){
+			$order_data = Order::where("id", "=", $args["id"])->get();
+			#$order_data = [];
+			#foreach($order as $data){
+			#	array_push($order_data, ["order_id" => $order_data -> getKey(), "client_name" => $data -> client_name, "product_size" => $data -> product_size, "product_amount" => $data -> product_amount]);
+			#}
+			$response -> getBody() -> write(include __DIR__."/../../backend/order.php");
+			return $response -> withStatus(200);
+		}
 	}
 ?>
