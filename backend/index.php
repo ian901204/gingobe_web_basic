@@ -38,7 +38,7 @@ $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
 $app -> get("/",  function (Request $request, Response $response) {
-    $response -> getBody() -> write(include "login.php");
+    $response -> getBody() -> write(include "blank.php");
     return $response -> withStatus(200);
 });
 
