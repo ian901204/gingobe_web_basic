@@ -7,6 +7,9 @@
     <?php
         include __DIR__."/head.php";
     ?>
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/lib/chosen/chosen.min.css">
 </head>
 
 <body>
