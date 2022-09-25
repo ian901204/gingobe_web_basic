@@ -21,7 +21,7 @@
                 $response -> getBody() -> write(json_encode(["token"=> $jwtToken]));
                 return $response ->withHeader('content-type', 'application/json') -> withStatus(200);
             }else{
-                $response -> getBody() -> write(json_encode(["token"=> "failed!"]));
+                $response -> getBody() -> write(json_encode(["Status"=> "failed!"]));
                 return $response->withHeader('content-type', 'application/json') -> withStatus(403);
             }
 		}
