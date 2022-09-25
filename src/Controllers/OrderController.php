@@ -38,6 +38,7 @@
 				#}
 				$order_data -> delete();
 			}catch(\Exception $e){
+				echo $e;
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
