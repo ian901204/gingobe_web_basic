@@ -39,6 +39,7 @@
         $("#login").click(function(){
             dataJSON["account"] = $("#account").val();
             dataJSON["password"] = $("#password").val();
+            console.log("press");
             $.ajax({
                 url: "https://admin.ian-shen.live/login",
                 data: JSON.stringify(dataJSON),
