@@ -74,20 +74,18 @@
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">業務員</label>
-                            <div class="input-group">
-                                <select data-placeholder="Choose a Country..." class="standardSelect" tabindex="1">
-                                    <option value="-1" label="default"></option>
-                                    <?php
-                                        foreach($seller_data as $data){
-                                            if ($data["id"] == $order_data["seller_id"]){
-                                                echo "<option value = '".$data["id"]."'selected>".$data["name"]."</option>";
-                                            }else{
-                                                echo "<option value = '".$data["id"]."'>".$data["name"]."</option>";
-                                            }
+                            <select data-placeholder="Choose a Country..." class="standardSelect" tabindex="1">
+                                <option value="-1" label="default"></option>
+                                <?php
+                                    foreach($seller_data as $data){
+                                        if ($data["id"] == $order_data["seller_id"]){
+                                            echo "<option value = '".$data["id"]."'selected>".$data["name"]."</option>";
+                                        }else{
+                                            echo "<option value = '".$data["id"]."'>".$data["name"]."</option>";
                                         }
-                                    ?>
-                                </select>
-                            </div>
+                                    }
+                                ?>
+                            </select>
                         </div>
                     </div>
                 </div>
