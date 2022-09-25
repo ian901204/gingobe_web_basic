@@ -30,40 +30,63 @@
         <!-- /#header -->
         <!-- Content -->
         <div class="content">
-        <div class="card">
-                            <div class="card-header">
-                                <strong class="card-title">訂單列表</strong>
+            <div class="col-xs-6 col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>訂單資訊</strong>
+                    </div>
+                    <div class="card-body card-block">
+                        <div class="form-group">
+                            <label class=" form-control-label">Date input</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                <input class="form-control">
                             </div>
-                            <div class="table-stats order-table ov-h">
-                                <table class="table ">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Product Size</th>
-                                            <th>Product Amount</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                            foreach($order_data as $data){
-                                                echo "<tr>";
-                                                echo "<td>#".$data["id"]."</td>";
-                                                echo "<td> <span class='name'>".$data["client_name"]."</td>";
-                                                echo "<td> <span class='product'>".$data["product_size"]."</td>";
-                                                echo "<td> <span class='count'>".$data["product_amount"]."</td>";
-                                                echo "<td>";
-                                                echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
-                                                echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
-                                                echo "</td>";
-                                                echo "</tr>";
-                                            }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div> <!-- /.table-stats -->
+                            <small class="form-text text-muted">ex. 99/99/9999</small>
                         </div>
+                        <div class="form-group">
+                            <label class=" form-control-label">Phone input</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                <input class="form-control">
+                            </div>
+                            <small class="form-text text-muted">ex. (999) 999-9999</small>
+                        </div>
+                        <div class="form-group">
+                            <label class=" form-control-label">Taxpayer Identification Numbers</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-usd"></i></div>
+                                <input class="form-control">
+                            </div>
+                            <small class="form-text text-muted">ex. 99-9999999</small>
+                        </div>
+                        <div class="form-group">
+                            <label class=" form-control-label">Social Security Number</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                                <input class="form-control">
+                            </div>
+                            <small class="form-text text-muted">ex. 999-99-9999</small>
+                        </div>
+                        <div class="form-group">
+                            <label class=" form-control-label">Eye Script</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+                                <input class="form-control">
+                            </div>
+                            <small class="form-text text-muted">ex. ~9.99 ~9.99 999</small>
+                        </div>
+                        <div class="form-group">
+                            <label class=" form-control-label">Credit Card Number</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                <input class="form-control">
+                            </div>
+                            <small class="form-text text-muted">ex. 9999 9999 9999 9999</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.content -->
         <div class="clearfix"></div>
