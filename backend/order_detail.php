@@ -36,14 +36,11 @@
                         <strong>訂單資訊</strong>
                     </div>
                     <div class="card-body card-block">
-                    <?php 
-                        echo $order_data;
-                        ?>
                         <div class="form-group">
                             <label class=" form-control-label">客戶姓名</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                <input id = "name" class="form-control" value = "<?php echo $order_data ?>">
+                                <input id = "name" class="form-control" value = "<?php echo $order_data -> client_name ?>">
                             </div>
                         </div>
                         

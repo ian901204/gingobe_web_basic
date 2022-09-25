@@ -31,9 +31,8 @@
 
 		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
-				$order_data = Order::where("id", "=", $args["id"]) -> get(["id", "client_name", "client_phone", "order_address", "product_size", "product_amount", "seller_id", "description"]);
-				$seller_data = sellers::where("id", "=", $args["id"]) -> get(["id", "name"]);
-				echo $order_data;
+				$order_data = Order::where("id", "=", $args["id"]) -> first(["id", "client_name", "client_phone", "order_address", "product_size", "product_amount", "seller_id", "description"]);
+				$seller_data = sellers::where("id", "=", $args["id"]) -> first(["id", "name"]);
 			}catch(\Exception $e){
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
