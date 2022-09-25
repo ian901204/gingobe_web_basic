@@ -30,6 +30,7 @@
 		}
 
 		public function delete(ServerRequestInterface $request, ResponseInterface $response, array $args){
+			print_r($args);
 			try{
 				$order_data = Order::where("id", "=", $args["id"])->find(1);
 				#$order_data = [];
