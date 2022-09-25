@@ -31,12 +31,11 @@
 
 		public function delete(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
-				$order_data = Order::where("id", "=", $args["id"])->get();
+				$order_data = Order::where("id", "=", $args["id"])->delete();
 				#$order_data = [];
 				#foreach($order as $data){
 				#	array_push($order_data, ["order_id" => $order_data -> getKey(), "client_name" => $data -> client_name, "product_size" => $data -> product_size, "product_amount" => $data -> product_amount]);
 				#}
-				$order_data -> delete();
 			}catch(\Exception $e){
 				echo $e;
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
