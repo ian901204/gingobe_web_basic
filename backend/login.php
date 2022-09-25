@@ -47,7 +47,7 @@
                 contentType: "application/json;charset=utf-8",
                 success: function(returnData){
                     alert(JSON.stringify(returnData));
-                    window.localStorage.setItem("token", returnData);
+                    window.localStorage.setItem("token", JSON.stringify(returnData)["Status"]);
                     window.location.replace("https://admin.ian-shen.live");
                 },
                 error: function(xhr, ajaxOptions, thrownError){
