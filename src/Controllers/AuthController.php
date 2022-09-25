@@ -18,11 +18,11 @@
                     "exp" => time()+86400
                 ];
                 $jwtToken = JWT::encode($jwt_data, $_ENV["JWT_SECRET"], 'HS256');
-                $response -> getBody() -> write(json_encode(["Status"=> $jwtToken]));
-                return $response -> withStatus(200);
+                $response -> getBody() -> write(json_encode(["token"=> $jwtToken]));
+                return $response ->withHeader('content-type', 'application/json') -> withStatus(200);
             }else{
-                $response -> getBody() -> write(json_encode(["Status"=> "failed!"]));
-                return $response -> withStatus(403);
+                $response -> getBody() -> write(json_encode(["token"=> "failed!"]));
+                return $response->withHeader('content-type', 'application/json') -> withStatus(403);
             }
 		}
 
