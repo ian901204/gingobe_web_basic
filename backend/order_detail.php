@@ -37,52 +37,85 @@
                     </div>
                     <div class="card-body card-block">
                         <div class="form-group">
-                            <label class=" form-control-label">Date input</label>
+                            <label class=" form-control-label">客戶姓名</label>
                             <div class="input-group">
-                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                <input class="form-control">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input id = "name" class="form-control" value = "<?php echo $order_data["client_name"]; ?>">
                             </div>
-                            <small class="form-text text-muted">ex. 99/99/9999</small>
                         </div>
                         <div class="form-group">
-                            <label class=" form-control-label">Phone input</label>
+                            <label class=" form-control-label">客戶電話</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                <input class="form-control">
+                                <input id = "phone" class="form-control" value = "<?php echo $order_data["client_phone"]; ?>">
                             </div>
-                            <small class="form-text text-muted">ex. (999) 999-9999</small>
                         </div>
                         <div class="form-group">
-                            <label class=" form-control-label">Taxpayer Identification Numbers</label>
+                            <label class=" form-control-label">訂單地址</label>
                             <div class="input-group">
-                                <div class="input-group-addon"><i class="fa fa-usd"></i></div>
-                                <input class="form-control">
+                                <div class="input-group-addon"><i class="fa fa-truck"></i></div>
+                                <input id = "address" class="form-control" value = "<?php echo $order_data["order_address"] ?>">
                             </div>
-                            <small class="form-text text-muted">ex. 99-9999999</small>
                         </div>
                         <div class="form-group">
-                            <label class=" form-control-label">Social Security Number</label>
+                            <label class=" form-control-label">產品尺寸</label>
                             <div class="input-group">
-                                <div class="input-group-addon"><i class="fa fa-male"></i></div>
-                                <input class="form-control">
+                                <div class="input-group-addon"><i class="fa fa-beer"></i></div>
+                                <input id = "size" class="form-control" value = "<?php echo $order_data["product_size"] ?>">
                             </div>
-                            <small class="form-text text-muted">ex. 999-99-9999</small>
                         </div>
                         <div class="form-group">
-                            <label class=" form-control-label">Eye Script</label>
+                            <label class=" form-control-label">產品數量(箱)</label>
                             <div class="input-group">
-                                <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
-                                <input class="form-control">
+                                <div class="input-group-addon"><i class="fa fa-archive"></i></div>
+                                <input id = "amount" class="form-control" value = "<?php echo $order_data["product_amount"] ?>">
                             </div>
-                            <small class="form-text text-muted">ex. ~9.99 ~9.99 999</small>
                         </div>
                         <div class="form-group">
-                            <label class=" form-control-label">Credit Card Number</label>
+                            <label class=" form-control-label">業務員</label>
                             <div class="input-group">
-                                <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                <input class="form-control">
+                                <div class="card-body">
+                                    <select data-placeholder="Choose a Country..." class="standardSelect" tabindex="-1" style="display: none;">
+                                    <option value="-1" label="default"></option>
+                                        <?php
+                                            foreach($seller_data as $data){
+                                                echo "<option value = '".$data["id"]."'>".$data["name"]."</option>";
+                                            }
+                                        ?>
+                                    </select>
+                                    <div class="chosen-container chosen-container-single" title="" style="width: 100%;">
+                                        <a class="chosen-single chosen-default">
+                                            <span>請選擇業務員</span>
+                                            <div><b></b></div>
+                                        </a>
+                                        <div class="chosen-drop">
+                                            <div class="chosen-search">
+                                                <input class="chosen-search-input" type="text" autocomplete="off" tabindex="1">
+                                            </div>
+                                            <ul class="chosen-results">
+                                                <?php
+                                                    $data_index = 1;
+                                                    foreach($seller_data as $data){
+                                                        echo "<li class='active-result' data-option-array-index=".$data_index." style=''>".$data["name"]."</li>";
+                                                        $data_index += 1;
+                                                    }
+                                                ?>
+                                                <!--<li class="active-result" data-option-array-index="1" style="">United States</li>
+                                                <li class="active-result" data-option-array-index="2" style="">United Kingdom</li>
+                                                <li class="active-result" data-option-array-index="3" style="">Afghanistan</li>
+                                                <li class="active-result" data-option-array-index="4" style="">Aland Islands</li>
+                                                <li class="active-result" data-option-array-index="5" style="">Albania</li>
+                                                <li class="active-result" data-option-array-index="6" style="">Algeria</li>
+                                                <li class="active-result" data-option-array-index="7" style="">American Samoa</li>
+                                                <li class="active-result" data-option-array-index="8" style="">Andorra</li>
+                                                <li class="active-result" data-option-array-index="9" style="">Angola</li>
+                                                <li class="active-result" data-option-array-index="10" style="">Anguilla</li>
+                                                <li class="active-result" data-option-array-index="11" style="">Antarctica</li>-->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <small class="form-text text-muted">ex. 9999 9999 9999 9999</small>
                         </div>
                     </div>
                 </div>

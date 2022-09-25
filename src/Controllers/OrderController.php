@@ -29,15 +29,22 @@
 			return $response -> withStatus(200);
 		}
 
+		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
+			try{
+				$order_data = Order::where("id", "=", $args["id"]) -> get(["id", "client_name", "client_phone", "order_address", "product_size", "product_amount", "seller_id", "description"]);
+				$seller_data = sellers::where("id", "=", $args["id"]) -> get(["id", "name"]);
+			}catch(\Exception $e){
+				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
+				return $response -> withStatus(400);
+			}
+			$response -> getBody() -> write(include __DIR__."/../../backend/order_detail.php");
+			return $response -> withStatus(200);
+		}
+
 		public function delete(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
 				$order_data = Order::where("id", "=", $args["id"])->delete();
-				#$order_data = [];
-				#foreach($order as $data){
-				#	array_push($order_data, ["order_id" => $order_data -> getKey(), "client_name" => $data -> client_name, "product_size" => $data -> product_size, "product_amount" => $data -> product_amount]);
-				#}
 			}catch(\Exception $e){
-				echo $e;
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
