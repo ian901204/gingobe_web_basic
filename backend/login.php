@@ -40,7 +40,6 @@
         $("#login").click(function(){
             dataJSON["account"] = $("#account").val();
             dataJSON["password"] = $("#password").val();
-            console.log("press");
             $.ajax({
                 url: $(location).attr('origin') + "/login",
                 data: JSON.stringify(dataJSON),
@@ -48,8 +47,7 @@
                 dataType: "json",
                 contentType: "application/json;charset=utf-8",
                 success: function(returnData){
-                    var data = JSON.stringify(returnData);
-                    alert(date["token"]);
+                    alert(JSON.stringify(returnData));
                     window.localStorage.setItem("token", date);
                     window.location.replace($(location).attr('origin'));
                 },
