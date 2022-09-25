@@ -78,11 +78,10 @@
     <!-- Scripts -->
     <script>
         function delete_order(val){
-            if(confirm("確認要刪除訂單?")){
+            if(confirm("確認要刪除訂單編號 #" + val + " ?")){
                 $.ajax({
-                    url: "https://admin.ian-shen.live/order/delete" + $(this).val(),
-                    data: JSON.stringify(dataJSON),
-                    type: "GET",
+                    url:  $(location).attr('origin') +  "/order/delete" + $(this).val(),
+                    type: "post",
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
                     success: function(returnData){
