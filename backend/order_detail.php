@@ -79,7 +79,7 @@
                                     <option value="-1" label="default"></option>
                                     <?php
                                         foreach($seller_data as $data){
-                                            if ($data["id"] == $order_data["seller_ed"]){
+                                            if ($data["id"] == $order_data["seller_id"]){
                                                 echo "<option value = '".$data["id"]."'selected>".$data["name"]."</option>";
                                             }else{
                                                 echo "<option value = '".$data["id"]."'>".$data["name"]."</option>";
