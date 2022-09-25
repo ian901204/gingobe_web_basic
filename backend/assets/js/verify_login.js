@@ -4,7 +4,18 @@ document.getElementsByTagName('head')[0].appendChild(script);
 var pathname = $(location).attr('pathname');
 
 if (pathname != "/login"){
-    verify_token($(location).attr('href'));
+    $.ajax({
+        url: $(location).attr('origin') + "/verify",
+        headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        error: function(xhr, ajaxOptions, thrownError){
+            localStorage.removeItem('token');
+            alert("請重新登入!" + pathname);
+            window.location.replace($(location).attr('origin') + "/login");
+        }
+    });
 }
 function verify_token(url){
     console.log(localStorage.getItem('token'));
