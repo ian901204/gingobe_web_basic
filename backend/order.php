@@ -55,7 +55,7 @@
                                                 echo "<td> <span class='count'>".$data["product_amount"]."</td>";
                                                 echo "<td>";
                                                 echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
-                                                echo "<a onclick = 'delete(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
+                                                echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
@@ -77,7 +77,7 @@
 
     <!-- Scripts -->
     <script>
-        function delete(val){
+        function delete_order(val){
             if(confirm("確認要刪除訂單?")){
                 $.ajax({
                     url: "https://admin.ian-shen.live/order/delete" + $(this).val(),
