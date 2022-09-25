@@ -75,45 +75,14 @@
                         <div class="form-group">
                             <label class=" form-control-label">業務員</label>
                             <div class="input-group">
-                                    <select data-placeholder="Choose a Country..." class="standardSelect" tabindex="-1" style="display: none;">
+                                <select data-placeholder="Choose a Country..." class="standardSelect" tabindex="1">
                                     <option value="-1" label="default"></option>
-                                        <?php
-                                            foreach($seller_data as $data){
-                                                echo "<option value = '".$data["id"]."'>".$data["name"]."</option>";
-                                            }
-                                        ?>
-                                    </select>
-                                    <div class="chosen-container chosen-container-single" title="" style="width: 100%;">
-                                        <a class="chosen-single chosen-default">
-                                            <span>請選擇業務員</span>
-                                            <div><b></b></div>
-                                        </a>
-                                        <div class="chosen-drop">
-                                            <div class="chosen-search">
-                                                <input class="chosen-search-input" type="text" autocomplete="off" tabindex="1">
-                                            </div>
-                                            <ul class="chosen-results">
-                                                <?php
-                                                    $data_index = 1;
-                                                    foreach($seller_data as $data){
-                                                        echo "<li class='active-result' data-option-array-index=".$data_index." style=''>".$data["name"]."</li>";
-                                                        $data_index += 1;
-                                                    }
-                                                ?>
-                                                <!--<li class="active-result" data-option-array-index="1" style="">United States</li>
-                                                <li class="active-result" data-option-array-index="2" style="">United Kingdom</li>
-                                                <li class="active-result" data-option-array-index="3" style="">Afghanistan</li>
-                                                <li class="active-result" data-option-array-index="4" style="">Aland Islands</li>
-                                                <li class="active-result" data-option-array-index="5" style="">Albania</li>
-                                                <li class="active-result" data-option-array-index="6" style="">Algeria</li>
-                                                <li class="active-result" data-option-array-index="7" style="">American Samoa</li>
-                                                <li class="active-result" data-option-array-index="8" style="">Andorra</li>
-                                                <li class="active-result" data-option-array-index="9" style="">Angola</li>
-                                                <li class="active-result" data-option-array-index="10" style="">Anguilla</li>
-                                                <li class="active-result" data-option-array-index="11" style="">Antarctica</li>-->
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <?php
+                                        foreach($seller_data as $data){
+                                            echo "<option value = '".$data["id"]."'>".$data["name"]."</option>";
+                                        }
+                                    ?>
+                                </select>
                             </div>
                         </div>
                     </div>
