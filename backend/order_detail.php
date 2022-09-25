@@ -30,7 +30,7 @@
         <!-- /#header -->
         <!-- Content -->
         <div class="content">
-            <div class="col-xs-6 col-sm-6">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">
                         <strong>訂單資訊</strong>
