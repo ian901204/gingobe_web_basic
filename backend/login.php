@@ -36,6 +36,7 @@
     </div>
     <script>
         var dataJSON = {};
+        var data;
         $("#login").click(function(){
             dataJSON["account"] = $("#account").val();
             dataJSON["password"] = $("#password").val();
@@ -49,7 +50,7 @@
                 success: function(returnData){
                     var data = JSON.stringify(returnData);
                     alert(date["token"]);
-                    window.localStorage.setItem("token", JSON.stringify(returnData)["Status"]);
+                    window.localStorage.setItem("token", date);
                     window.location.replace("https://admin.ian-shen.live");
                 },
                 error: function(xhr, ajaxOptions, thrownError){
