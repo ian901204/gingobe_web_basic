@@ -80,7 +80,7 @@
         function delete_order(order_id){
             if(confirm("確認要刪除訂單編號 #" + order_id + " ?")){
                 $.ajax({
-                    url:  $(location).attr('origin') +  "/order/delete" + $(this).val(),
+                    url:  $(location).attr('origin') +  "/order/delete/" + order_id,
                     type: "post",
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
