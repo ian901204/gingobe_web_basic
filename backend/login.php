@@ -47,7 +47,7 @@
                 dataType: "json",
                 contentType: "application/json;charset=utf-8",
                 success: function(returnData){
-                    alert(JSON.stringify(returnData));
+                    alert(JSON.parse(JSON.stringify(returnData))["token"]);
                     window.localStorage.setItem("token", data);
                     window.location.replace($(location).attr('origin'));
                 },
