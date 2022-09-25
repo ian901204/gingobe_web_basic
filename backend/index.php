@@ -5,7 +5,8 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
 use App\Middlewares\corsMiddleware;
-use App\Models\DB\Order;
+use App\Middlewares\authMiddleware;
+
 require __DIR__.'/../vendor/autoload.php';
 $app = AppFactory::create();
 $app->addErrorMiddleware(true, true, true);
@@ -58,5 +59,5 @@ $app -> group("/order", function (RouteCollectorProxy $group) {
     $group -> post('/add', 'App\Controllers\OrderController:add');
 
     $group -> get("/delete/{id}", 'App\Controllers\OrderController:delete');
-});
+})->add(authMiddleware::class);
 $app->run();
