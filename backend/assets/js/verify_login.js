@@ -1,8 +1,8 @@
 var script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
 document.getElementsByTagName('head')[0].appendChild(script);
-var url      = window.location.href;  
-if (url != "https://admin.ian-shen.live/login"){
+var pathname = $(location).attr('pathname');;  
+if (pathname != "/login"){
     $.ajax({
         url: "https://admin.ian-shen.live/verify",
         headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
