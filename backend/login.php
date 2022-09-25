@@ -42,7 +42,7 @@
             dataJSON["password"] = $("#password").val();
             console.log("press");
             $.ajax({
-                url: "https://admin.ian-shen.live/login",
+                url: $(location).attr('origin') + "/login",
                 data: JSON.stringify(dataJSON),
                 type: "POST",
                 dataType: "json",
@@ -51,7 +51,7 @@
                     var data = JSON.stringify(returnData);
                     alert(date["token"]);
                     window.localStorage.setItem("token", date);
-                    window.location.replace("https://admin.ian-shen.live");
+                    window.location.replace($(location).attr('origin'));
                 },
                 error: function(xhr, ajaxOptions, thrownError){
                     alert("failed!");
