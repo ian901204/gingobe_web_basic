@@ -59,5 +59,5 @@ $app -> group("/order", function (RouteCollectorProxy $group) {
     $group -> post('/add', 'App\Controllers\OrderController:add');
 
     $group -> get("/delete/{id}", 'App\Controllers\OrderController:delete');
-})->add(authMiddleware::class);
+});
 $app->run();
