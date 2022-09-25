@@ -4,7 +4,7 @@
             <a href="/"><i class="menu-icon ti-image"></i>總攬</a>
         </li>
         <li>
-            <a href="/list"><i class="menu-icon ti-shopping-cart-full"></i>訂單列表</a>
+            <a href="/order/list"><i class="menu-icon ti-shopping-cart-full"></i>訂單列表</a>
         </li>
         <li>
             <a href="/seller/list"><i class="menu-icon ti-id-badge"></i>業務列表</a>
