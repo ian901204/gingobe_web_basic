@@ -86,7 +86,8 @@
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
                     success: function(returnData){
-                        alert("Success");
+                        alert("刪除成功");
+                        location.reload(true);
                     },
                     error: function(xhr, ajaxOptions, thrownError){
                         alert("failed!");
