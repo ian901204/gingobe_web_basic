@@ -82,6 +82,7 @@
                 $.ajax({
                     url:  $(location).attr('origin') +  "/order/delete/" + order_id,
                     type: "post",
+                    headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
                     success: function(returnData){
