@@ -38,7 +38,9 @@
             $jwtToken = str_replace("Bearer ", "", $request->getHeader("Authorization")[0]);
             try {
                 $jwtBody = JWT::decode($jwtToken, new Key($_ENV["JWT_SECRET"], 'HS256'));
-                return $handler->handle($request);
+                $response -> getBody() -> write(json_encode(["Status" => "Success"]));
+                return $response ->withHeader('content-type', 'application/json')
+                ->withStatus(200);
             } catch (\Exception $e) {
                 $response->getBody()->write(json_encode([
                     "message" => "Token is invalid!",
