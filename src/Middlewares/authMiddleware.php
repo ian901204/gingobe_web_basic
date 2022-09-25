@@ -8,7 +8,7 @@ use Psr\Http\Message\ServerRequestInterface ;
 use Psr\Http\Server\RequestHandlerInterface ;
 use Slim\Psr7\Response;
 
-class verifyMiddleware
+class authMiddleware
 {
     public function __invoke(ServerRequestInterface $request, RequestHandlerInterface $handler)
     {
