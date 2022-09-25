@@ -14,7 +14,7 @@ if (pathname != "/login"){
         },
         error: function(xhr, ajaxOptions, thrownError){
             localStorage.removeItem('token');
-            alert("請重新登入!");
+            alert("請重新登入!" + pathname);
             window.location.replace("https://admin.ian-shen.live/login");
         }
     });
