@@ -25,5 +25,5 @@
     <script>
         $('link[href="/assets/css/style.css"]').attr('href',$(location).attr('origin') + '/assets/css/style.css');
         $('link[href="/assets/css/cs-skin-elastic.css"]').attr('href',$(location).attr('origin') + '/assets/css/cs-skin-elastic.css');
-        $('script[src="/assets/js/verify_login.js"]').attr('href',$(location).attr('origin') + '/assets/js/verify_login.js');
+        $('script[src="/assets/js/verify_login.js"]').attr('src',$(location).attr('origin') + '/assets/js/verify_login.js');
     </script> 
