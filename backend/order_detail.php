@@ -36,6 +36,9 @@
                         <strong>訂單資訊</strong>
                     </div>
                     <div class="card-body card-block">
+                    <?php 
+                        echo $order_data;
+                        ?>
                         <div class="form-group">
                             <label class=" form-control-label">客戶姓名</label>
                             <div class="input-group">
@@ -43,6 +46,7 @@
                                 <input id = "name" class="form-control" value = "<?php echo $order_data ?>">
                             </div>
                         </div>
+                        
                         <div class="form-group">
                             <label class=" form-control-label">客戶電話</label>
                             <div class="input-group">
@@ -74,7 +78,6 @@
                         <div class="form-group">
                             <label class=" form-control-label">業務員</label>
                             <div class="input-group">
-                                <div class="card-body">
                                     <select data-placeholder="Choose a Country..." class="standardSelect" tabindex="-1" style="display: none;">
                                     <option value="-1" label="default"></option>
                                         <?php
@@ -114,7 +117,6 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>
