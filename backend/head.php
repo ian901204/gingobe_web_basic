@@ -3,7 +3,6 @@
     <title>金勾杯後台</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="https://admin.ian-shen.live/" target="_self">
     <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
     <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
 
@@ -22,8 +21,3 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/verify_login.js"></script>
-    <script>
-        $('link[href="/assets/css/style.css"]').attr('href',$(location).attr('origin') + '/assets/css/style.css');
-        $('link[href="/assets/css/cs-skin-elastic.css"]').attr('href',$(location).attr('origin') + '/assets/css/cs-skin-elastic.css');
-        $('script[src="/assets/js/verify_login.js"]').attr('src',$(location).attr('origin') + '/assets/js/verify_login.js');
-    </script> 

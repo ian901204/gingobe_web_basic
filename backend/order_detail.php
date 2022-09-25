@@ -106,6 +106,7 @@
     <!-- Scripts -->
     
     <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
     jQuery(document).ready(function() {
         jQuery(".standardSelect").chosen({
