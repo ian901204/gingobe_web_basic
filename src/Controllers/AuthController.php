@@ -14,6 +14,8 @@
 			$user = admin::where([["account", "=", $data["account"]], ["password", "=", $data["password"]]])->get(["id", "name"]);
             if ($user != null){
                 $jwt_data = [
+                    "id" => $user[0]["id"],
+                    "name" => $user[0]["name"],
                     "iat" => time(),
                     "exp" => time()+86400
                 ];
