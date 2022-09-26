@@ -21,8 +21,4 @@
     <script>
         $('script[src="assets/js/main.js"]').attr('src',$(location).attr('origin') + '/assets/js/main.js');
         $('script[src="assets/js/lib/chosen/chosen.jquery.min.js"]').attr('src',$(location).attr('origin') + '/assets/js/lib/chosen/chosen.jquery.min.js');
-        function logout(){
-            window.localStorage.setItem("token", JSON.parse(JSON.stringify(returnData))["token"]);
-            window.location.replace($(location).attr('origin'));
-        }
     </script>

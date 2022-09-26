@@ -17,6 +17,10 @@ if (pathname != "/login"){
         }
     });
 }
+function logout(){
+    window.localStorage.setItem("token", JSON.parse(JSON.stringify(returnData))["token"]);
+    window.location.replace($(location).attr('origin'));
+}
 function verify_token(url){
     console.log(localStorage.getItem('token'));
     $.ajax({
