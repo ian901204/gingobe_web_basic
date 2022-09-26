@@ -76,6 +76,7 @@
                             <label class=" form-control-label">業務員</label>
                             <select data-placeholder="Choose a Country..." class="standardSelect" tabindex="1">
                                 <option value="-1" label="default"></option>
+                                <option value="0">無</option>
                                 <?php
                                     foreach($seller_data as $data){
                                         if ($data["id"] == $order_data["seller_id"]){
