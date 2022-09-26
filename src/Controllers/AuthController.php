@@ -17,7 +17,7 @@
                     "id" => $user[0]["id"],
                     "name" => $user[0]["name"],
                     "iat" => time(),
-                    "exp" => time()+86400
+                    "exp" => time()+300
                 ];
                 $jwtToken = JWT::encode($jwt_data, $_ENV["JWT_SECRET"], 'HS256');
                 $response -> getBody() -> write(json_encode(["token"=> $jwtToken]));
