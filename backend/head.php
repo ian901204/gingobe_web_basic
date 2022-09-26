@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/lib/chosen/chosen.min.css">
     <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
 
@@ -25,5 +26,6 @@
     <script>
         $('link[href="assets/css/style.css"]').attr('href',$(location).attr('origin') + '/assets/css/style.css');
         $('link[href="assets/css/cs-skin-elastic.css"]').attr('href',$(location).attr('origin') + '/assets/css/cs-skin-elastic.css');
+        $('link[href="assets/css/lib/chosen/chosen.min.css"]').attr('href',$(location).attr('origin') + '/assets/css/lib/chosen/chosen.min.css');
         $('script[src="assets/js/verify_login.js"]').attr('src',$(location).attr('origin') + '/assets/js/verify_login.js');
     </script> 

@@ -17,8 +17,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
-    <script src="assets/js/init/fullcalendar-init.js"></script>
+    <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
     <script>
         $('script[src="assets/js/main.js"]').attr('src',$(location).attr('origin') + '/assets/js/main.js');
-        $('script[src="assets/js/init/fullcalendar-init.js"]').attr('src',$(location).attr('origin') + '/assets/js/init/fullcalendar-init.js');
+        $('script[src="assets/js/lib/chosen/chosen.jquery.min.js"]').attr('src',$(location).attr('origin') + '/assets/js/lib/chosen/chosen.jquery.min.js');
     </script>

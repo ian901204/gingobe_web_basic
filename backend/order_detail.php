@@ -102,8 +102,9 @@
     <!-- /#right-panel -->
 
     <!-- Scripts -->
-    
-    <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
+    <?php
+        include "buttom_script.php";
+    ?>
     <script>
     jQuery(document).ready(function() {
         jQuery(".standardSelect").chosen({
@@ -113,9 +114,5 @@
         });
     });
     </script>
-
-    <?php
-        include "buttom_script.php";
-    ?>
 </body>
 </html>
