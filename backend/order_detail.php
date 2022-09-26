@@ -7,8 +7,6 @@
     <?php
         include __DIR__."/head.php";
     ?>
-    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="assets/css/lib/chosen/chosen.min.css">
 </head>
 
 <body>
@@ -106,7 +104,6 @@
     <!-- Scripts -->
     
     <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
     jQuery(document).ready(function() {
         jQuery(".standardSelect").chosen({
