@@ -51,7 +51,7 @@
                     window.location.replace($(location).attr('origin'));
                 },
                 error: function(xhr, ajaxOptions, thrownError){
-                    alert("failed!");
+                    alert(xhr.responseText);
                 }
             });
         });
