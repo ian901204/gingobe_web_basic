@@ -70,9 +70,12 @@
     <div class="row">
       <div class="col-lg-7 py-vh-3 position-relative" data-aos="fade-right">
         <h1 class="display-1 fw-bold mt-5">環保塑膠杯</h1>
-        <p class="lead"> 
+        <!--<p class="lead"> 
           本產品一體成形、手提專利飲料杯，BADP生物可降解塑料、PP材質食品級原料可回收再生能源，愛護地球、守護海洋從不拿塑膠袋開始！
       高透明、清晰，可以清楚看見杯子內的配料，可承受拉力為8公斤！！拿著飲料怎麼甩怎麼跑都不會斷，且耐高溫120°C，讓客人不用因為釋出塑化劑而喝下肚，有SGS材質及拉力檢驗證明，少拿一個塑膠袋，省錢又環保的好選擇！！
+        </p>-->
+        <p class = "lead">
+        此手提杯獲得台灣.中國.日本.越南.泰國.歐美...等等多國發明專利，本工廠採用德國最先進品質最佳的制杯機器制杯並非坊間二流機器製造，亦不是中國進口的塑料杯。
         </p>
         <a href="#order" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">訂購</a>
       </div>
@@ -96,65 +99,55 @@
   </div>
 </div>
 
-<div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
+<!--<div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
   <div class="container">
-      
-<div class="row d-flex justify-content-between align-items-center">
-  <div class="col-lg-6">
-  <div class="row gx-5 d-flex">
-    <div class="col-md-11">
-      <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right" style="background-image: url(img/people15.jpg);--bs-aspect-ratio: 50%;">
+    <div class="row d-flex justify-content-between align-items-center">
+      <div class="col-lg-6">
+        <div class="row gx-5 d-flex">
+          <div class="col-md-11">
+            <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right" style="background-image: url(img/people15.jpg);--bs-aspect-ratio: 50%;"></div>
+          </div>
+          <div class="col-md-5 offset-md-1">
+            <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/interior42.jpg);"></div>
+          </div>
+          <div class="col-md-6">
+            <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/people4.jpg);--bs-aspect-ratio: 150%;"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-5 offset-md-1">
-      <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/interior42.jpg);">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/people4.jpg);--bs-aspect-ratio: 150%;">
+      <div class="col-lg-4">
+      <h3 class="py-5 border-top border-dark" data-aos="fade-left">We did some interesting stuff in our field of work. For example we collect a lot of these free photos and use them on our website.</h3>
+      <p data-aos="fade-left" data-aos-delay="200">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a href="#" class="link-fancy link-dark" data-aos="fade-left" data-aos-delay="400">Learn more</a></p>
       </div>
     </div>
   </div>
-</div>
-<div class="col-lg-4">
-  <h3 class="py-5 border-top border-dark" data-aos="fade-left">We did some interesting stuff in our field of work. For example we collect a lot of these free photos and use them on our website.</h3>
-  <p data-aos="fade-left" data-aos-delay="200">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-  </p>
-  <p>
-    <a href="#" class="link-fancy link-dark" data-aos="fade-left" data-aos-delay="400">Learn more
-    </a>
-  </p>
-</div>
-</div>
+</div>-->
 
-  </div>
-</div>
-
-<div class="py-vh-5 w-100 overflow-hidden" id="numbers">
+<!--<div class="py-vh-5 w-100 overflow-hidden" id="numbers">
   <div class="container">
-      <div class="row d-flex justify-content-between align-items-center">
-  <div class="col-lg-5">
-    <h3 class="py-5 border-top border-dark" data-aos="fade-right">Our magic numbers</h3>
-</div>
-<div class="col-lg-6">
-  <div class="row">
-    <div class="col-12">
-    <h2 class="display-6 mb-5" data-aos="fade-down">There are some important numbers for us. They are just numbers without any meaning, but we just love them.</h2>
-    </div>
-    <div class="col-lg-6" data-aos="fade-up">
-      <div class="display-1 fw-bold py-4">42%</div>
-      <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-    </div>
-    <div class="col-lg-6" data-aos="fade-up">
-      <div class="display-1 fw-bold py-4">+300</div>
-      <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    <div class="row d-flex justify-content-between align-items-center">
+      <div class="col-lg-5">
+        <h3 class="py-5 border-top border-dark" data-aos="fade-right">Our magic numbers</h3>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="display-6 mb-5" data-aos="fade-down">There are some important numbers for us. They are just numbers without any meaning, but we just love them.</h2>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="display-1 fw-bold py-4">42%</div>
+            <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="display-1 fw-bold py-4">+300</div>
+            <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
-
-  </div>
-</div>
+</div>-->
 
 <div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
   <div class="container-fluid">
@@ -268,7 +261,7 @@
 </div>
 
 
-<!--<div class="small py-vh-3 w-100 overflow-hidden">
+<div class="small py-vh-3 w-100 overflow-hidden">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-lg-4 border-end" data-aos="fade-up">
@@ -314,7 +307,7 @@
       </div>
     </div>
   </div>
-</div>-->
+</div>
 </main>
 
 <footer>
