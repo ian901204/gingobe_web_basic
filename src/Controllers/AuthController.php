@@ -11,8 +11,8 @@
 	{
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
-			$user = admin::where([["account", "=", $data["account"]],["password", "=", $data["password"]]])->find(["id", "name"]);
-            if ($user[0] != null){
+			$user = admin::where("account", "=", $data["account"])->first(["id", "name"]);
+            if ($user != null and $user -> check_password($data["password"])){
                 $jwt_data = [
                     "id" => $user[0]["id"],
                     "name" => $user[0]["name"],
