@@ -11,7 +11,7 @@
 	{
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
-			$user = admin::where([["account", "=", $data["account"]], ["password", "=", $data["password"]]])->get(["id", "name"]);
+			$user = admin::where([["account", "=", $data["account"]], ["password", "=", $data["password"]]])->find(["id", "name"]);
             if ($user != null){
                 $jwt_data = [
                     "id" => $user[0]["id"],
@@ -19,7 +19,6 @@
                     "iat" => time(),
                     "exp" => time()+300
                 ];
-                echo $jwt_data;
                 $jwtToken = JWT::encode($jwt_data, $_ENV["JWT_SECRET"], 'HS256');
                 $response -> getBody() -> write(json_encode(["token"=> $jwtToken]));
                 return $response ->withHeader('content-type', 'application/json') -> withStatus(200);
