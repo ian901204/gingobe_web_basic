@@ -21,6 +21,7 @@
                     "iat" => time(),
                     "exp" => time()+300
                 ];
+                echo $jwt_data;
                 $jwtToken = JWT::encode($jwt_data, $_ENV["JWT_SECRET"], 'HS256');
                 $response -> getBody() -> write(json_encode(["token"=> $jwtToken]));
                 return $response ->withHeader('content-type', 'application/json') -> withStatus(200);
