@@ -13,7 +13,8 @@
 			$data = json_decode($request -> getbody() -> getcontents(),true);
             print_r($data);
 			$user = admin::where("account", "=", $data["account"])-> where("password", "=", $data["password"])->find(["id", "name"]);
-            if ($user != null){
+            print_r($user);
+            if ($user[0] != null){
                 $jwt_data = [
                     "id" => $user[0]["id"],
                     "name" => $user[0]["name"],
