@@ -12,7 +12,7 @@
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
             print_r($data);
-			$user = admin::where(["account", "=", $data["account"]])-> where("password", "=", $data["password"])->find(["id", "name"]);
+			$user = admin::where("account", "=", $data["account"])-> where("password", "=", $data["password"])->find(["id", "name"]);
             if ($user != null){
                 $jwt_data = [
                     "id" => $user[0]["id"],
