@@ -16,8 +16,8 @@
             echo ($user -> check_password($data["password"]));
             if ($user != null and !$user -> check_password($data["password"])){
                 $jwt_data = [
-                    "id" => $user[0]["id"],
-                    "name" => $user[0]["name"],
+                    "id" => $user->id,
+                    "name" => $user->name,
                     "iat" => time(),
                     "exp" => time()+300
                 ];
