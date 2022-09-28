@@ -7,5 +7,12 @@ class admin extends Model{
     protected $primaryKey = 'id';
     protected $fillable = ["name", "account", "password"];
     public $timestamps = false;
+    public function check_password($password){
+        if ($this -> password == $password){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
 }
 ?>
