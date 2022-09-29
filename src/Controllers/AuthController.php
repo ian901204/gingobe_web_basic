@@ -12,18 +12,23 @@
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$user = admin::where("account", "=", $data["account"])->first(["id", "name"]);
-            if ($user -> id != null and $user -> check_password($data["password"])){
-                $jwt_data = [
-                    "id" => $user->id,
-                    "name" => $user->name,
-                    "iat" => time(),
-                    "exp" => time()+300
-                ];
-                $jwtToken = JWT::encode($jwt_data, $_ENV["JWT_SECRET"], 'HS256');
-                $response -> getBody() -> write(json_encode(["token"=> $jwtToken]));
-                return $response ->withHeader('content-type', 'application/json') -> withStatus(200);
+            if ($user -> id != null){
+                if ($user -> check_password($data["password"])){
+                    $jwt_data = [
+                        "id" => $user->id,
+                        "name" => $user->name,
+                        "iat" => time(),
+                        "exp" => time()+300
+                    ];
+                    $jwtToken = JWT::encode($jwt_data, $_ENV["JWT_SECRET"], 'HS256');
+                    $response -> getBody() -> write(json_encode(["token"=> $jwtToken]));
+                    return $response ->withHeader('content-type', 'application/json') -> withStatus(200);
+                }else{
+                    $response -> getBody() -> write(json_encode(["Status"=> "Password incorrect!"]));
+                    return $response -> withHeader("content-type", "applocation/json") -> withStatus(403);
+                }
             }else{
-                $response -> getBody() -> write(json_encode(["Status"=> "failed!"]));
+                $response -> getBody() -> write(json_encode(["Status"=> "account not found!"]));
                 return $response->withHeader('content-type', 'application/json') -> withStatus(403);
             }
 		}
