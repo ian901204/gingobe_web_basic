@@ -13,8 +13,7 @@
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$user = admin::where("account", "=", $data["account"])->first(["id", "name"]);
             if ($user -> id != null){
-                print_r($user->password);
-                echo (!$user -> check_password($data["password"]))?"test":"untest";
+                print_r($user);
                 if ($user -> check_password($data["password"])){
                     $jwt_data = [
                         "id" => $user->id,
