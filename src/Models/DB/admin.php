@@ -6,7 +6,7 @@ class admin extends Model{
     protected $table = 'admins';
     protected $primaryKey = 'id';
     protected $guarded = ["id", "password"];
-    protected $hidden = ["id", "password"];
+    protected $hidden = ["id"];
     public $timestamps = false;
     public function check_password($password): bool{
         return $this -> password == $password;
