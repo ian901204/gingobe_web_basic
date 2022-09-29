@@ -9,11 +9,7 @@ class admin extends Model{
     protected $hidden = ["id", "password"];
     public $timestamps = false;
     public function check_password($password): bool{
-        if ($this -> password == $password){
-            return TRUE;
-        }else{
-            return FALSE;
-        }
+        return $this -> password == $password;
     }
 }
 ?>
