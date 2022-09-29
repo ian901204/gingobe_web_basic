@@ -8,7 +8,7 @@ class admin extends Model{
     protected $guarded = ["id", "password"];
     protected $hidden = ["id", "password"];
     public $timestamps = false;
-    public function check_password($password){
+    public function check_password($password): bool{
         if ($this -> password == $password){
             return TRUE;
         }else{
