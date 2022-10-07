@@ -96,10 +96,6 @@
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
-                    success: function(returnData){
-                        alert("刪除成功");
-                        location.reload(true);
-                    },
                     error: function(xhr, ajaxOptions, thrownError){
                         alert("failed!");
                     }
