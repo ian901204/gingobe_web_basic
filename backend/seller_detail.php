@@ -85,11 +85,8 @@
         $("#action_button").attr("onclick","edit_finish()");
     }
     function edit_finish(){
-        $("#name").prop('disabled', true);
-        $("#phone").prop('disabled', true);
-        $("#action_button").html("編輯");
-        $("#action_button").attr("onclick","edit()");
-        $.ajax({
+        try{
+            $.ajax({
                     url:  $(location).attr('origin') +  "/seller/edit/" + $("#seller_id").val(),
                     type: "post",
                     data: JSON.stringify({ "name": $("#name").val(), "phone": $("#phone").val() }),
@@ -104,6 +101,15 @@
                         alert("編輯失敗，請重新整理網頁後在進行編輯！");
                     }
                 });
+        }catch(err){
+            alert("編輯失敗！");
+            location.refresh();
+            return;
+        }
+        $("#name").prop('disabled', true);
+        $("#phone").prop('disabled', true);
+        $("#action_button").html("編輯");
+        $("#action_button").attr("onclick","edit()");
     }
 </script>
 </html>
