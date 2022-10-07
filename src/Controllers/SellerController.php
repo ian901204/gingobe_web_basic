@@ -31,6 +31,7 @@
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
+            print_r($seller_data);
 			include __DIR__."/../../backend/seller_detail.php";
 			return $response -> withStatus(200);
 		}
