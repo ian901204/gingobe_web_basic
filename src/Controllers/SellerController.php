@@ -8,7 +8,7 @@
 	{
 		public function add(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
-			$seller = sellers:: create(
+			$seller = sellers::create(
 				[
                     "name" => $data["name"],
                     "phone" => $data["phone"]
@@ -19,7 +19,7 @@
 		}
 
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
-			$seller_data = seller::get(["id", "name", "phone"]);
+			$seller_data = sellers::get(["id", "name", "phone"]);
 			include __DIR__."/../../backend/seller.php";
 			return $response -> withStatus(200);
 		}
