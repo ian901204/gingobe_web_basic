@@ -37,6 +37,13 @@
                     </div>
                     <div class="card-body card-block">
                         <div class="form-group">
+                            <label class=" form-control-label">業務編號</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input id = "seller_id" class="form-control" value = "<?php echo $seller_data -> id ?>" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label class=" form-control-label">業務姓名</label>
                             <button class="btn btn-success btn-sm" onclick="edit()" id = "action_button">編輯</button>
                             <div class="input-group">
@@ -44,7 +51,6 @@
                                 <input id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>" disabled>
                             </div>
                         </div>
-                        
                         <div class="form-group">
                             <label class=" form-control-label">業務電話</label>
                             <div class="input-group">
@@ -84,7 +90,7 @@
         $("#action_button").html("編輯");
         $("#action_button").attr("onclick","edit()");
         $.ajax({
-                    url:  $(location).attr('origin') +  "/seller/edit/" + seller_id,
+                    url:  $(location).attr('origin') +  "/seller/edit/" + $("#seller_id").val(),
                     type: "post",
                     data: JSON.stringify({ "name": $("#name").val(), "phone": $("#phone").val() }),
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
