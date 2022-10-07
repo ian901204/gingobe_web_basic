@@ -38,7 +38,7 @@
                     <div class="card-body card-block">
                         <div class="form-group">
                             <label class=" form-control-label">業務姓名</label>
-                            <button class="btn btn-success btn-sm" onclick="edit()">編輯</button>
+                            <button class="btn btn-success btn-sm" onclick="edit()" id = "action_button">編輯</button>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
                                 <input id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>" disabled>
@@ -75,6 +75,8 @@
     function edit(){
         $("#name").prop('disabled', false);
         $("#phone").prop('disabled', false);
+        $("#action_button").html("完成");
+        $("#action_button").attr("onclick","edit_finish()");
     }
 </script>
 </html>
