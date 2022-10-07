@@ -26,7 +26,7 @@
 
 		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
-				$seller_data = sellers::get(["id", "name", "phone"]);
+				$seller_data = sellers::where("id", "=", $args["id"])->get(["id", "name", "phone"]);
 			}catch(\Exception $e){
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
