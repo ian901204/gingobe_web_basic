@@ -38,6 +38,7 @@
                     <div class="card-body card-block">
                         <div class="form-group">
                             <label class=" form-control-label">業務姓名</label>
+                            <button class="btn btn-success btn-sm" onclick="edit()">編輯</button>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
                                 <input id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>">
