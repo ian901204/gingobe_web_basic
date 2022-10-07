@@ -36,6 +36,7 @@
                         <strong>訂單資訊</strong>
                     </div>
                     <div class="card-body card-block">
+                    <button class="btn btn-success btn-sm" onclick="edit()" id = "action_button">編輯</button>
                         <div class="form-group">
                             <label class=" form-control-label">業務編號</label>
                             <div class="input-group">
@@ -45,7 +46,6 @@
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">業務姓名</label>
-                            <button class="btn btn-success btn-sm" onclick="edit()" id = "action_button">編輯</button>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
                                 <input id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>" disabled>
