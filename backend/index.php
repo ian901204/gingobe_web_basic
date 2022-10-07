@@ -65,7 +65,7 @@ $app -> group("/seller", function (RouteCollectorProxy $group){
 $app -> group("/order", function (RouteCollectorProxy $group) {
     $group -> get("/list", 'App\Controllers\OrderController:list');
     
-    $group -> post('/add', 'App\Controllers\OrderController:add') -> add(authMiddleware::class);
+    $group -> post('/add', 'App\Controllers\OrderController:add');
 
     $group -> get('/get/{id}', 'App\Controllers\OrderController:get');
 
