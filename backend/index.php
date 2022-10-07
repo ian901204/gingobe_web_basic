@@ -39,14 +39,14 @@ $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
 $app -> get("/",  function (Request $request, Response $response) {
-    $response -> getBody() -> write(include "blank.php");
+    include "blank.php";
     return $response -> withStatus(200);
 });
 
 $app -> post("/verify", "App\Controllers\AuthController:verify");
 
 $app -> get("/login",  function (Request $request, Response $response) {
-    $response -> getBody() -> write(include "login.php");
+    include "login.php";
     return $response -> withStatus(200);
 });
 
