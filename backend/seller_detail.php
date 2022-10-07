@@ -48,14 +48,14 @@
                             <label class=" form-control-label">業務姓名</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                <input id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>" disabled>
+                                <input type = "text" id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">業務電話</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                <input id = "phone" class="form-control" value = "<?php echo $seller_data -> phone; ?>" disabled>
+                                <input type = "text" id = "phone" class="form-control" value = "<?php echo $seller_data -> phone; ?>" disabled>
                             </div>
                         </div>
                     </div>
