@@ -12,7 +12,12 @@ if (pathname != "/login"){
         contentType: "application/json;charset=utf-8",
         error: function(xhr, ajaxOptions, thrownError){
             localStorage.removeItem('token');
-            alert("請重新登入!" + JSON.parse(xhr.responseText)["Status"]);
+            var status = JSON.parse(xhr.responseText)["Status"];
+            if (status == "Token is invalid!"){
+                alert("認證已過期，請重新登入！");
+            }else{
+                alert("認證遺失，請重新登入！");
+            }
             window.location.replace($(location).attr('origin') + "/login");
         }
     });
