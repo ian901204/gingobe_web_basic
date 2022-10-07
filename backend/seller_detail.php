@@ -96,8 +96,11 @@
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
+                    success: function(data){
+                        alert("編輯成功！");
+                    }
                     error: function(xhr, ajaxOptions, thrownError){
-                        alert("failed!");
+                        alert("編輯失敗，請重新整理網頁後在進行編輯！");
                     }
                 });
     }

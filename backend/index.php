@@ -54,8 +54,11 @@ $app -> post("/login", "App\Controllers\AuthController:login");
 
 $app -> group("/seller", function (RouteCollectorProxy $group){
     $group -> get("/list", "App\Controllers\SellerController:list");
+
     $group -> get("/get/{id}", "App\Controllers\SellerController:get");
+    
     $group -> post("/edit/{id}", "App\Controllers\SellerController:edit");
+    
     $group -> post("/delete/{id}", "App\Controllers\SellerController:delete");
 });
 
