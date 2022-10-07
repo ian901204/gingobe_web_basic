@@ -43,6 +43,7 @@
                 $seller_data -> phone = $data["phone"];
                 $seller_data -> save();
 			}catch(\Exception $e){
+                echo $e;
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
