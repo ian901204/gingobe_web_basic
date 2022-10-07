@@ -36,7 +36,7 @@
         public function verify(ServerRequestInterface $request, ResponseInterface $response){
 			if(!isset($request->getHeader("Authorization")[0])){
                 $response->getBody()->write(json_encode([
-                    "message" => "No token provided!"
+                    "Status" => "No token provided!"
                 ]));
                 return $response
                     ->withHeader('content-type', 'application/json')
@@ -50,7 +50,7 @@
                 ->withStatus(200);
             } catch (\Exception $e) {
                 $response->getBody()->write(json_encode([
-                    "message" => "Token is invalid!",
+                    "Status" => "Token is invalid!",
                 ]));
                 return $response
                     ->withHeader('content-type', 'application/json')
