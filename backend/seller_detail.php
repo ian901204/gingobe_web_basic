@@ -41,7 +41,7 @@
                             <button class="btn btn-success btn-sm" onclick="edit()">編輯</button>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                <input id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>">
+                                <input id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>" disabled>
                             </div>
                         </div>
                         
@@ -49,7 +49,7 @@
                             <label class=" form-control-label">業務電話</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                <input id = "phone" class="form-control" value = "<?php echo $seller_data -> phone; ?>">
+                                <input id = "phone" class="form-control" value = "<?php echo $seller_data -> phone; ?>" disabled>
                             </div>
                         </div>
                     </div>
@@ -71,4 +71,10 @@
         include "buttom_script.php";
     ?>
 </body>
+<script>
+    function edit(){
+        $("#name").prop('disabled', false);
+        $("#phone").prop('disabled', false);
+    }
+</script>
 </html>
