@@ -47,6 +47,7 @@
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
+            $response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 			return $response -> withStatus(200);
 		}
 
