@@ -4,7 +4,7 @@
 	use Psr\Http\Message\ResponseInterface;
 	use Psr\Http\Message\ServerRequestInterface;
 	use App\Models\DB\sellers;
-	class OrderController
+	class SellerController
 	{
 		public function add(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
