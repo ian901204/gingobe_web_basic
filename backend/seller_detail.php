@@ -37,6 +37,7 @@
                     </div>
                     <div class="card-body card-block">
                     <button class="btn btn-success btn-sm" onclick="edit()" id = "action_button">編輯</button>
+                    <button class="btn btn-danger btn-sm" onclick="delete()" id = "action_button">刪除</button>
                         <div class="form-group">
                             <label class=" form-control-label">業務編號</label>
                             <div class="input-group">
@@ -78,6 +79,18 @@
     ?>
 </body>
 <script>
+    function delete(){
+        $.ajax({
+            url:  $(location).attr('origin') +  "/seller/delete/" + $("#seller_id").val(),
+            type: "post",
+            headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            error: function(xhr, ajaxOptions, thrownError){
+                alert("編輯失敗，請重新整理網頁後在進行編輯！");
+            }
+        });
+    }
     function edit(){
         $("#name").prop('disabled', false);
         $("#phone").prop('disabled', false);
