@@ -36,7 +36,6 @@
     </div>
     <script>
         var dataJSON = {};
-        var data;
         $("#login").click(function(){
             dataJSON["account"] = $("#account").val();
             dataJSON["password"] = $("#password").val();
