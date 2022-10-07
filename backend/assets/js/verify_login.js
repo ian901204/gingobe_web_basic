@@ -12,7 +12,7 @@ if (pathname != "/login"){
         contentType: "application/json;charset=utf-8",
         error: function(xhr, ajaxOptions, thrownError){
             localStorage.removeItem('token');
-            alert("請重新登入!" + JSON.parse(xhr.responseText));
+            alert("請重新登入!" + JSON.parse(xhr.responseText)["Status"]);
             window.location.replace($(location).attr('origin') + "/login");
         }
     });
