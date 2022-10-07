@@ -97,7 +97,6 @@
                         alert("編輯成功！");
                     },
                     error: function(xhr, ajaxOptions, thrownError){
-                        console.log(JSON.parse(xhr.responseText)["Status"]);
                         alert("編輯失敗，請重新整理網頁後在進行編輯！");
                     }
                 });
