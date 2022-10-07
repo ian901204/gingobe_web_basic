@@ -78,5 +78,26 @@
         $("#action_button").html("完成");
         $("#action_button").attr("onclick","edit_finish()");
     }
+    function edit_finish(){
+        $("#name").prop('disabled', true);
+        $("#phone").prop('disabled', true);
+        $("#action_button").html("編輯");
+        $("#action_button").attr("onclick","edit()");
+        $.ajax({
+                    url:  $(location).attr('origin') +  "/seller/edit/" + seller_id,
+                    type: "post",
+                    data: JSON.stringify({ "name": $("#name").val(), "phone": $("#phone").val() }),
+                    headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    success: function(returnData){
+                        alert("刪除成功");
+                        location.reload(true);
+                    },
+                    error: function(xhr, ajaxOptions, thrownError){
+                        alert("failed!");
+                    }
+                });
+    }
 </script>
 </html>
