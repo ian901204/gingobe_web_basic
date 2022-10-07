@@ -52,8 +52,8 @@
                                                 echo "<td> <span class='name'>".$data["name"]."</td>";
                                                 echo "<td> <span class='product'>".$data["phone"]."</td>";
                                                 echo "<td>";
-                                                echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
-                                                echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
+                                                echo "<a href = '/seller/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
+                                                echo "<a onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
@@ -75,10 +75,10 @@
 
     <!-- Scripts -->
     <script>
-        function delete_order(order_id){
-            if(confirm("確認要刪除訂單編號 #" + order_id + " ?")){
+        function delete_seller(seller_id){
+            if(confirm("確認要刪除業務編號 #" + seller_id + " ?")){
                 $.ajax({
-                    url:  $(location).attr('origin') +  "/order/delete/" + order_id,
+                    url:  $(location).attr('origin') +  "/seller/delete/" + seller_id,
                     type: "post",
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",

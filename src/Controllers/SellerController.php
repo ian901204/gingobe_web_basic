@@ -37,7 +37,7 @@
 
 		public function delete(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
-				$order_data = Order::where("id", "=", $args["id"])->delete();
+				$order_data = sellers::where("id", "=", $args["id"])->delete();
 			}catch(\Exception $e){
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
