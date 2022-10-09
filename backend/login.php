@@ -47,7 +47,7 @@
                 contentType: "application/json;charset=utf-8",
                 success: function(returnData){
                     window.localStorage.setItem("token", JSON.parse(JSON.stringify(returnData))["token"]);
-                    window.location.replace($(location).attr('origin'));
+                    //window.location.replace($(location).attr('origin'));
                 },
                 error: function(xhr, ajaxOptions, thrownError){
                     alert(xhr.responseText);
