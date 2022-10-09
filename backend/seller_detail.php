@@ -37,7 +37,7 @@
                     </div>
                     <div class="card-body card-block">
                     <button class="btn btn-success btn-sm" onclick="edit()" id = "action_button">編輯</button>
-                    <button class="btn btn-danger btn-sm" onclick="delete()" id = "action_button">刪除</button>
+                    <button class="btn btn-danger btn-sm" onclick="delete_seller()" id = "action_button">刪除</button>
                         <div class="form-group">
                             <label class=" form-control-label">業務編號</label>
                             <div class="input-group">
@@ -79,7 +79,7 @@
     ?>
 </body>
 <script>
-    function delete(){
+    function delete_seller(){
         $.ajax({
             url:  $(location).attr('origin') +  "/seller/delete/" + $("#seller_id").val(),
             type: "post",
