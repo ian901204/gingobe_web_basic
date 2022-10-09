@@ -88,6 +88,7 @@
             contentType: "application/json;charset=utf-8",
             success: function(data){
                 alert("刪除成功！");
+                window.location.replace($(location).attr("origin")+"/seller/list");
             },
             error: function(xhr, ajaxOptions, thrownError){
                 alert("編輯失敗，請重新整理網頁後在進行編輯！");
