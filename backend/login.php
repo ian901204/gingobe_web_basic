@@ -28,7 +28,7 @@
                             <label>Password</label>
                             <input id = "password" type="password" class="form-control" placeholder="Password">
                         </div>
-                        <button id = "login" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+                        <button onclick = "login()" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
                     </form>
                 </div>
             </div>
@@ -36,7 +36,7 @@
     </div>
     <script>
         var dataJSON = {};
-        $("#login").click(function(){
+        function login(){
             dataJSON["account"] = $("#account").val();
             dataJSON["password"] = $("#password").val();
             $.ajax({
@@ -53,7 +53,7 @@
                     alert(xhr.responseText);
                 }
             });
-        });
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
