@@ -74,8 +74,7 @@
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">業務員</label>
-                            <div class="col col-md-3"><label for="select" class=" form-control-label">Select</label></div>
-                                <div class="col-12 col-md-9">
+                                <div class="col-12">
                                     <select name="select" id="select" class="form-control">
                                         <option value="0">Please select</option>
                                         <?php
