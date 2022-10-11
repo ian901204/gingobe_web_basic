@@ -75,6 +75,7 @@
                         <div class="form-group">
                             <label class=" form-control-label">業務員</label>
                                 <div class="col-12">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
                                     <select name="select" id="select" class="form-control">
                                         <option value="0">Please select</option>
                                         <?php
