@@ -74,19 +74,22 @@
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">業務員</label>
-                            <select data-placeholder="Choose a Country..." class="standardSelect" tabindex="1">
-                                <option value="-1" label="default"></option>
-                                <option value="0">無</option>
-                                <?php
-                                    foreach($seller_data as $data){
-                                        if ($data["id"] == $order_data["seller_id"]){
-                                            echo "<option value = '".$data["id"]."'selected>".$data["name"]."</option>";
-                                        }else{
-                                            echo "<option value = '".$data["id"]."'>".$data["name"]."</option>";
-                                        }
-                                    }
-                                ?>
-                            </select>
+                            <div class="col col-md-3"><label for="select" class=" form-control-label">Select</label></div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" id="select" class="form-control">
+                                        <option value="0">Please select</option>
+                                        <?php
+                                            foreach($seller_data as $data){
+                                                if ($data["id"] == $order_data["seller_id"]){
+                                                    echo "<option value = '".$data["id"]."'selected>".$data["name"]."</option>";
+                                                }else{
+                                                    echo "<option value = '".$data["id"]."'>".$data["name"]."</option>";
+                                                }
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
