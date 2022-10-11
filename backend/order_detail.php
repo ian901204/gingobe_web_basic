@@ -77,7 +77,7 @@
                                 <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
                                     <select name="select" id="select" class="form-control">
-                                        <option value="0">請選擇業務員</option>
+                                        <option value="-1">請選擇業務員</option>
                                         <?php   
                                             foreach($seller_data as $data){
                                                 if ($data["id"] == $order_data["seller_id"]){
