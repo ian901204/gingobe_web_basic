@@ -33,6 +33,8 @@
         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">產品列表</strong>
+                                <button class="btn btn-success btn-sm" onclick="add_seller()">新增產品</button>
+                                <button class="btn btn-primary btn-sm" onclick="add_seller()">調整順序</button>
                             </div>
                             <div class="table-stats order-table ov-h">
                                 <table class="table ">
