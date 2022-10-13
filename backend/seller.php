@@ -50,7 +50,6 @@
                                     <tbody>
                                         <?php
                                             foreach($seller_data as $data){
-                                                $order_data = Order::where("seller_id", "=", $data["id"]) -> get(["total"]);
                                                 echo "<tr>";
                                                 echo "<td>#".$data["id"]."</td>";
                                                 echo "<td> <span class='name'>".$data["name"]."</td>";
