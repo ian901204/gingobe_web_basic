@@ -7,7 +7,7 @@
 	class ProductController
 	{
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
-            $product_data = product::get(["size", "prize"]);
+            $product_data = product::get(["id", "size", "prize"]);
 			include __DIR__."/../../backend/product.php";
 			return $response -> withStatus(200);
 		}

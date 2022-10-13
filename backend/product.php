@@ -52,8 +52,8 @@
                                                 echo "<td> <span class='name'>".$data["size"]."</td>";
                                                 echo "<td> <span class='product'>".$data["prize"]."</td>";
                                                 echo "<td>";
-                                                echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>編輯</a>";
-                                                echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
+                                                echo "<a href = '/prodcut/get/" . $data["id"]. "' class = 'btn btn-success'>編輯</a>";
+                                                echo "<a href = '/product/delete/".$data["id"]."' class = 'btn btn-danger'>刪除</a>";
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
