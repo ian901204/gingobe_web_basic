@@ -23,10 +23,11 @@
 			return $response -> withStatus(200);
 		}
 
-		public function edit(ServerRequestInterface $request, ResponseInterface $response){
+		public function edit(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
 				$data = json_decode($request -> getbody() -> getcontents(),true);
-				$order = Order::where("id", "=", $data["id"])->first();
+				$order = Order::where("id", "=", $args["id"])->first();
+				
 				foreach($data as $key => $value){
 					echo $order -> client_name;
 					$order -> $key = $value;
