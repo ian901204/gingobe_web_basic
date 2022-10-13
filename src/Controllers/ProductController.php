@@ -9,7 +9,6 @@
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
             $product_data = product::get(["size", "prize"]);
 			include __DIR__."/../../backend/product.php";
-			$response -> getBody() -> write(json_encode(["Status"=> "Success", "id" => $order -> id]));
 			return $response -> withStatus(200);
 		}
 
