@@ -28,7 +28,7 @@
 				$data = json_decode($request -> getbody() -> getcontents(),true);
 				$order = Order::where("id", "=", $data["id"])->first();
 				foreach($data as $key => $value){
-					echo $order -> $key;
+					echo $order -> client_name;
 					$order -> $key = $value;
 				}
 				$order -> save();
