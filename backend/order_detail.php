@@ -123,7 +123,7 @@
         $("input").each(function(){
             $(this).prop('disabled', false);
         });
-        $("#select").prop("disabled", false);
+        $("#seller_id").prop("disabled", false);
         $("#edit_button").attr("onclick", "finish()");
         $("#edit_button").html("完成編輯");
         console.log($("#order_id").val());
@@ -157,7 +157,7 @@
         $("input").each(function(){
             $(this).prop('disabled', true);
         });
-        $("#select").prop("disabled", true);
+        $("#seller_id").prop("disabled", true);
         $("#edit_button").attr("onclick", "edit()");
         $("#edit_button").html("編輯");
     }
