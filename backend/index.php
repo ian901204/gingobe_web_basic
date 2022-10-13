@@ -55,7 +55,14 @@ $app -> post("/login", "App\Controllers\AuthController:login");
 $app -> group("/seller", function (RouteCollectorProxy $group){
     $group -> get("/list", "App\Controllers\SellerController:list");
 
+    $group -> get("/add", function (Request $request, Response $response){
+        include "seller_add.php";
+        return $response -> withStatus(200);
+    });
+
     $group -> get("/get/{id}", "App\Controllers\SellerController:get");
+
+    $group -> post("/add", "App\Controllers\SellerController:add");
     
     $group -> post("/edit/{id}", "App\Controllers\SellerController:edit");
     
