@@ -12,6 +12,13 @@
 			return $response -> withStatus(200);
 		}
 
+        public function add(ServerRequestInterface $request, ResponseInterface $response){
+            $product_data = product::get(["size", "prize"]);
+			include __DIR__."/../../backend/product.php";
+			return $response -> withStatus(200);
+		}
+
+        
 
 		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{

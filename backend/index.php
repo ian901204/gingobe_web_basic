@@ -55,7 +55,10 @@ $app -> post("/login", "App\Controllers\AuthController:login");
 $app -> group("/product", function (RouteCollectorProxy $group){
     $group -> get("/list", "App\Controllers\ProductController:list");
 
-    $group -> get("/add", "App\Controllers\ProductContrller:add");
+    $group -> get("/add", function (Request $request, Response $response){
+        include "product_add.php";
+        return $response -> withStatus(200);
+    });
 
     $group -> get("/queue", "App\Controllers\ProductController:queue_list");
 
