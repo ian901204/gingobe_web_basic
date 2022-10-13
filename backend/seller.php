@@ -39,15 +39,18 @@
                                 <table class="table ">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Phone</th>
-                                            <th>Action</th>
+                                            <th>編號</th>
+                                            <th>姓名</th>
+                                            <th>電話</th>
+                                            <!--<th>完成訂單數</th>
+                                            <th>獎金</th>-->
+                                            <th>動作</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                             foreach($seller_data as $data){
+                                                $order_data = Order::where("seller_id", "=", $data["id"]) -> get(["total"]);
                                                 echo "<tr>";
                                                 echo "<td>#".$data["id"]."</td>";
                                                 echo "<td> <span class='name'>".$data["name"]."</td>";

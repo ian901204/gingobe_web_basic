@@ -4,6 +4,7 @@
 	use Psr\Http\Message\ResponseInterface;
 	use Psr\Http\Message\ServerRequestInterface;
 	use App\Models\DB\sellers;
+	use App\Models\DB\Order;
 	class SellerController
 	{
 		public function add(ServerRequestInterface $request, ResponseInterface $response){
