@@ -52,8 +52,8 @@
                                                 echo "<td> <span class='name'>".$data["size"]."</td>";
                                                 echo "<td> <span class='product'>".$data["prize"]."</td>";
                                                 echo "<td>";
-                                                echo "<a href = '/prodcut/get/" . $data["id"]. "' class = 'btn btn-success'>編輯</a>";
-                                                echo "<a href = '/product/delete/".$data["id"]."' class = 'btn btn-danger'>刪除</a>";
+                                                echo "<a href = '/product/get/" . $data["id"]. "' class = 'btn btn-success'>編輯</a>";
+                                                echo "<a onclick = 'product_delete(".$data["id"].",".$data["size"].")' class = 'btn btn-danger'>刪除</a>";
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
@@ -80,6 +80,24 @@
         }
         function queue_adjustment(){
             window.location.href =  $(location).attr('origin') +  "/product/queue"
+        }
+        function product_delete(id, size){
+            if(confirm("確認要刪除產品名稱 #" + size + " ?")){
+                $.ajax({
+                    url:  $(location).attr('origin') +  "/product/delete/" + id,
+                    type: "post",
+                    headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    success: function(returnData){
+                        alert("刪除成功");
+                        location.reload(true);
+                    },
+                    error: function(xhr, ajaxOptions, thrownError){
+                        alert("failed!");
+                    }
+                });
+            }
         }
     </script>
     <?php
