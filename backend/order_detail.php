@@ -37,7 +37,7 @@
                     </div>
                     <div class="card-body card-block">
                         <button class="btn btn-success btn-sm" onclick="edit()" id = "edit_button">編輯</button>
-                        <button class="btn btn-danger btn-sm" onclick="delete_seller()" id = "delete_button">刪除</button>
+                        <button class="btn btn-danger btn-sm" onclick="delete_order()" >刪除</button>
                         <div class="form-group">
                             <label class=" form-control-label">客戶姓名</label>
                             <div class="input-group">
@@ -125,7 +125,7 @@
             $(this).prop('disabled', true);
         });
     }
-    function delete(){
+    function delete_order(){
         alert("function not complete");
     }
     </script>
