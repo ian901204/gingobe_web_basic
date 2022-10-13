@@ -36,11 +36,13 @@
                         <strong>訂單資訊</strong>
                     </div>
                     <div class="card-body card-block">
+                        <button class="btn btn-success btn-sm" onclick="edit()" id = "action_button">編輯</button>
+                        <button class="btn btn-danger btn-sm" onclick="delete_seller()" id = "action_button">刪除</button>
                         <div class="form-group">
                             <label class=" form-control-label">客戶姓名</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                <input id = "name" class="form-control" value = "<?php echo $order_data -> client_name ?>">
+                                <input id = "name" class="form-control" value = "<?php echo $order_data -> client_name ?>" disabled>
                             </div>
                         </div>
                         
@@ -48,35 +50,35 @@
                             <label class=" form-control-label">客戶電話</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                <input id = "phone" class="form-control" value = "<?php echo $order_data["client_phone"]; ?>">
+                                <input id = "phone" class="form-control" value = "<?php echo $order_data["client_phone"]; ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">訂單地址</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-truck"></i></div>
-                                <input id = "address" class="form-control" value = "<?php echo $order_data["order_address"] ?>">
+                                <input id = "address" class="form-control" value = "<?php echo $order_data["order_address"] ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">產品尺寸</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-beer"></i></div>
-                                <input id = "size" class="form-control" value = "<?php echo $order_data["product_size"] ?>">
+                                <input id = "size" class="form-control" value = "<?php echo $order_data["product_size"] ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">產品數量(箱)</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-archive"></i></div>
-                                <input id = "amount" class="form-control" value = "<?php echo $order_data["product_amount"] ?>">
+                                <input id = "amount" class="form-control" value = "<?php echo $order_data["product_amount"] ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">業務員</label>
                                 <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                    <select name="select" id="select" class="form-control">
+                                    <select name="select" id="select" class="form-control" disabled>
                                         <option value="-1">請選擇業務員</option>
                                         <?php   
                                             foreach($seller_data as $data){
@@ -110,13 +112,11 @@
         include "buttom_script.php";
     ?>
     <script>
-    jQuery(document).ready(function() {
-        jQuery(".standardSelect").chosen({
-            disable_search_threshold: 10,
-            no_results_text: "Oops, nothing found!",
-            width: "100%"
+    function edit(){
+        $("input").each(function(){
+            $(this).prop('disabled', false);
         });
-    });
+    }
     </script>
 </body>
 </html>
