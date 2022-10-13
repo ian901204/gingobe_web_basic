@@ -42,8 +42,8 @@
                             <th>編號</th>
                             <th>姓名</th>
                             <th>電話</th>
-                            <!--<th>完成訂單數</th>
-                            <th>獎金</th>-->
+                            <th>完成訂單數</th>
+                            <!--<th>獎金</th>-->
                             <th>動作</th>
                         </tr>
                     </thead>
@@ -55,7 +55,7 @@
                                 echo "<td> <span class='name'>".$data["name"]."</td>";
                                 echo "<td> <span class='product'>".$data["phone"]."</td>";
                                 echo "<td>";
-                                print_r($data["order_data"]);
+                                echo "<td>" . $data["order_data"] -> count() . "</td>";
                                 echo "<a href = '/seller/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
                                 echo "<a onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
                                 echo "</td>";
