@@ -10,7 +10,7 @@
             <a href="/seller/list"><i class="menu-icon ti-id-badge"></i>業務列表</a>
         </li>
         <li>
-            <a href="/frontend/manager"><i class="menu-icon ti-layout"></i>前台管理</a>
+            <a href="/product/list"><i class="menu-icon ti-layout"></i>產品管理</a>
         </li>
     </ul>
 </div><!-- /.navbar-collapse -->
