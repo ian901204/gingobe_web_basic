@@ -72,7 +72,20 @@
 </body>
 <script>
     $("#action_button").click(function (){
-        alert("hellow");
+        $.ajax({
+            url:  $(location).attr('origin') +  "/seller/add",
+            type: "post",
+            data: JSON.stringify({"name" : $("#name").val(),"phone" : $("#phone").val()}),
+            headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function(data){
+                alert("新增成功");
+                window.location.replace($(location).attr("origin")+"/seller/list");
+            },
+            error: function(xhr, ajaxOptions, thrownError){
+                alert("編輯失敗，請重新整理網頁後在進行編輯！");
+            }
     });
 </script>
 </html>
