@@ -33,8 +33,8 @@
         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">產品列表</strong>
-                                <button class="btn btn-success btn-sm" onclick="add_seller()">新增產品</button>
-                                <button class="btn btn-primary btn-sm" onclick="add_seller()">調整順序</button>
+                                <button class="btn btn-success btn-sm" onclick="add_product()">新增產品</button>
+                                <button class="btn btn-primary btn-sm" onclick="queue_adjustment()">調整順序</button>
                             </div>
                             <div class="table-stats order-table ov-h">
                                 <table class="table ">
@@ -75,23 +75,11 @@
 
     <!-- Scripts -->
     <script>
-        function delete_order(order_id){
-            if(confirm("確認要刪除產品 #" + order_id + " ?")){
-                $.ajax({
-                    url:  $(location).attr('origin') +  "/order/delete/" + order_id,
-                    type: "post",
-                    headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
-                    dataType: "json",
-                    contentType: "application/json;charset=utf-8",
-                    success: function(returnData){
-                        alert("刪除成功");
-                        location.reload(true);
-                    },
-                    error: function(xhr, ajaxOptions, thrownError){
-                        alert("failed!");
-                    }
-                });
-            }
+        function add_product(){
+            window.location.href =  $(location).attr('origin') +  "/product/add"
+        }
+        function queue_adjustment(){
+            window.location.href =  $(location).attr('origin') +  "/product/queue"
         }
     </script>
     <?php
