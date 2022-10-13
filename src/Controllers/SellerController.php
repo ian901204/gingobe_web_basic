@@ -22,7 +22,7 @@
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
 			$seller_data = sellers::get(["id", "name", "phone"]);
 			foreach($seller_data as $data){
-				$order_data = Order::where("id", "=", $data["id"]) -> get();
+				$order_data = Order::where("seller_id", "=", $data["id"]) -> get(["product_amount"]);
 				$data["order_data"] = $order_data;
 			}
 			include __DIR__."/../../backend/seller.php";
