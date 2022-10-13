@@ -126,6 +126,7 @@
         $("#select").prop("disabled", false);
         $("#edit_button").attr("onclick", "finish()");
         $("#edit_button").html("完成編輯");
+        console.log($("order_id").val());
     }
     function finish(){
         try{
