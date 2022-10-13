@@ -40,14 +40,14 @@
                             <label class=" form-control-label">業務姓名</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                <input type = "text" id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>" disabled>
+                                <input type = "text" id = "name" class="form-control" value = "<?php echo $seller_data -> name ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">業務電話</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                <input type = "text" id = "phone" class="form-control" value = "<?php echo $seller_data -> phone; ?>" disabled>
+                                <input type = "text" id = "phone" class="form-control" value = "<?php echo $seller_data -> phone; ?>">
                             </div>
                         </div>
                         <button class="btn btn-success btn-sm" id = "action_button">完成</button>
