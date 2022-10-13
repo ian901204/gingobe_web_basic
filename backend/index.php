@@ -60,6 +60,8 @@ $app -> group("/product", function (RouteCollectorProxy $group){
         return $response -> withStatus(200);
     });
 
+    $group -> post("/delete/{id}", "App\Controllers\ProductController:delete");
+
     $group -> post("/add", "App\Controllers\ProductController:add");
 
     $group -> get("/queue", "App\Controllers\ProductController:queue_list");
