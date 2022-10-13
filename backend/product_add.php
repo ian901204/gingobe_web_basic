@@ -81,7 +81,7 @@
             contentType: "application/json;charset=utf-8",
             success: function(data){
                 alert("新增成功");
-                window.location.replace($(location).attr("origin")+"/seller/list");
+                window.location.replace($(location).attr("origin")+"/product/list");
             },
             error: function(xhr, ajaxOptions, thrownError){
                 alert("新增失敗！ 請檢查問題！");
