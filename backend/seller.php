@@ -31,40 +31,41 @@
         <!-- Content -->
         <div class="content">
         <div class="card">
-                            <div class="card-header">
-                                <strong class="card-title">訂單列表</strong>
-                                <button class="btn btn-success btn-sm" onclick="add_seller()">新增業務員</button>
-                            </div>
-                            <div class="table-stats order-table ov-h">
-                                <table class="table ">
-                                    <thead>
-                                        <tr>
-                                            <th>編號</th>
-                                            <th>姓名</th>
-                                            <th>電話</th>
-                                            <!--<th>完成訂單數</th>
-                                            <th>獎金</th>-->
-                                            <th>動作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                            foreach($seller_data as $data){
-                                                echo "<tr>";
-                                                echo "<td>#".$data["id"]."</td>";
-                                                echo "<td> <span class='name'>".$data["name"]."</td>";
-                                                echo "<td> <span class='product'>".$data["phone"]."</td>";
-                                                echo "<td>";
-                                                echo "<a href = '/seller/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
-                                                echo "<a onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
-                                                echo "</td>";
-                                                echo "</tr>";
-                                            }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div> <!-- /.table-stats -->
-                        </div>
+            <div class="card-header">
+                <strong class="card-title">訂單列表</strong>
+                <button class="btn btn-success btn-sm" onclick="add_seller()">新增業務員</button>
+            </div>
+            <div class="table-stats order-table ov-h">
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <th>編號</th>
+                            <th>姓名</th>
+                            <th>電話</th>
+                            <!--<th>完成訂單數</th>
+                            <th>獎金</th>-->
+                            <th>動作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            foreach($seller_data as $data){
+                                echo "<tr>";
+                                echo "<td>#".$data["id"]."</td>";
+                                echo "<td> <span class='name'>".$data["name"]."</td>";
+                                echo "<td> <span class='product'>".$data["phone"]."</td>";
+                                echo "<td>";
+                                print_r($data["order_data"]);
+                                echo "<a href = '/seller/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
+                                echo "<a onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
+                                echo "</td>";
+                                echo "</tr>";
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div> <!-- /.table-stats -->
+        </div>
         </div>
         <!-- /.content -->
         <div class="clearfix"></div>
