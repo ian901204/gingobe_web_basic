@@ -42,6 +42,13 @@
                             <label class=" form-control-label">客戶姓名</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input id = "order_id" class="form-control" value = "<?php echo $order_data -> id ?>" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" form-control-label">客戶姓名</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
                                 <input id = "name" class="form-control" value = "<?php echo $order_data -> client_name ?>" disabled>
                             </div>
                         </div>
@@ -121,9 +128,29 @@
         $("#edit_button").html("完成編輯");
     }
     function finish(){
+        try{
+            $.ajax({
+                    url:  $(location).attr('origin') +  "/order/edit/" + $("#seller_id").val(),
+                    type: "post",
+                    data: JSON.stringify({ "name": $("#name").val(), "phone": $("#phone").val() }),
+                    headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    error: function(xhr, ajaxOptions, thrownError){
+                        alert("編輯失敗，請重新整理網頁後在進行編輯！");
+                    }
+                });
+        }catch(err){
+            alert("編輯失敗！");
+            location.refresh();
+            return;
+        }
         $("input").each(function(){
             $(this).prop('disabled', true);
         });
+        $("#select").prop("disabled", true);
+        $("#edit_button").attr("onclick", "edit()");
+        $("#edit_button").html("編輯");
     }
     function delete_order(){
         alert("function not complete");
