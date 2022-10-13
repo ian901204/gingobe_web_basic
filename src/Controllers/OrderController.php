@@ -29,7 +29,6 @@
 				$order = Order::where("id", "=", $args["id"])->first();
 				
 				foreach($data as $key => $value){
-					echo $order -> client_name;
 					$order -> $key = $value;
 				}
 				$order -> save();
