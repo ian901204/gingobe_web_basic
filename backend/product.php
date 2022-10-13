@@ -53,7 +53,7 @@
                                                 echo "<td> <span class='product'>".$data["prize"]."</td>";
                                                 echo "<td>";
                                                 echo "<a href = '/product/get/" . $data["id"]. "' class = 'btn btn-success'>編輯</a>";
-                                                echo "<a onclick = 'product_delete(id = ".$data["id"].", size = ".$data["size"].")' class = 'btn btn-danger'>刪除</a>";
+                                                echo "<a onclick = 'product_delete(".$data["id"].", '".$data["size"]."')' class = 'btn btn-danger'>刪除</a>";
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
