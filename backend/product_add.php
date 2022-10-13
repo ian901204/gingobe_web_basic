@@ -73,7 +73,7 @@
 <script>
     $("#action_button").click(function (){
         $.ajax({
-            url:  $(location).attr('origin') +  "/seller/add",
+            url:  $(location).attr('origin') +  "/product/add",
             type: "post",
             data: JSON.stringify({"size" : $("#size").val(), "prize" : $("#prize").val()}),
             headers: {"Authorization":"Bearer " + localStorage.getItem('token')},

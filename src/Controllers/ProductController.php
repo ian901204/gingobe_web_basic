@@ -13,12 +13,16 @@
 		}
 
         public function add(ServerRequestInterface $request, ResponseInterface $response){
-            $product_data = product::get(["size", "prize"]);
-			include __DIR__."/../../backend/product.php";
-			return $response -> withStatus(200);
+            try{
+                $data = json_decode($request -> getbody() -> getcontents(),true);
+                $product_data = product::create($data);
+                $response -> getBody() -> write(json_encode(["Status" => "Success"]));
+                return $response -> withStatus(200);
+            }catch(\Exception $e){
+                $response -> getBody() -> write(json_encode(["Status" => "add failed!"]));
+                return $response -> withStatus(400);
+            }
 		}
-
-        
 
 		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
