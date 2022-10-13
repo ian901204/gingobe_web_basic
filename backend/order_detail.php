@@ -39,7 +39,7 @@
                         <button class="btn btn-success btn-sm" onclick="edit()" id = "edit_button">編輯</button>
                         <button class="btn btn-danger btn-sm" onclick="delete_order()" >刪除</button>
                         <div class="form-group">
-                            <label class=" form-control-label">客戶姓名</label>
+                            <label class=" form-control-label">訂單編號</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
                                 <input id = "order_id" class="form-control" value = "<?php echo $order_data -> id ?>" disabled>
@@ -85,7 +85,7 @@
                             <label class=" form-control-label">業務員</label>
                                 <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                    <select name="select" id="select" class="form-control" disabled>
+                                    <select name="select" id="seller_id" class="form-control" disabled>
                                         <option value="-1">請選擇業務員</option>
                                         <?php   
                                             foreach($seller_data as $data){
@@ -129,10 +129,18 @@
     }
     function finish(){
         try{
+            var order_data = JSON.stringify({
+                "client_name" : $("#name").val(),
+                "client_phone" : $("#phone").val(),
+                "order_address" : $("#address").val(),
+                "seller_id" : $("#seller_id").val(),
+                "product_amount" : $("#amount").val(),
+                "product_size" : $("#size").val(),
+            });
             $.ajax({
-                    url:  $(location).attr('origin') +  "/order/edit/" + $("#seller_id").val(),
+                    url:  $(location).attr('origin') +  "/order/edit/" + $("#order_id").val(),
                     type: "post",
-                    data: JSON.stringify({ "name": $("#name").val(), "phone": $("#phone").val() }),
+                    data: order_data,
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",

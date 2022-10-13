@@ -23,9 +23,26 @@
 			return $response -> withStatus(200);
 		}
 
+		public function edit(ServerRequestInterface $request, ResponseInterface $response){
+			try{
+				$data = json_decode($request -> getbody() -> getcontents(),true);
+				$order = Order::where("id", "=", $data["id"])->first();
+				foreach($data as $key => $value){
+					$order -> $key = $value;
+				}
+				$order -> save();
+			}catch(\Exception $e){
+				$response -> getBody() -> write(json_encode(["Status" => "edit order error"]));
+				return $response -> withStatus(400);
+			}
+			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
+			return $response -> withStatus(200);
+		}
+
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
 			$order_data = Order::get(["id", "client_name", "product_size", "product_amount"]);
 			include __DIR__."/../../backend/order.php";
+			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
 			return $response -> withStatus(200);
 		}
 
