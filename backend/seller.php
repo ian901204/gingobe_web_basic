@@ -54,8 +54,8 @@
                                 echo "<td>#".$data["id"]."</td>";
                                 echo "<td> <span class='name'>".$data["name"]."</td>";
                                 echo "<td> <span class='product'>".$data["phone"]."</td>";
-                                echo "<td>";
                                 echo "<td>" . $data["order_data"] -> count() . "</td>";
+                                echo "<td>";
                                 echo "<a href = '/seller/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
                                 echo "<a onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
                                 echo "</td>";
