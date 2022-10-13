@@ -41,7 +41,6 @@
                                             <th>產品尺寸</th>
                                             <th>產品價格</th>
                                             <th>產品編輯</th>
-                                            <th>產品順序</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -53,10 +52,6 @@
                                                 echo "<td>";
                                                 echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>編輯</a>";
                                                 echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
-                                                echo "</td>";
-                                                echo "<td>";
-                                                echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn btn-primary'>往上移</a>";
-                                                echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-secondary'>往下移</a>";
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
