@@ -36,8 +36,8 @@
                         <strong>訂單資訊</strong>
                     </div>
                     <div class="card-body card-block">
-                        <button class="btn btn-success btn-sm" onclick="edit()" id = "action_button">編輯</button>
-                        <button class="btn btn-danger btn-sm" onclick="delete_seller()" id = "action_button">刪除</button>
+                        <button class="btn btn-success btn-sm" onclick="edit()" id = "edit_button">編輯</button>
+                        <button class="btn btn-danger btn-sm" onclick="delete_seller()" id = "delete_button">刪除</button>
                         <div class="form-group">
                             <label class=" form-control-label">客戶姓名</label>
                             <div class="input-group">
@@ -116,6 +116,17 @@
         $("input").each(function(){
             $(this).prop('disabled', false);
         });
+        $("#select").prop("disabled", false);
+        $("#edit_button").attr("onclick", "finish()");
+        $("#edit_button").html("完成編輯");
+    }
+    function finish(){
+        $("input").each(function(){
+            $(this).prop('disabled', true);
+        });
+    }
+    function delete(){
+        alert("function not complete");
     }
     </script>
 </body>

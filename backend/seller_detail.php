@@ -36,8 +36,8 @@
                         <strong>訂單資訊</strong>
                     </div>
                     <div class="card-body card-block">
-                    <button class="btn btn-success btn-sm" onclick="edit()" id = "action_button">編輯</button>
-                    <button class="btn btn-danger btn-sm" onclick="delete_seller()" id = "action_button">刪除</button>
+                    <button class="btn btn-success btn-sm" onclick="edit()" id = "edit_button">編輯</button>
+                    <button class="btn btn-danger btn-sm" onclick="delete_seller()">刪除</button>
                         <div class="form-group">
                             <label class=" form-control-label">業務編號</label>
                             <div class="input-group">
@@ -98,8 +98,8 @@
     function edit(){
         $("#name").prop('disabled', false);
         $("#phone").prop('disabled', false);
-        $("#action_button").html("完成");
-        $("#action_button").attr("onclick","edit_finish()");
+        $("#edit_button").html("完成");
+        $("#edit_button").attr("onclick","edit_finish()");
     }
     function edit_finish(){
         try{
@@ -121,8 +121,8 @@
         }
         $("#name").prop('disabled', true);
         $("#phone").prop('disabled', true);
-        $("#action_button").html("編輯");
-        $("#action_button").attr("onclick","edit()");
+        $("#edit_button").html("編輯");
+        $("#edit_button").attr("onclick","edit()");
     }
 </script>
 </html>
