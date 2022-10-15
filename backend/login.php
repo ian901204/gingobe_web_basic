@@ -43,7 +43,6 @@
                 url: $(location).attr('origin') + "/login",
                 data: JSON.stringify(dataJSON),
                 type: "POST",
-                dataType: "json",
                 contentType: "application/json;charset=utf-8",
                 success: function(returnData){
                     window.localStorage.setItem("token", JSON.parse(JSON.stringify(returnData))["token"]);
