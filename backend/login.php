@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
     <?php
-        include "head.php";
+        include __DIR__."/common_component/head.php";
     ?>
 </head>
 <body class="bg-dark">
@@ -58,6 +58,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script>
+        $('link[src="assets/js/main.js"]').attr('href',$(location).attr('origin') + 'assets/js/main.js');
+    </script>
 </body>
 </html>

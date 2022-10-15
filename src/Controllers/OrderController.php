@@ -42,7 +42,7 @@
 
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
 			$order_data = Order::get(["id", "client_name", "product_size", "product_amount"]);
-			include __DIR__."/../../backend/order.php";
+			include __DIR__."/../../backend/order/order.php";
 			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
 			return $response -> withStatus(200);
 		}
@@ -55,7 +55,7 @@
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
-			include __DIR__."/../../backend/order_detail.php";
+			include __DIR__."/../../backend/order/order_detail.php";
 			return $response -> withStatus(200);
 		}
 

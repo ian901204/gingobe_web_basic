@@ -8,7 +8,7 @@
 	{
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
             $product_data = product::get(["id", "size", "prize"]);
-			include __DIR__."/../../backend/product.php";
+			include __DIR__."/../../backend/product/product.php";
 			return $response -> withStatus(200);
 		}
 
@@ -32,7 +32,7 @@
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
-			include __DIR__."/../../backend/order_detail.php";
+			include __DIR__."/../../backend/product/order_detail.php";
 			return $response -> withStatus(200);
 		}
 

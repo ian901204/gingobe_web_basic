@@ -46,7 +46,7 @@ $app -> get("/",  function (Request $request, Response $response) {
 $app -> post("/verify", "App\Controllers\AuthController:verify");
 
 $app -> get("/login",  function (Request $request, Response $response) {
-    include "login.php";
+    include __DIR__."/login.php";
     return $response -> withStatus(200);
 });
 
@@ -56,9 +56,11 @@ $app -> group("/product", function (RouteCollectorProxy $group){
     $group -> get("/list", "App\Controllers\ProductController:list");
 
     $group -> get("/add", function (Request $request, Response $response){
-        include "product_add.php";
+        include __DIR__."/product/product_add.php";
         return $response -> withStatus(200);
     });
+
+    $group -> get("/get/{id}", "App\Controllers\ProductController:get");
 
     $group -> post("/delete/{id}", "App\Controllers\ProductController:delete");
 
@@ -74,7 +76,7 @@ $app -> group("/seller", function (RouteCollectorProxy $group){
     $group -> get("/list", "App\Controllers\SellerController:list");
 
     $group -> get("/add", function (Request $request, Response $response){
-        include "seller_add.php";
+        include __DIR__."/seller/seller_add.php";
         return $response -> withStatus(200);
     });
 

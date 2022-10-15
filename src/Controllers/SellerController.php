@@ -25,7 +25,7 @@
 				$order_data = Order::where("seller_id", "=", $data["id"]) -> get(["product_amount"]);
 				$data["order_data"] = $order_data;
 			}
-			include __DIR__."/../../backend/seller.php";
+			include __DIR__."/../../backend/seller/seller.php";
 			return $response -> withStatus(200);
 		}
 
@@ -36,7 +36,7 @@
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
-			include __DIR__."/../../backend/seller_detail.php";
+			include __DIR__."/../../backend/seller/seller_detail.php";
 			return $response -> withStatus(200);
 		}
 
