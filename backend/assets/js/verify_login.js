@@ -23,7 +23,7 @@ if (pathname != "/login"){
     });
 }
 function logout(){
-    window.localStorage.setItem("token", JSON.parse(JSON.stringify(returnData))["token"]);
+    window.localStorage.removeItem("token");
     window.location.replace($(location).attr('origin'));
 }
 function verify_token(url){
