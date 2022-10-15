@@ -31,6 +31,8 @@
                 $response -> getBody() -> write(json_encode(["Status"=> "account not found!"]));
                 return $response->withHeader('content-type', 'application/json') -> withStatus(403);
             }
+            $response -> getBody() -> write(json_encode(["Status" => "something went wrong on server!"]));
+            return $response -> withStatus(400);
 		}
 
         public function verify(ServerRequestInterface $request, ResponseInterface $response){
