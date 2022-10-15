@@ -11,6 +11,7 @@
 	{
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
+            echo $_POST["account"];
 			$user = admin::where("account", "=", $data["account"])->first();
             if ($user -> id != null){
                 if ($user -> check_password($data["password"])){

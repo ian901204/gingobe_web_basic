@@ -19,7 +19,7 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form action = "/login" method = "post">
                         <div class="form-group">
                             <label>admin account</label>
                             <input id = "account" type="account" class="form-control" placeholder="account">
