@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
     <?php
-        include __DIR__."/common_component/head.php";
+        include __DIR__."/../common_component/head.php";
     ?>
 </head>
 
@@ -14,7 +14,7 @@
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
             <?php
-                include __DIR__."/common_component/menu.php";
+                include __DIR__."/../common_component/menu.php";
             ?>
         </nav>
     </aside>
@@ -24,7 +24,7 @@
         <!-- Header-->
         <header id="header" class="header">
             <?php
-                include __DIR__."/common_component/header.php";
+                include __DIR__."/../common_component/header.php";
             ?>
         </header>
         <!-- /#header -->
@@ -108,7 +108,7 @@
         <div class="clearfix"></div>
         <!-- Footer -->
         <?php
-            include __DIR__."/common_component/footer.php";
+            include __DIR__."/../common_component/footer.php";
         ?>
         <!-- /.site-footer -->
     </div>
@@ -116,7 +116,7 @@
 
     <!-- Scripts -->
     <?php
-        include __DIR__."/common_component/buttom_script.php";
+        include __DIR__."/../common_component/buttom_script.php";
     ?>
     <script>
     function edit(){
