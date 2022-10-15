@@ -19,7 +19,6 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form action = "/login" method = "post">
                         <div class="form-group">
                             <label>admin account</label>
                             <input id = "account" type="account" class="form-control" placeholder="account">
@@ -29,7 +28,6 @@
                             <input id = "password" type="password" class="form-control" placeholder="Password">
                         </div>
                         <button onclick = "login()" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
-                    </form>
                 </div>
             </div>
         </div>
