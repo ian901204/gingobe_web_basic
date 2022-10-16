@@ -12,6 +12,7 @@
   <title>金勾杯股份有限公司</title>
   <link rel="stylesheet" href="css/theme.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/api_url.js"></script>
 <style>
   /* inter-200 - latin */
   @font-face {
@@ -368,6 +369,7 @@
   
 </script>
  <script>
+  
   let scrollpos = window.scrollY
   const header = document.querySelector(".navbar")
   const header_height = header.offsetHeight
@@ -382,6 +384,16 @@
 
     console.log(scrollpos)
   })
+
+  $.ajax({
+    url: APIUrl + "/product/select",
+    type: "POST",
+    contentType: "application/json;charset=utf-8",
+    success: function(select_data){
+      var set_select = JSON.parse(JSON.stringify(select_data));
+      alert(set_select);
+    }
+  });
 </script>
 
   </body>
