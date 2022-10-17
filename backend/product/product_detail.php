@@ -34,7 +34,7 @@
                 <div class="card">
                     <div class="card-header">
                         <strong>產品資訊</strong>
-                        <button class="btn btn-success btn-sm" id = "edit_button">編輯</button>
+                        <button class="btn btn-success btn-sm" id = "edit_button" onclick = "edit()">編輯</button>
                         <button class="btn btn-success btn-sm" onclick="delete_product(<?php echo $product_data -> size ?>)">刪除</button>
                         <input id = "product_id" value = "<?php echo $product_data -> id; ?>" hidden>
                     </div>
