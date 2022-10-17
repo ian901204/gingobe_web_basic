@@ -388,8 +388,9 @@
     url: APIUrl + "/product/select",
     type: "POST",
     contentType: "application/json;charset=utf-8",
+    dataype:"json",
     success: function(select_data){
-      var set_select = (JSON.stringify(select_data));
+      var set_select = JSON.pares(JSON.stringify(select_data));
       alert(set_select);
       $.each(set_select, function(data){
         $('#size').append($('<option>', {
