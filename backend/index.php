@@ -89,6 +89,8 @@ $app -> group("/seller", function (RouteCollectorProxy $group){
     $group -> post("/edit/{id}", "App\Controllers\SellerController:edit");
     
     $group -> post("/delete/{id}", "App\Controllers\SellerController:delete");
+
+    $group -> post("/select", "App]Controllers\SellerController:select");
 });
 
 $app -> group("/order", function (RouteCollectorProxy $group) {

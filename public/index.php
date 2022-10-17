@@ -241,8 +241,6 @@
               <select  class = "form-control p-3" id = "seller" placeholder = "業務">
                 <option value = -1 selected disabled>請選擇業務員名稱</option>
                 <option value = 0>無</option>
-                <option value = 1>業務一</option>
-                <option value = 2>業務二</option>
               </select>
               </div>
               <div class="col-12" data-aos="fade-up">
@@ -389,6 +387,16 @@
     success: function(select_data){
       $.each(select_data, function(index, data){
         $('#size').append($('<option>', {value: data["id"],text: data["size"]}));
+      });
+  }
+  $.ajax({
+    url: APIUrl + "/seller/select",
+    type: "POST",
+    contentType: "application/json;charset=utf-8",
+    dataType:"json",
+    success: function(select_data){
+      $.each(select_data, function(index, data){
+        $('#seller').append($('<option>', {value: data["id"],text: data["name"]}));
       });
   }
 });

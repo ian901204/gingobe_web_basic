@@ -7,6 +7,12 @@
 	use App\Models\DB\Order;
 	class SellerController
 	{
+		public function select(ServerRequestInterface $request, ResponseInterface $response){
+			$seller_data = sellers::get(["id", "name"]);
+			$response -> getBody() -> write(json_encode($seller_data));
+			return $response -> withStatus(200);
+		}
+
 		public function add(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$seller = sellers::create(
