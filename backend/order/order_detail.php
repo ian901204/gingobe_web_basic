@@ -71,7 +71,18 @@
                             <label class=" form-control-label">產品尺寸</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-beer"></i></div>
-                                <input id = "size" class="form-control" value = "<?php echo $order_data["product_size"] ?>" disabled>
+                                <select id="size" class="form-control" disabled>
+                                        <option value="-1">請選擇產品尺寸</option>
+                                        <?php   
+                                            foreach($product_data as $data){
+                                                if ($data["size"] == $order_data["product_size"]){
+                                                    echo "<option value = '".$data["size"]."'selected>".$data["size"]."</option>";
+                                                }else{
+                                                    echo "<option value = '".$data["size"]."'>".$data["name"]."</option>";
+                                                }
+                                            }
+                                        ?>
+                                    </select>
                             </div>
                         </div>
                         <div class="form-group">
