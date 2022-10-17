@@ -75,7 +75,7 @@
         $.ajax({
             url:  $(location).attr('origin') +  "/product/add",
             type: "post",
-            data: JSON.stringify({"size" : $("#size").val(), "prize" : $("#prize").val()}),
+            data: JSON.stringify({"size" : $("#size").val(), "price" : $("#prize").val()}),
             headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
             dataType: "json",
             contentType: "application/json;charset=utf-8",

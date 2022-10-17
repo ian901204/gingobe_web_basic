@@ -7,13 +7,13 @@
 	class ProductController
 	{
 		public function get_select(ServerRequestInterface $request, ResponseInterface $response){
-			$product_data = product::get(["id", "size", "prize"]);
+			$product_data = product::get(["id", "size", "price"]);
 			$response -> getBody() -> write(json_encode($product_data));
 			return $response -> withStatus(200);
 		}
 
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
-            $product_data = product::get(["id", "size", "prize"]);
+            $product_data = product::get(["id", "size", "price"]);
 			include __DIR__."/../../backend/product/product.php";
 			return $response -> withStatus(200);
 		}
@@ -45,7 +45,7 @@
 		public function edit(ServerRequestInterface $request, ResponseInterface $response){
 			try{
 				$body_data = json_decode($request -> getbody() -> getcontents(),true);
-				$product_data = product::where("id", "=", $data["id"])->get(["size", "prize", "amount"]);
+				$product_data = product::where("id", "=", $data["id"])->get(["size", "price", "amount"]);
 				unset($body_data["id"]);
 				foreach($body_data as $key-> $value){
 					$product_data -> $key = $value;
