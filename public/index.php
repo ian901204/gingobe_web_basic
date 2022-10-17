@@ -387,8 +387,8 @@
     contentType: "application/json;charset=utf-8",
     dataType:"json",
     success: function(select_data){
-      alert(select_data[0]["size"]);
       for(var data in select_data){
+        alert(data);
         $('#size').append($('<option>', {
             value: data["id"],
             text: data["size"]
