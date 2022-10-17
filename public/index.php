@@ -228,9 +228,6 @@
               <h3 class="h5 my-2" >請輸入欲訂購的尺寸</h3>
               <select  class = "form-control p-3" id = "size" placeholder = "尺寸">
                 <option value = -1 selected disabled>請選擇尺寸</option>
-                <option value = 700>PP700</option>
-                <option value = 660>PP660</option>
-                <option value = 500>PP500</option>
               </select>
               </div>
               <br>
@@ -391,12 +388,12 @@
     dataType:"json",
     success: function(select_data){
       alert(select_data[0]["size"]);
-      $.each(select_data, function(data){
+      for(var data in select_data){
         $('#size').append($('<option>', {
             value: data["id"],
             text: data["size"]
         }));
-      });
+      }
     }
   });
 </script>
