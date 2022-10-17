@@ -67,15 +67,13 @@ $app -> group("/product", function (RouteCollectorProxy $group){
 
     $group -> get("/get/{id}", "App\Controllers\ProductController:get");
 
-    $group -> post("/delete/{id}", "App\Controllers\ProductController:delete");
-
-    $group -> post("/add", "App\Controllers\ProductController:add");
-
     $group -> get("/queue", "App\Controllers\ProductController:queue_list");
 
-    $group -> post("/queue", "App\Controllers\ProductController:queue");
+    $group -> post("/delete/{id}", "App\Controllers\ProductController:delete")-> add(authMiddleware::class);
 
-    
+    $group -> post("/add", "App\Controllers\ProductController:add")-> add(authMiddleware::class);
+
+    $group -> post("/queue", "App\Controllers\ProductController:queue")-> add(authMiddleware::class);
 });
 
 
@@ -89,21 +87,21 @@ $app -> group("/seller", function (RouteCollectorProxy $group){
 
     $group -> get("/get/{id}", "App\Controllers\SellerController:get");
 
-    $group -> post("/add", "App\Controllers\SellerController:add");
+    $group -> post("/add", "App\Controllers\SellerController:add")-> add(authMiddleware::class);
     
-    $group -> post("/edit/{id}", "App\Controllers\SellerController:edit");
+    $group -> post("/edit/{id}", "App\Controllers\SellerController:edit")-> add(authMiddleware::class);
     
-    $group -> post("/delete/{id}", "App\Controllers\SellerController:delete");
+    $group -> post("/delete/{id}", "App\Controllers\SellerController:delete")-> add(authMiddleware::class);
 });
 
 $app -> group("/order", function (RouteCollectorProxy $group) {
     $group -> get("/list", 'App\Controllers\OrderController:list');
     
-    $group -> post('/add', 'App\Controllers\OrderController:add');
+    $group -> post('/add', 'App\Controllers\OrderController:add') -> add(authMiddleware::class);
 
     $group -> get('/get/{id}', 'App\Controllers\OrderController:get');
 
-    $group -> post("/edit/{id}", "App\Controllers\OrderController:edit");
+    $group -> post("/edit/{id}", "App\Controllers\OrderController:edit") -> add(authMiddleware::class);
 
     $group -> post("/delete/{id}", 'App\Controllers\OrderController:delete') -> add(authMiddleware::class);
 });
