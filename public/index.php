@@ -392,6 +392,9 @@
     success: function(select_data){
       var set_select = JSON.parse(JSON.stringify(select_data));
       alert(set_select);
+    },
+    error: function(xhr, ajaxOptions, thrownError){
+        alert(APIUrl);
     }
   });
 </script>
