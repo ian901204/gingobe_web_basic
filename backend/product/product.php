@@ -82,7 +82,7 @@
             window.location.href =  $(location).attr('origin') +  "/product/queue"
         }
         function product_delete(id, size){
-            if(confirm("確認要刪除產品名稱 #" + size + " ?")){
+            if(confirm("已存在訂單可能會受到影響，確定要刪除產品名稱" + size + " ?")){
                 $.ajax({
                     url:  $(location).attr('origin') +  "/product/delete/" + id,
                     type: "post",
