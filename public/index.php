@@ -390,7 +390,7 @@
     contentType: "application/json;charset=utf-8",
     dataType:"json",
     success: function(select_data){
-      alert(select_data[0]);
+      alert(select_data[0]["id"]);
       $.each(select_data, function(data){
         $('#size').append($('<option>', {
             value: data["id"],
