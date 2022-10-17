@@ -39,7 +39,7 @@ $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
 $app -> get("/",  function (Request $request, Response $response) {
-    include "blank.php";
+    include __DIR__."/common_component/blank.php";
     return $response -> withStatus(200);
 });
 
