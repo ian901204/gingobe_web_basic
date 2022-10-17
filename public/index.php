@@ -388,7 +388,7 @@
     url: APIUrl + "/product/select",
     type: "POST",
     contentType: "application/json;charset=utf-8",
-    dataype:"json",
+    dataType:"json",
     success: function(select_data){
       var set_select = JSON.pares(JSON.stringify(select_data));
       alert(set_select);
