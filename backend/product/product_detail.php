@@ -35,7 +35,7 @@
                     <div class="card-header">
                         <strong>產品資訊</strong>
                         <button class="btn btn-success btn-sm" id = "edit_button" onclick = "edit()">編輯</button>
-                        <button class="btn btn-success btn-sm" onclick="delete_product(<?php echo $product_data -> size ?>)">刪除</button>
+                        <button class="btn btn-danger btn-sm" onclick="delete_product(<?php echo $product_data -> size ?>)">刪除</button>
                         <input id = "product_id" value = "<?php echo $product_data -> id; ?>" hidden>
                     </div>
                     <div class="card-body card-block">
@@ -85,11 +85,12 @@
     function finish(){
         try{
             var order_data = JSON.stringify({
+                "id" : $("$product_id").val(),
                 "size" : $("#size").val(),
                 "price" : $("#price").val(),
             });
             $.ajax({
-                    url:  $(location).attr('origin') +  "/product/edit/" + $("#product_id").val(),
+                    url:  $(location).attr('origin') +  "/product/edit",
                     type: "post",
                     data: order_data,
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},

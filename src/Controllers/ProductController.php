@@ -42,6 +42,21 @@
 			return $response -> withStatus(200);
 		}
 
+		public function edit(ServerRequestInterface $request, ResponseInterface $response){
+			try{
+				$body_data = json_decode($request -> getbody() -> getcontents(),true);
+				$product_data = product::where("id", "=", $data["id"])->get(["size", "prize", "amount"]);
+				unset($body_data["id"]);
+				foreach($body_data as $key-> $value){
+					$product_data -> $key = $value;
+				}
+				$body_data-> save;
+			}catch(\Exception $e){
+				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
+				return $response -> withStatus(400);
+			}
+		}
+
 		public function delete(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
 				$order_data = product::where("id", "=", $args["id"])->delete();
