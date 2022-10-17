@@ -388,7 +388,8 @@
       $.each(select_data, function(index, data){
         $('#size').append($('<option>', {value: data["id"],text: data["size"]}));
       });
-  }
+    }
+  });
   $.ajax({
     url: APIUrl + "/seller/select",
     type: "POST",
@@ -398,8 +399,8 @@
       $.each(select_data, function(index, data){
         $('#seller').append($('<option>', {value: data["id"],text: data["name"]}));
       });
-  }
-});
+    }
+  });
 </script>
 
   </body>
