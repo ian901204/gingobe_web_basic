@@ -6,6 +6,12 @@
 	use App\Models\DB\product;
 	class ProductController
 	{
+		public function get_select(ServerRequestInterface $request, ResponseInterface $response){
+			$product_data = product::get(["id", "size", "prize"]);
+			$response -> getBody() -> write(json_encode([$product_data]));
+			return $response -> withStatus(200);
+		}
+
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
             $product_data = product::get(["id", "size", "prize"]);
 			include __DIR__."/../../backend/product/product.php";
