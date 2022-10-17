@@ -392,8 +392,8 @@
     success: function(select_data){
       $.each(select_data, function(data){
         $('#size').append($('<option>', {
-            value: date["id"],
-            text: date["size"]
+            value: data["id"],
+            text: data["size"]
         }));
       });
     }
