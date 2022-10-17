@@ -390,9 +390,7 @@
     contentType: "application/json;charset=utf-8",
     dataType:"json",
     success: function(select_data){
-      var set_select = JSON.pares(JSON.stringify(select_data));
-      alert(set_select);
-      $.each(set_select, function(data){
+      $.each(select_data, function(data){
         $('#size').append($('<option>', {
             value: date["id"],
             text: date["size"]
