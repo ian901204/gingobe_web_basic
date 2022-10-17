@@ -78,7 +78,7 @@
                                                 if ($data["size"] == $order_data["product_size"]){
                                                     echo "<option value = '".$data["size"]."'selected>".$data["size"]."</option>";
                                                 }else{
-                                                    echo "<option value = '".$data["size"]."'>".$data["name"]."</option>";
+                                                    echo "<option value = '".$data["size"]."'>".$data["size"]."</option>";
                                                 }
                                             }
                                         ?>
