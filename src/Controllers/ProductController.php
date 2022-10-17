@@ -34,6 +34,7 @@
 			try{
 				$order_data = product::where("size", "=", $args["size"]) -> first(["id","size","price"]);
 			}catch(\Exception $e){
+				echo $e;
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
