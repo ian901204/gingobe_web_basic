@@ -71,7 +71,7 @@
                             <label class=" form-control-label">產品尺寸</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-beer"></i></div>
-                                <select id="size" class="form-control" disabled>
+                                <select id="product_size" class="form-control" disabled>
                                         <option value="-1">請選擇產品尺寸</option>
                                         <?php   
                                             foreach($product_data as $data){
@@ -134,6 +134,7 @@
         $("input").each(function(){
             $(this).prop('disabled', false);
         });
+        $("#product_size").prop("disabled", false);
         $("#seller_id").prop("disabled", false);
         $("#edit_button").attr("onclick", "finish()");
         $("#edit_button").html("完成編輯");
@@ -147,7 +148,7 @@
                 "order_address" : $("#address").val(),
                 "seller_id" : $("#seller_id").val(),
                 "product_amount" : $("#amount").val(),
-                "product_size" : $("#size").val(),
+                "product_size" : $("#product_size").val(),
             });
             $.ajax({
                     url:  $(location).attr('origin') +  "/order/edit/" + $("#order_id").val(),
@@ -168,6 +169,7 @@
         $("input").each(function(){
             $(this).prop('disabled', true);
         });
+        $("#product_size").prop("disabled", true);
         $("#seller_id").prop("disabled", true);
         $("#edit_button").attr("onclick", "edit()");
         $("#edit_button").html("編輯");
