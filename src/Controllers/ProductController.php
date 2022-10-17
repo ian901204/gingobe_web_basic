@@ -50,7 +50,7 @@
 				foreach($body_data as $key-> $value){
 					$product_data -> $key = $value;
 				}
-				$body_data-> save;
+				$body_data-> save();
 			}catch(\Exception $e){
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
