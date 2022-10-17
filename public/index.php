@@ -386,7 +386,7 @@
     dataType:"json",
     success: function(select_data){
       $.each(select_data, function(index, data){
-        $('#size').append($('<option>', {value: data["id"],text: data["size"]}));
+        $('#size').append($('<option>', {value: data["size"],text: data["size"]}));
       });
     }
   });
