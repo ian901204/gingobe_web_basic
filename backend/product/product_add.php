@@ -40,14 +40,14 @@
                             <label class=" form-control-label">產品尺寸</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                <input type = "text" id = "size" class="form-control" value = "<?php echo $seller_data -> name ?>">
+                                <input type = "text" id = "size" class="form-control" value = "">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">產品價格</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                <input type = "text" id = "prize" class="form-control" value = "<?php echo $seller_data -> phone; ?>">
+                                <input type = "text" id = "prize" class="form-control" value = "">
                             </div>
                         </div>
                         <button class="btn btn-success btn-sm" id = "action_button">完成</button>
