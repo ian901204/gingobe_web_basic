@@ -389,7 +389,7 @@
     type: "POST",
     contentType: "application/json;charset=utf-8",
     success: function(select_data){
-      var set_select = JSON.parse(JSON.stringify(select_data));
+      var set_select = JSON.parse(JSON.stringify(select_data))[0];
       $.each(set_select, function(data){
         $('#size').append($('<option>', {
             value: date["id"],
