@@ -388,12 +388,10 @@
     dataType:"json",
     success: function(select_data){
       $.each(select_data, function(index, value){
-        $('#size').append($('<option>', {
-            value: data["id"],
-            text: data["size"]
-        }));
+        $('#size').append($('<option>', {value: data["id"],text: data["size"]}));
       });
-  });
+  }
+});
 </script>
 
   </body>
