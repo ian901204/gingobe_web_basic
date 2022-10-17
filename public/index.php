@@ -390,7 +390,12 @@
     contentType: "application/json;charset=utf-8",
     success: function(select_data){
       var set_select = JSON.parse(JSON.stringify(select_data));
-      alert(set_select);
+      set_select.each(function(data){
+        $('#size').append($('<option>', {
+            value: date["id"],
+            text: date["size"]
+        }));
+      });
     }
   });
 </script>
