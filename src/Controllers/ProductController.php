@@ -32,7 +32,7 @@
 
 		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
-				$order_data = product::where("size", "=", $args["size"]) -> first(["id","size","price"]);
+				$product_data = product::where("size", "=", $args["size"]) -> first(["id","size","price"]);
 			}catch(\Exception $e){
 				echo $e;
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
