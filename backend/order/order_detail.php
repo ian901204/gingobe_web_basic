@@ -132,8 +132,9 @@
     <script>
     function edit(){
         $("input").each(function(){
-            alert(this.id);
-            $(this).prop('disabled', false);
+            if (this.id != "order_id"){
+                $(this).prop('disabled', false);
+            }
         });
         $("#product_size").prop("disabled", false);
         $("#seller_id").prop("disabled", false);
