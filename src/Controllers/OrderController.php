@@ -52,7 +52,7 @@
 			try{
 				$order_data = Order::where("id", "=", $args["id"]) -> first(["id", "client_name", "client_phone", "order_address", "product_size", "product_amount", "seller_id", "description"]);
 				$seller_data = sellers::get(["id", "name"]);
-				$product_data = product::get(["name"]);
+				$product_data = product::get(["size"]);
 			}catch(\Exception $e){
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
