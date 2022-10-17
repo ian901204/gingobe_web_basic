@@ -380,7 +380,7 @@
   })
 
   $.ajax({
-    url: APIUrl + "/product/select",
+    url: APIUrl + "/frontend/product",
     type: "POST",
     contentType: "application/json;charset=utf-8",
     dataType:"json",
@@ -391,7 +391,7 @@
     }
   });
   $.ajax({
-    url: APIUrl + "/seller/select",
+    url: APIUrl + "/frontend/seller",
     type: "POST",
     contentType: "application/json;charset=utf-8",
     dataType:"json",
