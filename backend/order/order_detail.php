@@ -159,7 +159,7 @@
                     contentType: "application/json;charset=utf-8",
                     success: function(data){
                         window.location.href =  $(location).attr('origin') +  "/order/list";
-                    }
+                    },
                     error: function(xhr, ajaxOptions, thrownError){
                         alert("編輯失敗，請重新整理網頁後在進行編輯！");
                     }
