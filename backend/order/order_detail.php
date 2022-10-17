@@ -132,7 +132,7 @@
     <script>
     function edit(){
         $("input").each(function(){
-            alert(this);
+            alert(this.id);
             $(this).prop('disabled', false);
         });
         $("#product_size").prop("disabled", false);
