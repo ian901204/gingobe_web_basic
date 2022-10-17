@@ -8,7 +8,7 @@
 	{
 		public function get_select(ServerRequestInterface $request, ResponseInterface $response){
 			$product_data = product::get(["id", "size", "prize"]);
-			$response -> getBody() -> write(json_encode([$product_data]));
+			$response -> getBody() -> write(json_encode($product_data));
 			return $response -> withStatus(200);
 		}
 
