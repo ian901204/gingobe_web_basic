@@ -43,14 +43,14 @@
                             <label class=" form-control-label">產品尺寸</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                <input type = "text" id = "size" class="form-control" value = "<?php echo $product_data -> size ?>">
+                                <input type = "text" id = "size" class="form-control" value = "<?php echo $product_data -> size ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">產品價格</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                <input type = "text" id = "price" class="form-control" value = "<?php echo $product_data -> price; ?>">
+                                <input type = "text" id = "price" class="form-control" value = "<?php echo $product_data -> price; ?>" disabled>
                             </div>
                         </div>
                     </div>
