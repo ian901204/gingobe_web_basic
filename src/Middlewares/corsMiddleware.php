@@ -6,6 +6,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 
+//用於檢測 request 來源
 class corsMiddleware
 {
     public function __invoke(Request $request, RequestHandler $handler): Response

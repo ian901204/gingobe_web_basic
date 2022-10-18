@@ -3,11 +3,14 @@
 
 	use Psr\Http\Message\ResponseInterface;
 	use Psr\Http\Message\ServerRequestInterface;
+	
+	//引入資料庫類別
 	use App\Models\DB\Order;
 	use App\Models\DB\sellers;
 	use App\Models\DB\product;
 	class OrderController
 	{
+		//訂單新增 function
 		public function add(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$order = Order:: create(
@@ -24,6 +27,7 @@
 			return $response -> withStatus(200);
 		}
 
+		//訂單編輯 function
 		public function edit(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
 				$data = json_decode($request -> getbody() -> getcontents(),true);
@@ -41,6 +45,7 @@
 			return $response -> withStatus(200);
 		}
 
+		//後台訂單列表 function
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
 			$order_data = Order::get(["id", "client_name", "product_size", "product_amount"]);
 			include __DIR__."/../../backend/order/order.php";
@@ -48,6 +53,7 @@
 			return $response -> withStatus(200);
 		}
 
+		//後台取得訂單資訊 function
 		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
 				$order_data = Order::where("id", "=", $args["id"]) -> first(["id", "client_name", "client_phone", "order_address", "product_size", "product_amount", "seller_id", "description"]);
@@ -61,6 +67,7 @@
 			return $response -> withStatus(200);
 		}
 
+		//後台刪除訂單 function
 		public function delete(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
 				$order_data = Order::where("id", "=", $args["id"])->delete();

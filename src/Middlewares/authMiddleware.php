@@ -8,6 +8,10 @@ use Psr\Http\Message\ServerRequestInterface ;
 use Psr\Http\Server\RequestHandlerInterface ;
 use Slim\Psr7\Response;
 
+//用於檢測 request 是否帶有正確的 token
+//用 jwt 進行加解密
+//token 生成於 AuthController.php 裡面的 login function
+
 class authMiddleware
 {
     public function __invoke(ServerRequestInterface $request, RequestHandlerInterface $handler)

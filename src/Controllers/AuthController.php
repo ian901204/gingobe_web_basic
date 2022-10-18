@@ -9,6 +9,7 @@
 
 	class AuthController
 	{
+        //登入function
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
             echo $_POST["account"];
@@ -36,6 +37,7 @@
             return $response -> withStatus(400);
 		}
 
+        //認證 token function
         public function verify(ServerRequestInterface $request, ResponseInterface $response){
 			if(!isset($request->getHeader("Authorization")[0])){
                 $response->getBody()->write(json_encode([

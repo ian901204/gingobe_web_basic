@@ -7,12 +7,14 @@
 	use App\Models\DB\Order;
 	class SellerController
 	{
+		//前台取得所有業務的資料
 		public function select(ServerRequestInterface $request, ResponseInterface $response){
 			$seller_data = sellers::get(["id", "name"]);
 			$response -> getBody() -> write(json_encode($seller_data));
 			return $response -> withStatus(200);
 		}
 
+		//後台新增業務
 		public function add(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$seller = sellers::create(
@@ -25,6 +27,7 @@
 			return $response -> withStatus(200);
 		}
 
+		//後台業務列表
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
 			$seller_data = sellers::get(["id", "name", "phone"]);
 			foreach($seller_data as $data){
@@ -35,6 +38,7 @@
 			return $response -> withStatus(200);
 		}
 
+		//後台取得業務資訊
 		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
 				$seller_data = sellers::where("id", "=", $args["id"])->first(["id", "name", "phone"]);
@@ -46,6 +50,7 @@
 			return $response -> withStatus(200);
 		}
 
+		//後台編輯業務資訊
         public function edit(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
                 $data = json_decode($request -> getbody() -> getcontents(),true);
@@ -62,6 +67,7 @@
 			return $response -> withStatus(200);
 		}
 
+		//後台刪除業務
 		public function delete(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
 				$order_data = sellers::where("id", "=", $args["id"])->delete();
