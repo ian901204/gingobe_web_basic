@@ -65,7 +65,7 @@
 <main>
 <div class="w-100 overflow-hidden bg-gray-100" id="top">
   <div class="container position-relative">
-    <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/face.jpg);">
+    <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/face1.jpg);">
     </div>
     <div class="row">
       <div class="col-lg-7 py-vh-3 position-relative" data-aos="fade-right">
