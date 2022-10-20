@@ -155,7 +155,7 @@
     <div class="col-12">
       <div class="row vw-100 px-0 py-vh-5 d-flex align-items-center scrollx">
         <div class="col-md-2" data-aos="fade-up">
-            <img src="img/interior37.jpg" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
+            <img src="img/face.jpg" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
         </div>
 
         <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
