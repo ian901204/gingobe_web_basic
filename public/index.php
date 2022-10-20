@@ -159,7 +159,7 @@
         </div>
 
         <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/people1.jpg" class="img-fluid rounded shadow" alt="nice gallery image" width="1164" height="776">
+            <img src="img/people1.jpg" class="img-fluid rounded shadow" alt="nice gallery image" width="1200" height="1200">
         </div>
 
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
