@@ -131,13 +131,12 @@
 					dataJSON["seller"] = $("#seller").val();
 					$.each(dataJSON, function(index, value){
 						if ((value == "") || (value == null)){
+							console.log(index);
 							$("#" + index + "_label").css("color", 'red');
 							data_missing = 1;
 						}else{
-							console.log(index);
 							$("#" + index + "_label").css("color", 'white');
 						}
-						console.log(index+":"+value);
 					});
 					if (data_missing == 0){
 						$.ajax({
