@@ -102,8 +102,8 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="送出訂單" id = "sendOrder" class="primary" /></li>
-									</ul>
+										<li><a class="button primary" onclick = "send_order()">Default</a></li>
+										</ul>
 								</form>
 							</article>
 
@@ -370,7 +370,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script>
 				const APIUrl = "https://admin.ian-shen.live"
 				var dataJSON = {};
-				$("#sendOrder").click(function(e){
+				function send_order(){
 					var data_missing = 0;
 					dataJSON["name"] = $("#name").val();
 					dataJSON["address"] = $("#address").val();
@@ -403,7 +403,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					}
 					});
 					}
-				});
+				}
 				$.ajax({
 					url: APIUrl + "/frontend/product",
 					type: "POST",
