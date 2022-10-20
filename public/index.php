@@ -75,7 +75,7 @@
       高透明、清晰，可以清楚看見杯子內的配料，可承受拉力為8公斤！！拿著飲料怎麼甩怎麼跑都不會斷，且耐高溫120°C，讓客人不用因為釋出塑化劑而喝下肚，有SGS材質及拉力檢驗證明，少拿一個塑膠袋，省錢又環保的好選擇！！
         </p>-->
         <p class = "lead">
-        此手提杯獲得台灣.中國.日本.越南.泰國.歐美...等等多國發明專利，本工廠採用德國最先進品質最佳的制杯機器制杯並非坊間二流機器製造，亦不是中國進口的塑料杯。
+        此手提杯獲得台灣.中國.日本.越南.泰國.歐美...等等多國發明專利，本公司採用德國最先進品質最佳的制杯機器制杯並非坊間二流機器製造，亦不是中國進口的塑料杯。
         </p>
         <a href="#order" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">訂購</a>
       </div>
@@ -83,7 +83,7 @@
   </div>
 </div>
 
-<div class="py-vh-3 bg-gray-200 w-100 overflow-hidden" id="services">
+<div class="py-vh-3 bg-gray-200 w-100 overflow-hidden" id="introduce">
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="col-lg-10 aos-init border-bottom border-dark aos-animate" data-aos="fade-down"><h2 class="display-6">我們的產品 BADP-icycle Pro + PP 所製成的環保金勾杯與傳統 PLA 所製成的金勾杯相比，有以下幾種優點</h2><br>
@@ -149,7 +149,7 @@
   </div>
 </div>-->
 
-<div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
+<div class="position-relative overflow-hidden w-100 bg-light">
   <div class="container-fluid">
   <div class="row overflow-scroll">
     <div class="col-12">
@@ -180,7 +180,7 @@
 
 </div>
 
-<div class="container py-vh-4 w-100 overflow-hidden">
+<div class="container py-vh-4 w-100 overflow-hidden" id = "about">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-lg-5">
       <h3 class="py-5 border-top border-dark" data-aos="fade-right">關於我們</h3>
@@ -306,7 +306,7 @@
 </main>
 
 <footer>
-<div class="container small border-top">
+<div class="container small border-top" id = "contact">
   <div class="row py-5 d-flex justify-content-between">
     <div class="col-12 text-center">
       <?php

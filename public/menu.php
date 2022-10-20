@@ -13,18 +13,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
-                服務
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#aboutus">
-                關於我們
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#gallery">
+                <a class="nav-link" href="#introduce">
                 介紹
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">
+                關於我們
                 </a>
             </li>
             <li class="nav-item">
@@ -33,7 +28,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#testimonials">
+                <a class="nav-link" href="#contact">
                 聯絡我們
                 </a>
             </li>
