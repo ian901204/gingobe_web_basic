@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -76,11 +77,11 @@
 										</div>
 										<div class="field">
 											<label for="email">運送地址</label>
-											<input type="text" name="email" id="email" />
+											<input type="text" name="email" id="address" />
 										</div>
 										<div class="field">
 											<label for="email">電話</label>
-											<input type="text" name="email" id="email" />
+											<input type="text" name="email" id="phone" />
 										</div>
 										<div class="field">
 											<label for="email">欲訂購尺寸</label>
@@ -90,27 +91,20 @@
 										</div>
 										<div class="field">
 											<label for="email">欲訂購的箱數(1000杯/箱)</label>
-											<input type="text" name="email" id="email" />
+											<input type="text" name="email" id="amount" />
 										</div>
 										<div class="field">
 											<label for="email">業務員</label>
-											<input type="text" name="email" id="email" />
+											<select id = "seller" placeholder = "業務">
+												<option value = -1 selected disabled>請選擇業務員名稱</option>
+												<option value = 0>無</option>
+											  </select>
 										</div>
-										<!--<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>-->
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="送出訂單" class="primary" /></li>
+										<li><input type="submit" value="送出訂單" id = "sendOrder" class="primary" /></li>
 									</ul>
 								</form>
-								<!--<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>-->
 							</article>
 
 						<!-- Elements -->
@@ -373,6 +367,64 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				var dataJSON = {};
+				$("#sendOrder").click(function(e){
+					var data_missing = 0;
+					dataJSON["name"] = $("#name").val();
+					dataJSON["address"] = $("#address").val();
+					dataJSON["phone"] = $("#phone").val();
+					dataJSON["size"] = $("#size").val();
+					dataJSON["amount"] = $("#amount").val();
+					dataJSON["seller"] = $("#seller").val();
+					console.log(dataJSON["seller"]);
+					$.each(dataJSON, function(index, value){
+					if ((value == "") || (value == null)){
+						console.log(index + ":" + value);
+						$("#warrningText").text($("#" + index).attr('placeholder') + "資料缺少 請確認完整後在送出！");
+						$("#warrningText").css("color", 'red');
+						data_missing = 1;
+						return false;
+					}
+					});
+					if (data_missing == 0){
+					$.ajax({
+					url: "https://admin.ian-shen.live/order/add",
+					data: JSON.stringify(dataJSON),
+					type: "POST",
+					dataType: "json",
+					contentType: "application/json;charset=utf-8",
+					success: function(returnData){
+						alert("Success");
+					},
+					error: function(xhr, ajaxOptions, thrownError){
+						alert("failed!");
+					}
+					});
+					}
+				});
+				$.ajax({
+					url: APIUrl + "/frontend/product",
+					type: "POST",
+					contentType: "application/json;charset=utf-8",
+					dataType:"json",
+					success: function(select_data){
+					$.each(select_data, function(index, data){
+						$('#size').append($('<option>', {value: data["size"],text: data["size"]}));
+					});
+					}
+				});
+				$.ajax({
+					url: APIUrl + "/frontend/seller",
+					type: "POST",
+					contentType: "application/json;charset=utf-8",
+					dataType:"json",
+					success: function(select_data){
+					$.each(select_data, function(index, data){
+						$('#seller').append($('<option>', {value: data["id"],text: data["name"]}));
+					});
+					}
+				});
+			</script>
 	</body>
 </html>
