@@ -147,7 +147,7 @@
 						contentType: "application/json;charset=utf-8",
 						success: function(returnData){
 							alert("訂單送出成功");
-							window.location.replace(APIUrl);
+							window.location.replace(window.location.origin);
 						},
 						error: function(xhr, ajaxOptions, thrownError){
 							alert("送出訂單時發生了問題，請稍後在試!");
