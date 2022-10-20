@@ -146,10 +146,11 @@
 						dataType: "json",
 						contentType: "application/json;charset=utf-8",
 						success: function(returnData){
-							alert("Success");
+							alert("訂單送出成功");
+							window.location.replace(APIUrl);
 						},
 						error: function(xhr, ajaxOptions, thrownError){
-							alert("failed!");
+							alert("送出訂單時發生了問題，請稍後在試!");
 						}
 						});
 					}
