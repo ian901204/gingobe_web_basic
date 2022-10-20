@@ -109,7 +109,7 @@ $app -> group("/order", function (RouteCollectorProxy $group) {
 
     $group -> get('/get/{id}', 'App\Controllers\OrderController:get');
 
-    $group -> post('/add', 'App\Controllers\OrderController:add') -> add(authMiddleware::class);
+    $group -> post('/add', 'App\Controllers\OrderController:add');
 
     $group -> post("/edit/{id}", "App\Controllers\OrderController:edit") -> add(authMiddleware::class);
 
