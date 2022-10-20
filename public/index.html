@@ -132,10 +132,11 @@
 					console.log(dataJSON["seller"]);
 					$.each(dataJSON, function(index, value){
 					if ((value == "") || (value == null)){
-						console.log(index + ":" + value);
 						$("#" + index + "_label").css("color", 'red');
 						data_missing = 1;
 						return false;
+					}else{
+						$("#" + index + "_label").css("color", 'write');
 					}
 					});
 					if (data_missing == 0){
