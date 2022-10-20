@@ -129,15 +129,15 @@
 					dataJSON["size"] = $("#size").val();
 					dataJSON["amount"] = $("#amount").val();
 					dataJSON["seller"] = $("#seller").val();
-					console.log(dataJSON["seller"]);
 					$.each(dataJSON, function(index, value){
-					if ((value == "") || (value == null)){
-						$("#" + index + "_label").css("color", 'red');
-						data_missing = 1;
-						return false;
-					}else{
-						$("#" + index + "_label").css("color", 'write');
-					}
+						if ((value == "") || (value == null)){
+							$("#" + index + "_label").css("color", 'red');
+							data_missing = 1;
+							return false;
+						}else{
+							console.log(index);
+							$("#" + index + "_label").css("color", 'write');
+						}
 					});
 					if (data_missing == 0){
 						$.ajax({
