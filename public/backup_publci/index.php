@@ -76,7 +76,7 @@
         </p>-->
         <p class = "lead">
         此手提杯獲得台灣.中國.日本.越南.泰國.歐美...等等多國發明專利，本公司採用德國最先進品質最佳的制杯機器制杯並非坊間二流機器製造，亦不是中國進口的塑料杯。
-        </p>
+        </p>  
         <a href="#order" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">訂購</a>
       </div>
     </div>
