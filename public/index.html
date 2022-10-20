@@ -133,7 +133,6 @@
 					$.each(dataJSON, function(index, value){
 					if ((value == "") || (value == null)){
 						console.log(index + ":" + value);
-						$("#" + index + "_label").text($("#" + index + "_label").text() + "資料缺少 請確認完整後在送出！");
 						$("#" + index + "_label").css("color", 'red');
 						data_missing = 1;
 						return false;
@@ -153,8 +152,6 @@
 							alert("failed!");
 						}
 						});
-					}else{
-						alert();
 					}
 				}
 				$.ajax({
