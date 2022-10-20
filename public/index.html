@@ -63,40 +63,42 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">訂購</h2>
-								<div class="fields">
-									<div class="field">
-										<label id="name_label">姓名</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label id="address_label">運送地址</label>
-										<input type="text" name="address" id="address" />
-									</div>
-									<div class="field">
-										<label id="phone">電話</label>
-										<input type="text" name="phone" id="phone" />
-									</div>
-									<div class="field">
-										<label id="size_label">欲訂購尺寸</label>
-										<select id = "size" placeholder = "尺寸">
-											<option value = -1 selected disabled>請選擇尺寸</option>
-										</select>
-									</div>
-									<div class="field">
-										<label for="amount_label">欲訂購的箱數(1000杯/箱)</label>
-										<input type="text" name="amount" id="amount" />
-									</div>
-									<div class="field">
-										<label for="seller_label">業務員</label>
-										<select id = "seller" placeholder = "業務">
-											<option value = -1 selected disabled>請選擇業務員名稱</option>
-											<option value = -1 >無</option>
+								<form>
+									<div class="fields">
+										<div class="field">
+											<label id="name_label">姓名</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field">
+											<label id="address_label">運送地址</label>
+											<input type="text" name="address" id="address" />
+										</div>
+										<div class="field">
+											<label id="phone">電話</label>
+											<input type="text" name="phone" id="phone" />
+										</div>
+										<div class="field">
+											<label id="size_label">欲訂購尺寸</label>
+											<select id = "size" placeholder = "尺寸">
+												<option value = -1 selected disabled>請選擇尺寸</option>
 											</select>
+										</div>
+										<div class="field">
+											<label for="amount_label">欲訂購的箱數(1000杯/箱)</label>
+											<input type="text" name="amount" id="amount" />
+										</div>
+										<div class="field">
+											<label for="seller_label">業務員</label>
+											<select id = "seller" placeholder = "業務">
+												<option value = -1 selected disabled>請選擇業務員名稱</option>
+												<option value = -1 >無</option>
+												</select>
+										</div>
 									</div>
-								</div>
-								<ul class="actions">
-									<li><a class="button primary" onclick = "send_order()">Default</a></li>
-								</ul>
+									<ul class="actions">
+										<li><a class="button primary" onclick = "send_order()">Default</a></li>
+									</ul>
+								</form>
 							</article>
 					</div>
 
