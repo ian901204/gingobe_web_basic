@@ -69,7 +69,7 @@
     </div>
     <div class="row">
       <div class="col-lg-7 py-vh-3 position-relative" data-aos="fade-right">
-        <h1 class="display-1 fw-bold mt-5">金勾杯</h1>
+        <h1 class="display-1 fw-bold mt-5">可以提的！環保杯</h1>
         <!--<p class="lead"> 
           本產品一體成形、手提專利飲料杯，BADP生物可降解塑料、PP材質食品級原料可回收再生能源，愛護地球、守護海洋從不拿塑膠袋開始！
       高透明、清晰，可以清楚看見杯子內的配料，可承受拉力為8公斤！！拿著飲料怎麼甩怎麼跑都不會斷，且耐高溫120°C，讓客人不用因為釋出塑化劑而喝下肚，有SGS材質及拉力檢驗證明，少拿一個塑膠袋，省錢又環保的好選擇！！
