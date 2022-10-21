@@ -35,7 +35,7 @@
                                 <strong class="card-title">訂單列表</strong>
                             </div>
                             <div class="table-stats order-table ov-h">
-                                <table class="table ">
+                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <th>ID</th>
@@ -56,9 +56,9 @@
                                                 echo "<td> <span class='name'>".$data["client_name"]."</td>";
                                                 echo "<td> <span class='count'>".$data["client_phone"]."</td>";
                                                 echo "<td> <span class='product'>".$data["product_size"]."</td>";
-                                                echo "<td> <span class='count'>".$data["product_amount"]."</td>";
-                                                echo "<td> <span class='count'>".$data["order_address"]."</td>";
-                                                echo "<td> <span class='count'>".$data["seller_id"]."</td>";
+                                                echo "<td> ".$data["product_amount"]."</td>";
+                                                echo "<td> <span >".$data["order_address"]."</td>";
+                                                echo "<td> <span >".$data["seller_id"]."</td>";
                                                 echo "<td>";
                                                 echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
                                                 echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
