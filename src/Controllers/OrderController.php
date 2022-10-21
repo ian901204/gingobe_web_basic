@@ -49,6 +49,7 @@
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
 			$order_data = Order::get(["id", "client_name", "product_size", "product_amount", "client_phone", "order_address", "seller_id"]);
 			foreach ($order_data as $data){
+				echo $data["order_address"];
 				if ($data["seller_id"] != -1 || $data["seller_id"] != 0){
 					$seller_data = sellers::where("id", "=", $data["seller_id"])->first();
 					$data["seller_id"] = $seller_data->name;
