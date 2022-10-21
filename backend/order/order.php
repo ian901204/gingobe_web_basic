@@ -34,7 +34,7 @@
                             <div class="card-header">
                                 <strong class="card-title">訂單列表</strong>
                             </div>
-                            <div class="table-stats order-table ov-h">
+                            <div class="card-body">
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
