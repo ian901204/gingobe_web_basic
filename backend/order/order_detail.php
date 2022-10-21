@@ -99,11 +99,12 @@
                                     <select name="select" id="seller_id" class="form-control" disabled>
                                         <option value="-1">請選擇業務員</option>
                                         <?php   
+                                            echo "<option value=0 ".($order_data["seller_id"] == 0)?"selected":"".">無</option>";
                                             foreach($seller_data as $data){
                                                 if ($data["id"] == $order_data["seller_id"]){
-                                                    echo "<option value = '".$data["id"]."'selected>".$data["name"]."</option>";
+                                                    echo "<option value=".$data["id"]." selected>".$data["name"]."</option>";
                                                 }else{
-                                                    echo "<option value = '".$data["id"]."'>".$data["name"]."</option>";
+                                                    echo "<option value=".$data["id"].">".$data["name"]."</option>";
                                                 }
                                             }
                                         ?>
