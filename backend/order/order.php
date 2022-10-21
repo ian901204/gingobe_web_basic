@@ -32,44 +32,46 @@
         <div class="content">
             <div class="row">
                 <div class="card">
-                    <div class="card-header">
-                        <strong class="card-title">訂單列表</strong>
+                    <div class="col-md-12">
+                        <div class="card-header">
+                            <strong class="card-title">訂單列表</strong>
+                        </div>
+                        <div class="card-body">
+                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>訂購人</th>
+                                        <th>訂購人電話</th>
+                                        <th>產品尺寸</th>
+                                        <th>產品數量</th>
+                                        <th>訂單地址</th>
+                                        <th>業務員</th>
+                                        <th>動作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        foreach($order_data as $data){
+                                            echo "<tr>";
+                                            echo "<td>".$data["id"]."</td>";
+                                            echo "<td> ".$data["client_name"]."</td>";
+                                            echo "<td> ".$data["client_phone"]."</td>";
+                                            echo "<td>".$data["product_size"]."</td>";
+                                            echo "<td> ".$data["product_amount"]."</td>";
+                                            echo "<td> ".$data["order_address"]."</td>";
+                                            echo "<td> ".$data["seller_id"]."</td>";
+                                            echo "<td>";
+                                            echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
+                                            echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
+                                            echo "</td>";
+                                            echo "</tr>";
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div> <!-- /.table-stats -->
                     </div>
-                    <div class="card-body">
-                        <table id="bootstrap-data-table" class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>訂購人</th>
-                                    <th>訂購人電話</th>
-                                    <th>產品尺寸</th>
-                                    <th>產品數量</th>
-                                    <th>訂單地址</th>
-                                    <th>業務員</th>
-                                    <th>動作</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                    foreach($order_data as $data){
-                                        echo "<tr>";
-                                        echo "<td>".$data["id"]."</td>";
-                                        echo "<td> ".$data["client_name"]."</td>";
-                                        echo "<td> ".$data["client_phone"]."</td>";
-                                        echo "<td>".$data["product_size"]."</td>";
-                                        echo "<td> ".$data["product_amount"]."</td>";
-                                        echo "<td> ".$data["order_address"]."</td>";
-                                        echo "<td> ".$data["seller_id"]."</td>";
-                                        echo "<td>";
-                                        echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
-                                        echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
-                                        echo "</td>";
-                                        echo "</tr>";
-                                    }
-                                ?>
-                            </tbody>
-                        </table>
-                    </div> <!-- /.table-stats -->
                 </div>
             </div>
         </div>
