@@ -57,7 +57,6 @@
 				}
 			}
 			include __DIR__."/../../backend/order/order.php";
-			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
 			return $response -> withStatus(200);
 		}
 
