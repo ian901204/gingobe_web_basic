@@ -39,10 +39,13 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Product Size</th>
-                                            <th>Product Amount</th>
-                                            <th>Action</th>
+                                            <th>訂購人</th>
+                                            <th>訂購人電話</th>
+                                            <th>產品尺寸</th>
+                                            <th>產品數量</th>
+                                            <th>訂單地址</th>
+                                            <th>業務員</th>
+                                            <th>動作</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -51,8 +54,11 @@
                                                 echo "<tr>";
                                                 echo "<td>#".$data["id"]."</td>";
                                                 echo "<td> <span class='name'>".$data["client_name"]."</td>";
+                                                echo "<td> <span class='count'>".$data["client_phone"]."</td>";
                                                 echo "<td> <span class='product'>".$data["product_size"]."</td>";
                                                 echo "<td> <span class='count'>".$data["product_amount"]."</td>";
+                                                echo "<td> <span class='count'>".$data["order_address"]."</td>";
+                                                echo "<td> <span class='count'>".$data["seller_id"]."</td>";
                                                 echo "<td>";
                                                 echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
                                                 echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";

@@ -47,7 +47,7 @@
 
 		//後台訂單列表 function
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
-			$order_data = Order::get(["id", "client_name", "product_size", "product_amount"]);
+			$order_data = Order::get(["id", "client_name", "product_size", "product_amount", "client_phone", "order_address", "seller_id"]);
 			include __DIR__."/../../backend/order/order.php";
 			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
 			return $response -> withStatus(200);
