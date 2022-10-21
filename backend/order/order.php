@@ -31,8 +31,8 @@
         <!-- Content -->
         <div class="content">
             <div class="row">
-                <div class="card">
-                    <div class="col-md-12">
+                <div class="col-md-12">
+                    <div class="card">
                         <div class="card-header">
                             <strong class="card-title">訂單列表</strong>
                         </div>
