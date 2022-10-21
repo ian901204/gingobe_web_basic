@@ -7,6 +7,7 @@
     <?php
         include __DIR__."/../common_component/head.php";
     ?>
+    <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css">
 </head>
 
 <body>
