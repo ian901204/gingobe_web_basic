@@ -48,6 +48,14 @@
 		//後台訂單列表 function
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
 			$order_data = Order::get(["id", "client_name", "product_size", "product_amount", "client_phone", "order_address", "seller_id"]);
+			foreach ($order_data as $data){
+				if ($data["seller_id"] != -1){
+					$seller_data = sellers::where("id", "=", $data["seller_id"])->first();
+					$data["seller_id"] = $seller_data->name;
+				}else{
+					$data["seller_id"] = "無";
+				}
+			}
 			include __DIR__."/../../backend/order/order.php";
 			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
 			return $response -> withStatus(200);
