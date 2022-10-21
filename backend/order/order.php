@@ -53,12 +53,12 @@
                                             foreach($order_data as $data){
                                                 echo "<tr>";
                                                 echo "<td>#".$data["id"]."</td>";
-                                                echo "<td> <span class='name'>".$data["client_name"]."</td>";
-                                                echo "<td> <span class='count'>".$data["client_phone"]."</td>";
-                                                echo "<td> <span class='product'>".$data["product_size"]."</td>";
+                                                echo "<td> ".$data["client_name"]."</td>";
+                                                echo "<td> ".$data["client_phone"]."</td>";
+                                                echo "<td>".$data["product_size"]."</td>";
                                                 echo "<td> ".$data["product_amount"]."</td>";
-                                                echo "<td> <span >".$data["order_address"]."</td>";
-                                                echo "<td> <span >".$data["seller_id"]."</td>";
+                                                echo "<td> ".$data["order_address"]."</td>";
+                                                echo "<td> ".$data["seller_id"]."</td>";
                                                 echo "<td>";
                                                 echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
                                                 echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
