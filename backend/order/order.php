@@ -43,8 +43,8 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>訂購人</th>
-                                            <th>訂購人電話</th>
+                                            <th>客戶姓名</th>
+                                            <th>客戶電話</th>
                                             <th>產品尺寸</th>
                                             <th>產品數量</th>
                                             <th>訂單地址</th>
