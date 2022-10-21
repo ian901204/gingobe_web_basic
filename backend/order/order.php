@@ -52,7 +52,7 @@
                                         <?php
                                             foreach($order_data as $data){
                                                 echo "<tr>";
-                                                echo "<td>#".$data["id"]."</td>";
+                                                echo "<td>".$data["id"]."</td>";
                                                 echo "<td> ".$data["client_name"]."</td>";
                                                 echo "<td> ".$data["client_phone"]."</td>";
                                                 echo "<td>".$data["product_size"]."</td>";
