@@ -49,6 +49,7 @@
                                             <th>產品數量</th>
                                             <th>訂單地址</th>
                                             <th>業務員</th>
+                                            <th>訂單成立時間</th>
                                             <th>動作</th>
                                         </tr>
                                     </thead>
@@ -63,6 +64,7 @@
                                                 echo "<td> ".$data["product_amount"]."</td>";
                                                 echo "<td> ".$data["order_address"]."</td>";
                                                 echo "<td> ".$data["seller_id"]."</td>";
+                                                echo "<td> ".$data["order_time"]."</td>";
                                                 echo "<td>";
                                                 echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
                                                 echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
