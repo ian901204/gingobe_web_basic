@@ -61,13 +61,19 @@
                                                 echo "<td>" . $data["order_data"] -> count() . "</td>";
                                                 echo "<td>";
                                                 ?>
-                                                <div class = "col-md-12">
+                                                <div class = "row">
+                                                    <div class = "col-md-6">
                                                 <?php
                                                 echo "<a href = '/seller/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
                                                 ?>
-                                                </div>
+                                                    </div>
+                                                    <div class = "col-md-6">
                                                 <?php
                                                 echo "<a onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
+                                                ?>
+                                                    </div>
+                                                </div>
+                                                <?php
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
