@@ -37,7 +37,6 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">訂單列表</strong>
-                                <button class="btn btn-success btn-sm" onclick="add_seller()">新增業務員</button>
                             </div>
                             <div class="table-stats order-table ov-h">
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
