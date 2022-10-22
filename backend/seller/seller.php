@@ -64,12 +64,12 @@
                                                 <div class = "row">
                                                     <div class = "col-md-6">
                                                 <?php
-                                                echo "<button onclick = 'get_detail(" . $data["id"]. ")' class = 'btn btn-success'>顯示</button>";
+                                                echo "<button onclick = 'get_detail(" . $data["id"]. ")' class = 'btn btn-success btn-block'>顯示</button>";
                                                 ?>
                                                     </div>
                                                     <div class = "col-md-6">
                                                 <?php
-                                                echo "<button onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</button>";
+                                                echo "<button onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger btn-block'>刪除</button>";
                                                 ?>
                                                     </div>
                                                 </div>
