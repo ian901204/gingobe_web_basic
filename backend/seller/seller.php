@@ -7,6 +7,7 @@
     <?php
         include __DIR__."/../common_component/head.php";
     ?>
+    <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css">
 </head>
 
 <body>
@@ -30,42 +31,48 @@
         <!-- /#header -->
         <!-- Content -->
         <div class="content">
-        <div class="card">
-            <div class="card-header">
-                <strong class="card-title">訂單列表</strong>
-                <button class="btn btn-success btn-sm" onclick="add_seller()">新增業務員</button>
+            <div class="animated fadeIn">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">訂單列表</strong>
+                                <button class="btn btn-success btn-sm" onclick="add_seller()">新增業務員</button>
+                            </div>
+                            <div class="table-stats order-table ov-h">
+                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>編號</th>
+                                            <th>姓名</th>
+                                            <th>電話</th>
+                                            <th>完成訂單數</th>
+                                            <!--<th>獎金</th>-->
+                                            <th>動作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                            foreach($seller_data as $data){
+                                                echo "<tr>";
+                                                echo "<td>#".$data["id"]."</td>";
+                                                echo "<td> <span class='name'>".$data["name"]."</td>";
+                                                echo "<td> <span class='product'>".$data["phone"]."</td>";
+                                                echo "<td>" . $data["order_data"] -> count() . "</td>";
+                                                echo "<td>";
+                                                echo "<a href = '/seller/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
+                                                echo "<a onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
+                                                echo "</td>";
+                                                echo "</tr>";
+                                            }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div> <!-- /.table-stats -->
+                </div>
             </div>
-            <div class="table-stats order-table ov-h">
-                <table class="table ">
-                    <thead>
-                        <tr>
-                            <th>編號</th>
-                            <th>姓名</th>
-                            <th>電話</th>
-                            <th>完成訂單數</th>
-                            <!--<th>獎金</th>-->
-                            <th>動作</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                            foreach($seller_data as $data){
-                                echo "<tr>";
-                                echo "<td>#".$data["id"]."</td>";
-                                echo "<td> <span class='name'>".$data["name"]."</td>";
-                                echo "<td> <span class='product'>".$data["phone"]."</td>";
-                                echo "<td>" . $data["order_data"] -> count() . "</td>";
-                                echo "<td>";
-                                echo "<a href = '/seller/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
-                                echo "<a onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
-                                echo "</td>";
-                                echo "</tr>";
-                            }
-                        ?>
-                    </tbody>
-                </table>
-            </div> <!-- /.table-stats -->
-        </div>
         </div>
         <!-- /.content -->
         <div class="clearfix"></div>
@@ -104,5 +111,22 @@
     <?php
         include __DIR__."/../common_component/buttom_script.php";
     ?>
+    <script src="assets/js/lib/data-table/datatables.min.js"></script>
+    <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+    <script src="assets/js/lib/data-table/jszip.min.js"></script>
+    <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
+    <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
+    <script src="assets/js/init/datatables-init.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('#bootstrap-data-table-export').DataTable();
+      } );
+    </script>
 </body>
 </html>
