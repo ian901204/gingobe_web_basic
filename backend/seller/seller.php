@@ -98,6 +98,9 @@
 
     <!-- Scripts -->
     <script>
+        function get_detail(seller_id){
+            window.location.href = $(location).attr("origin") + "/seller/get/" + seller_id;
+        }
         function add_seller(){
             window.location.href = $(location).attr("origin") + "/seller/add";
         }
