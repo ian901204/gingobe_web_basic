@@ -47,7 +47,7 @@
                                             <th>姓名</th>
                                             <th>電話</th>
                                             <th>完成訂單數</th>
-                                            <!--<th>獎金</th>-->
+                                            <th>獎金</th>
                                             <th>動作</th>
                                         </tr>
                                     </thead>
@@ -58,6 +58,7 @@
                                                 echo "<td>#".$data["id"]."</td>";
                                                 echo "<td> <span class='name'>".$data["name"]."</td>";
                                                 echo "<td> <span class='product'>".$data["phone"]."</td>";
+                                                echo "<td>" . $data["order_data"] -> count() . "</td>";
                                                 echo "<td>" . $data["order_data"] -> count() . "</td>";
                                                 echo "<td>";
                                                 ?>
