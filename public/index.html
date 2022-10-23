@@ -133,7 +133,7 @@
 						if ((value == "") || (value == null)){
 							$("#" + index + "_label").css("color", 'red');
 							data_missing = 1;
-						}else if(index == "amount" && !isNumeric(value)){
+						}else if(index == "amount" && !$.isNumeric(value)){
 							$("#" + index + "_label").text("輸入錯誤");
 							$("#" + index + "_label").css("color", 'red');
 							data_missing = 1;
