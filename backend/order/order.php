@@ -66,8 +66,20 @@
                                                 echo "<td> ".$data["seller_id"]."</td>";
                                                 echo "<td> ".$data["order_time"]."</td>";
                                                 echo "<td>";
-                                                echo "<a href = '/order/get/" . $data["id"]. "' class = 'btn btn-success'>顯示</a>";
-                                                echo "<a onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger'>刪除</a>";
+                                                ?>
+                                                <div class = "row">
+                                                <div class = "col-md-4">
+                                                <?php
+                                                echo "<button onclick = 'get_detail(" . $data["id"]. ")' class = 'btn btn-success btn-block'>顯示</button>";
+                                                ?>
+                                                </div>
+                                                <div class = "col-md-4">
+                                                <?php
+                                                echo "<button onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger btn-block'>刪除</button>";
+                                                ?>
+                                                    </div>
+                                                </div>
+                                                <?php
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
@@ -92,6 +104,10 @@
 
     <!-- Scripts -->
     <script>
+        function get_detail(id){
+            var path = window.location.pathname.split("/order")[0];
+            window.location.href = window.location.origin + path + "/order/get/" + id;
+        }
         function delete_order(order_id){
             if(confirm("確認要刪除訂單編號 #" + order_id + " ?")){
                 $.ajax({
