@@ -164,7 +164,7 @@
                     success: function(data){
                         var pathname = window.location.pathname;
                         if (pathname.includes("seller")){
-                            window.location.href = window.location.origin + pathname.split("/get")[0]
+                            window.location=document.referrer;
                         }else{
                             window.location.href =  $(location).attr('origin') +  "/order/list";
                         }
