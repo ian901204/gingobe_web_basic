@@ -121,6 +121,14 @@
 			<script>
 				const APIUrl = "https://admin.ian-shen.live"
 				var dataJSON = {};
+				var label_data = {
+					"name":"姓名",
+					"address":"運送地址",
+					"name":"電話",
+					"size":"欲訂購尺寸",
+					"amount":"欲訂購的箱數(1000杯/箱)",
+					"seller":"業務員"
+				};
 				function send_order(){
 					var data_missing = 0;
 					dataJSON["name"] = $("#name").val();
@@ -134,10 +142,11 @@
 							$("#" + index + "_label").css("color", 'red');
 							data_missing = 1;
 						}else if(index == "amount" && !$.isNumeric(value)){
-							$("#" + index + "_label").text("輸入錯誤");
+							$("#" + index + "_label").text($("#" + index + "_label").text() + "，請輸入正確數量！");
 							$("#" + index + "_label").css("color", 'red');
 							data_missing = 1;
 						}else{
+							$("#" + index + "_label").text(labeldata[index]);
 							$("#" + index + "_label").css("color", 'white');
 						}
 					});
