@@ -47,7 +47,6 @@
                                             <th>姓名</th>
                                             <th>電話</th>
                                             <th>完成訂單數</th>
-                                            <th>獎金</th>
                                             <th>動作</th>
                                         </tr>
                                     </thead>
@@ -59,16 +58,20 @@
                                                 echo "<td> <span class='name'>".$data["name"]."</td>";
                                                 echo "<td> <span class='product'>".$data["phone"]."</td>";
                                                 echo "<td>" . $data["order_data"] -> count() . "</td>";
-                                                echo "<td>" . $data["order_data"] -> count() . "</td>";
                                                 echo "<td>";
                                                 ?>
                                                 <div class = "row">
-                                                    <div class = "col-md-6">
+                                                    <div class = "col-md-4">
                                                 <?php
-                                                echo "<button onclick = 'get_detail(" . $data["id"]. ")' class = 'btn btn-success btn-block'>顯示</button>";
+                                                echo "<button onclick = 'get_order(" . $data["id"]. ")' class = 'btn btn-success btn-block'>顯示所有訂單</button>";
                                                 ?>
                                                     </div>
-                                                    <div class = "col-md-6">
+                                                    <div class = "col-md-4">
+                                                    <?php
+                                                    echo "<button onclick = 'get_detail(" . $data["id"]. ")' class = 'btn btn-success btn-block'>顯示</button>";
+                                                    ?>
+                                                    </div>
+                                                    <div class = "col-md-4">
                                                 <?php
                                                 echo "<button onclick = 'delete_seller(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger btn-block'>刪除</button>";
                                                 ?>
@@ -99,6 +102,9 @@
 
     <!-- Scripts -->
     <script>
+        function get_order(seller_id){
+            window.location.href = $(location).attr("origin") + "/seller/order/" + seller_id;
+        }
         function get_detail(seller_id){
             window.location.href = $(location).attr("origin") + "/seller/get/" + seller_id;
         }

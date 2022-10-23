@@ -5,6 +5,7 @@
 	use Psr\Http\Message\ServerRequestInterface;
 	use App\Models\DB\sellers;
 	use App\Models\DB\Order;
+	use App\Models\DB\product;
 	class SellerController
 	{
 		//前台取得所有業務的資料
@@ -31,10 +32,37 @@
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
 			$seller_data = sellers::get(["id", "name", "phone"]);
 			foreach($seller_data as $data){
-				$order_data = Order::where("seller_id", "=", $data["id"]) -> get(["product_amount"]);
+				$order_data = Order::where("seller_id", "=", $data["id"]) -> get(["product_amount", "product_size"]);
 				$data["order_data"] = $order_data;
 			}
 			include __DIR__."/../../backend/seller/seller.php";
+			return $response -> withStatus(200);
+		}
+
+		//後台取得業務員經手的所有訂單
+		public function order_list(ServerRequestInterface $request, ResponseInterface $response, array $args){
+			$order_data = Order::where("seller_id", "=", $args["id"]) -> get(["id", "client_name", "product_size", "product_amount", "client_phone", "order_address", "seller_id", "order_time"]);
+			foreach ($order_data as $data){
+				if ($data["seller_id"] != 0){
+					$seller_data = sellers::where("id", "=", $data["seller_id"])->first();
+					$data["seller_id"] = $seller_data->name;
+				}
+			}
+			include __DIR__."/../../backend/order/order.php";
+			return $response -> withStatus(200);
+		}
+
+		//後台取得業務員經手的訂單資訊
+		public function order_detail(ServerRequestInterface $request, ResponseInterface $response, array $args){
+			try{
+				$order_data = Order::where("id", "=", $args["id"]) -> first(["id", "client_name", "client_phone", "order_address", "product_size", "product_amount", "seller_id", "description"]);
+				$seller_data = sellers::get(["id", "name"]);
+				$product_data = product::get(["size"]);
+			}catch(\Exception $e){
+				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
+				return $response -> withStatus(400);
+			}
+			include __DIR__."/../../backend/order/order_detail.php";
 			return $response -> withStatus(200);
 		}
 

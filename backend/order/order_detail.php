@@ -155,14 +155,19 @@
                 "product_size" : $("#product_size").val(),
             });
             $.ajax({
-                    url:  $(location).attr('origin') +  "/order/edit/" + $("#order_id").val(),
+                    url:  window.location.origin +  "/order/edit/" + $("#order_id").val(),
                     type: "post",
                     data: order_data,
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
                     success: function(data){
-                        window.location.href =  $(location).attr('origin') +  "/order/list";
+                        var pathname = window.location.pathname;
+                        if (pathname.includes("seller")){
+                            window.location.href = window.location.origin + pathname.split("/get")[0]
+                        }else{
+                            window.location.href =  $(location).attr('origin') +  "/order/list";
+                        }
                     },
                     error: function(xhr, ajaxOptions, thrownError){
                         alert("編輯失敗，請重新整理網頁後在進行編輯！");
