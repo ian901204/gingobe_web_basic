@@ -50,7 +50,7 @@
                                             foreach($product_data as $data){
                                                 echo "<tr>";
                                                 echo "<td> <span class='name'>".$data["size"]."</td>";
-                                                echo "<td> <span class='product'>".$data["prize"]."</td>";
+                                                echo "<td> <span class='product'>".$data["price"]."</td>";
                                                 echo "<td>";
                                                 echo "<a href = '/product/get/" . $data["size"]. "' class = 'btn btn-success'>編輯</a>";
                                                 echo "<a onclick = \"product_delete(".$data["id"].", '".$data["size"]."')\" class = 'btn btn-danger'>刪除</a>";
