@@ -162,12 +162,7 @@
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
                     success: function(data){
-                        var pathname = window.location.pathname;
-                        if (pathname.includes("seller")){
-                            window.location=document.referrer;
-                        }else{
-                            window.location.href =  $(location).attr('origin') +  "/order/list";
-                        }
+                        window.location=document.referrer;
                     },
                     error: function(xhr, ajaxOptions, thrownError){
                         alert("編輯失敗，請重新整理網頁後在進行編輯！");
