@@ -93,9 +93,9 @@ $app -> group("/seller", function (RouteCollectorProxy $group){
 
     $group -> get("/list", "App\Controllers\SellerController:list");
 
-    $group -> get("/order", "AppControllers\SellerController:order_list");
+    $group -> get("/order", "App\Controllers\SellerController:order_list");
 
-    $group -> get("/order/get", "AppControllers\SellerController:order_detail");
+    $group -> get("/order/get", "App\Controllers\SellerController:order_detail");
 
     $group -> get("/get/{id}", "App\Controllers\SellerController:get");
 
