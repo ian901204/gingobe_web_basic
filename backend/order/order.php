@@ -106,8 +106,7 @@
     <script>
         function get_detail(id){
             if (window.location.pathname.includes("seller")){
-                var path = window.location.pathname.split("/order")[0];
-                window.location.href = window.location.origin + path + "/order/get/" + id;
+                window.location.href = window.location.origin + "/seller/order/get/" + id;
             }else{
                 window.location.href = window.location.origin + "/order/get/" + id;
             }
