@@ -105,8 +105,12 @@
     <!-- Scripts -->
     <script>
         function get_detail(id){
-            var path = window.location.pathname.split("/order")[0];
-            window.location.href = window.location.origin + path + "/order/get/" + id;
+            if (window.location.pathname.includes("seller")){
+                var path = window.location.pathname.split("/order")[0];
+                window.location.href = window.location.origin + path + "/order/get/" + id;
+            }else{
+                window.location.href = window.location.origin + "/order/get/" + id;
+            }
         }
         function delete_order(order_id){
             if(confirm("確認要刪除訂單編號 #" + order_id + " ?")){
