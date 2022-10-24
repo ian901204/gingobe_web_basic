@@ -66,20 +66,8 @@
                                                 echo "<td> ".$data["seller_id"]."</td>";
                                                 echo "<td> ".$data["order_time"]."</td>";
                                                 echo "<td>";
-                                                ?>
-                                                <div class = "row">
-                                                <div class = "col-6">
-                                                <?php
                                                 echo "<button onclick = 'get_detail(" . $data["id"]. ")' class = 'btn btn-success btn-block'>顯示</button>";
-                                                ?>
-                                                </div>
-                                                <div class = "col-6">
-                                                <?php
                                                 echo "<button onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger btn-block'>刪除</button>";
-                                                ?>
-                                                    </div>
-                                                </div>
-                                                <?php
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
