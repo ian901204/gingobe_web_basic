@@ -65,10 +65,10 @@
                                                 echo "<td> ".$data["order_address"]."</td>";
                                                 echo "<td> ".$data["seller_id"]."</td>";
                                                 echo "<td> ".$data["order_time"]."</td>";
-                                                echo "<td><div class = 'row'><div class = 'col-lg-6'>";
+                                                echo "<td>";
                                                 echo "<button onclick = 'get_detail(" . $data["id"]. ")' class = 'btn btn-success btn-block'>顯示</button>";
-                                                echo "</div><div class = 'col-lg-6'><button onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger btn-block'>刪除</button>";
-                                                echo "</div></div></td>";
+                                                echo "<button onclick = 'delete_order(".$data["id"].")' value = ".$data["id"]." class = 'btn btn-danger btn-block'>刪除</button>";
+                                                echo "</td>";
                                                 echo "</tr>";
                                             }
                                         ?>
