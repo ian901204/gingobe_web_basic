@@ -36,8 +36,8 @@
                                 <button class="btn btn-success btn-sm" onclick="add_product()">新增產品</button>
                                 <button class="btn btn-primary btn-sm" onclick="queue_adjustment()">調整順序</button>
                             </div>
-                            <div class="table-stats order-table ov-h">
-                                <table class="table ">
+                            <div class="card-body">
+                                <table class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th>產品尺寸</th>
