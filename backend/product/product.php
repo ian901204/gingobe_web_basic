@@ -51,10 +51,10 @@
                                                 echo "<tr>";
                                                 echo "<td> <span class='name'>".$data["size"]."</td>";
                                                 echo "<td> <span class='product'>".$data["price"]."</td>";
-                                                echo "<td>";
+                                                echo "<td><div class = 'row'><div class = 'col-3 offset-md-3 mr-auto ml-auto'>";
                                                 echo "<button onclick = 'get_detail(" . $data["size"]. ")' class = 'btn btn-success btn-block'>編輯</button>";
-                                                echo "<button onclick = 'product_delete(".$data["id"]."," . $data["size"]. ")' class = 'btn btn-danger btn-block'>刪除</button>";
-                                                echo "</td>";
+                                                echo "</div><div class = 'col-3'><button onclick = 'product_delete(".$data["id"]."," . $data["size"]. ")' class = 'btn btn-danger btn-block'>刪除</button>";
+                                                echo "</div></div></td>";
                                                 echo "</tr>";
                                             }
                                         ?>
