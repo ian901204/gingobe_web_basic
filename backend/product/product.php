@@ -52,8 +52,8 @@
                                                 echo "<td> <span class='name'>".$data["size"]."</td>";
                                                 echo "<td> <span class='product'>".$data["price"]."</td>";
                                                 echo "<td>";
-                                                echo "<a href = '/product/get/" . $data["size"]. "' class = 'btn btn-success'>編輯</a>";
-                                                echo "<a onclick = \"product_delete(".$data["id"].", '".$data["size"]."')\" class = 'btn btn-danger'>刪除</a>";
+                                                echo "<button onclick = 'get_detail(" . $data["size"]. ")' class = 'btn btn-success btn-block'>編輯</button>";
+                                                echo "<button onclick = 'product_delete(".$data["id"]."," . $data["size"]. ")' class = 'btn btn-danger btn-block'>刪除</button>";
                                                 echo "</td>";
                                                 echo "</tr>";
                                             }
@@ -80,6 +80,9 @@
         }
         function queue_adjustment(){
             window.location.href =  $(location).attr('origin') +  "/product/queue"
+        }
+        function get_detail(size){
+            window.location.href = $(location).attr('origin')+ "/prodcut/get/" + size
         }
         function product_delete(id, size){
             if(confirm("已存在訂單可能會受到影響，確定要刪除產品名稱" + size + " ?")){
