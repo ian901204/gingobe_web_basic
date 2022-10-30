@@ -61,10 +61,10 @@
                                                 echo "</div><div class = 'col-4'>";
                                                 if ($flag != count($product_data)){
                                                     echo "<button onclick = 'move_down(\"".$data["size"]."\")' class = 'btn btn-danger btn-block'>往下</button>";
-                                                
                                                 }
                                                 echo "</div></div></td>";
                                                 echo "</tr>";
+                                                $flag ++;
                                             }
                                         ?>
                                     </tbody>
