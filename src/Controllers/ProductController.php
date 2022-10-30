@@ -75,5 +75,11 @@
 			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
 			return $response -> withStatus(200);
 		}
+
+		public function queue(ServerRequestInterface $request, ResponseInterface $response){
+			$product_data = product::get(["id", "size", "price"]);
+			include __DIR__."/../../backend/product/product_queue.php";
+			return $response -> withStatus(200);
+		}
 	}
 ?>
