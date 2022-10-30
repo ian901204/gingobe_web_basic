@@ -48,14 +48,14 @@
                                     </thead>
                                     <tbody>
                                         <?php
-                                            $flag = 0;
+                                            $flag = 1;
                                             foreach($product_data as $data){
                                                 echo "<tr>";
                                                 echo "<td> <span class='name'>".$data["size"]."</td>";
                                                 echo "<td> <span class='product'>".$data["price"]."</td>";
                                                 echo "<td></td>";
                                                 echo "<td><div class = 'row'><div class = 'col-4'>";
-                                                if ($flag != 0){
+                                                if ($flag != 1){
                                                     echo "<button onclick = 'move_up(\"" . $data["size"]. "\")' class = 'btn btn-success btn-block'>往上</button>";
                                                 }
                                                 echo "</div><div class = 'col-4'>";
