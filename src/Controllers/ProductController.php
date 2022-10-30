@@ -28,6 +28,7 @@
                 $response -> getBody() -> write(json_encode(["Status" => "Success"]));
                 return $response -> withStatus(200);
             }catch(\Exception $e){
+				echo $e;
                 $response -> getBody() -> write(json_encode(["Status" => "add failed!"]));
                 return $response -> withStatus(400);
             }
@@ -67,6 +68,7 @@
 			try{
 				$order_data = product::where("id", "=", $args["id"])->delete();
 			}catch(\Exception $e){
+				echo $e;
 				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
 				return $response -> withStatus(400);
 			}
