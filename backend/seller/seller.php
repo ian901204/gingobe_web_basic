@@ -63,7 +63,7 @@
                                                 <div class = "row">
                                                     <div class = "col-md-6">
                                                 <?php
-                                                echo "<button onclick = 'get_order(" . $data["id"]. ")' class = 'btn btn-success btn-block'>顯示所有訂單</button>";
+                                                echo "<button onclick = 'get_order(" . $data["id"]. ")' class = 'btn btn-info btn-block'>顯示所有訂單</button>";
                                                 ?>
                                                     </div>
                                                     <div class = "col-md-3">
