@@ -42,6 +42,7 @@
                                         <tr>
                                             <th>產品尺寸</th>
                                             <th>產品價格</th>
+                                            <th></th>
                                             <th>產品編輯</th>
                                         </tr>
                                     </thead>
@@ -51,6 +52,7 @@
                                                 echo "<tr>";
                                                 echo "<td> <span class='name'>".$data["size"]."</td>";
                                                 echo "<td> <span class='product'>".$data["price"]."</td>";
+                                                echo "<td></td>";
                                                 echo "<td><div class = 'row'><div class = 'col-3'>";
                                                 echo "<button onclick = 'get_detail(" . $data["size"]. ")' class = 'btn btn-success btn-block'>編輯</button>";
                                                 echo "</div><div class = 'col-3'><button onclick = 'product_delete(".$data["id"]."," . $data["size"]. ")' class = 'btn btn-danger btn-block'>刪除</button>";
