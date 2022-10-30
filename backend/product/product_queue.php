@@ -32,9 +32,7 @@
         <div class="content">
         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">產品列表</strong>
-                                <button class="btn btn-success btn-sm" onclick="add_product()">新增產品</button>
-                                <button class="btn btn-primary btn-sm" onclick="queue_adjustment()">調整順序</button>
+                                <strong class="card-title">產品順序調整</strong>
                             </div>
                             <div class="card-body">
                                 <table class="table table-striped">
@@ -84,32 +82,11 @@
 
     <!-- Scripts -->
     <script>
-        function add_product(){
-            window.location.href =  $(location).attr('origin') +  "/product/add"
+        function move_up(){
+
         }
-        function queue_adjustment(){
-            window.location.href =  $(location).attr('origin') +  "/product/queue"
-        }
-        function get_detail(size){
-            window.location.href = $(location).attr('origin')+ "/prodcut/get/" + size
-        }
-        function product_delete(id, size){
-            if(confirm("已存在訂單可能會受到影響，確定要刪除產品名稱" + size + " ?")){
-                $.ajax({
-                    url:  $(location).attr('origin') +  "/product/delete/" + id,
-                    type: "post",
-                    headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
-                    dataType: "json",
-                    contentType: "application/json;charset=utf-8",
-                    success: function(returnData){
-                        alert("刪除成功");
-                        location.reload(true);
-                    },
-                    error: function(xhr, ajaxOptions, thrownError){
-                        alert("failed!");
-                    }
-                });
-            }
+        function move_down(){
+            
         }
     </script>
     <?php
