@@ -59,6 +59,7 @@
                                                     echo "<button onclick = 'move_up(\"" . $data["size"]. "\")' class = 'btn btn-success btn-block'>往上</button>";
                                                 }
                                                 echo "</div><div class = 'col-4'>";
+                                                echo count($product_data);
                                                 if ($flag != count($product_data)){
                                                     echo "<button onclick = 'move_down(\"".$data["size"]."\")' class = 'btn btn-danger btn-block'>往下</button>";
                                                 }
