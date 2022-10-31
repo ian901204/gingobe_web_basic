@@ -82,10 +82,6 @@ $app -> group("/product", function (RouteCollectorProxy $group){
         $queue -> post("/up/{size}", "App\Controllers\ProductController:queue_up");
     });
 
-    $group -> post("/queue", "App\Controllers\ProductController:queue_list");
-
-    $group -> post("/queue", "App\Controllers\ProductController:queue_list");
-
     $group -> post("/delete/{id}", "App\Controllers\ProductController:delete")-> add(authMiddleware::class);
 
     $group -> post("/add", "App\Controllers\ProductController:add")-> add(authMiddleware::class);
