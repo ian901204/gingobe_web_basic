@@ -82,7 +82,7 @@
 
     <!-- Scripts -->
     <script>
-        function move_up(){
+        function move_up(size){
             $.ajax({
                     url:  $(location).attr('origin') +  "/product/queue/up/" + size,
                     type: "post",
@@ -97,7 +97,7 @@
                     }
                 });
         }
-        function move_down(){
+        function move_down(size){
             $.ajax({
                     url:  $(location).attr('origin') +  "/product/queue/down/" + size,
                     type: "post",
