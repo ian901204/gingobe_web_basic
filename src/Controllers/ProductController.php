@@ -81,5 +81,13 @@
 			include __DIR__."/../../backend/product/product_queue.php";
 			return $response -> withStatus(200);
 		}
+
+		public function queue_down(ServerRequestInterface $request, ResponseInterface $response, array $args){
+			
+		}
+
+		public function queue_up(ServerRequestInterface $request, ResponseInterface $response, array $args){
+
+		}
 	}
 ?>

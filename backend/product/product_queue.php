@@ -83,10 +83,34 @@
     <!-- Scripts -->
     <script>
         function move_up(){
-
+            $.ajax({
+                    url:  $(location).attr('origin') +  "/product/queue/up/" + size,
+                    type: "post",
+                    headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    success: function(returnData){
+                        location.reload(true);
+                    },
+                    error: function(xhr, ajaxOptions, thrownError){
+                        alert("failed!");
+                    }
+                });
         }
         function move_down(){
-            
+            $.ajax({
+                    url:  $(location).attr('origin') +  "/product/queue/down/" + size,
+                    type: "post",
+                    headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    success: function(returnData){
+                        location.reload(true);
+                    },
+                    error: function(xhr, ajaxOptions, thrownError){
+                        alert("failed!");
+                    }
+                });
         }
     </script>
     <?php
