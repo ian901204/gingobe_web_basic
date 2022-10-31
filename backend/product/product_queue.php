@@ -93,7 +93,7 @@
                         location.reload(true);
                     },
                     error: function(xhr, ajaxOptions, thrownError){
-                        alert("failed!");
+                        alert("更新失敗，請在檢查網路或者伺服器是否錯誤後再重試一次!");
                     }
                 });
         }
@@ -108,7 +108,7 @@
                         location.reload(true);
                     },
                     error: function(xhr, ajaxOptions, thrownError){
-                        alert("failed!");
+                        alert("更新失敗，請在檢查網路或者伺服器是否錯誤後再重試一次!");
                     }
                 });
         }
