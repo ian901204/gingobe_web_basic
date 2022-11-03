@@ -36,7 +36,7 @@
 		}
 
 		//後台取得產品詳細資訊
-		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
+		public function get_data(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
 				$product_data = product::where("size", "=", $args["size"]) -> first(["id","size","price"]);
 			}catch(\Exception $e){

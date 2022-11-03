@@ -47,7 +47,7 @@ $app -> get("/login",  function (Request $request, Response $response) {
     return $response -> withStatus(200);
 });
 
-//後台登入API
+//後台登入APIp
 $app -> post("/login", "App\Controllers\AuthController:login");
 
 //前端頁面取得資訊用API
@@ -67,7 +67,7 @@ $app -> group("/product", function (RouteCollectorProxy $group){
 
     $group -> get("/list", "App\Controllers\ProductController:list");
 
-    $group -> get("/get/{size}", "App\Controllers\ProductController:get");
+    $group -> get("/get/{size}", "App\Controllers\ProductController:get_data");
 
     $group -> get("/queue", "App\Controllers\ProductController:queue_list");
 
