@@ -98,6 +98,8 @@
 				}
 			}
 			$product_data -> save();
+			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
+			return $response -> withStatus(200);
 		}
 
 		public function queue_up(ServerRequestInterface $request, ResponseInterface $response, array $args){
