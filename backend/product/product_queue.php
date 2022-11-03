@@ -33,7 +33,7 @@
         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">產品順序調整</strong>
-                                <button onclick="go_back()" class = 'btn btn-success btn-block'>回上一頁</button>
+                                <button onclick="go_back()" class = 'btn btn-success'>回上一頁</button>
                             </div>
                             <div class="card-body">
                                 <table class="table table-striped">
@@ -71,6 +71,7 @@
                             </div> <!-- /.table-stats -->
                         </div>
         </div>
+        
         <!-- /.content -->
         <div class="clearfix"></div>
         <!-- Footer -->
@@ -83,7 +84,7 @@
 
     <!-- Scripts -->
     <script>
-        function go_bacl(){
+        function go_back(){
             window.location.href = document.location.origin + "/product/list";
         }
         function move_up(size, index){
