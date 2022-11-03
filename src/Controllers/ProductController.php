@@ -15,7 +15,7 @@
 
 		//後台顯示現有產品列表 
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
-            $product_data = product::product::orderBy("order_index", "desc") -> get(["id", "size", "price"]);
+            $product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price"]);
 			include __DIR__."/../../backend/product/product.php";
 			return $response -> withStatus(200);
 		}
