@@ -33,6 +33,7 @@
         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">產品順序調整</strong>
+                                <button onclick="go_back()" class = 'btn btn-success btn-block'>回上一頁</button>
                             </div>
                             <div class="card-body">
                                 <table class="table table-striped">
