@@ -83,6 +83,9 @@
 
     <!-- Scripts -->
     <script>
+        function go_bacl(){
+            window.location.href = document.location.origin + "/product/list";
+        }
         function move_up(size, index){
             $.ajax({
                     url:  $(location).attr('origin') +  "/product/queue/up",
