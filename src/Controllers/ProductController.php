@@ -87,11 +87,12 @@
 			$index = $body_data["index"];
 			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price", "order_index"]);
 			$i = 0;
+			if ($index - 1 == 0){
+				$response -> getBody() -> write(json_encode(["Status" => "error API request!"]));
+				return $response -> withStatus(400);
+			}
 			for ($i = 0;$i <= 2; $i ++){
-				if ($product_data[$i]["order_index"] - 1 == 0){
-					$response -> getBody() -> write(json_encode(["Status" => "error API request!"]));
-					return $response -> withStatus(400);
-				}else if($product_data[$i]["queue_index"] - 1 == $index -1){
+				if($product_data[$i]["queue_index"] - 1 == $index -1){
 					$product_data[$i]["queue_index"] = $index;
 				}else if($product_data[$i]["queue_index"] == $index){
 					$product_data[$i]["queue_index"] = $index -1;
