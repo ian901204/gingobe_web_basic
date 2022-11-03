@@ -8,14 +8,14 @@
 	{
 		//前台取得產品資訊 
 		public function get_select(ServerRequestInterface $request, ResponseInterface $response){
-			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price"]);
+			$product_data = product::orderBy("order_index", "asc") -> get(["id", "size", "price"]);
 			$response -> getBody() -> write(json_encode($product_data));
 			return $response -> withStatus(200);
 		}
 
 		//後台顯示現有產品列表 
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
-            $product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price"]);
+            $product_data = product::orderBy("order_index", "asc") -> get(["id", "size", "price"]);
 			include __DIR__."/../../backend/product/product.php";
 			return $response -> withStatus(200);
 		}
@@ -76,7 +76,7 @@
 		}
 
 		public function queue_list(ServerRequestInterface $request, ResponseInterface $response){
-			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price", "order_index"]);
+			$product_data = product::orderBy("order_index", "asc") -> get(["id", "size", "price", "order_index"]);
 			include __DIR__."/../../backend/product/product_queue.php";
 			return $response -> withStatus(200);
 		}
