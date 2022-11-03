@@ -76,7 +76,7 @@
 		}
 
 		public function queue_list(ServerRequestInterface $request, ResponseInterface $response){
-			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price", "queue_index"]);
+			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price", "order_index"]);
 			include __DIR__."/../../backend/product/product_queue.php";
 			return $response -> withStatus(200);
 		}
