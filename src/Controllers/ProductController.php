@@ -30,7 +30,7 @@
                 $response -> getBody() -> write(json_encode(["Status" => "Success"]));
                 return $response -> withStatus(200);
             }catch(\Exception $e){
-                $response -> getBody() -> write(json_encode(["Status" => "add failed!"]));
+                $response -> getBody() -> write(json_encode(["Status" => "add failed!", "Exception" => $e]));
                 return $response -> withStatus(400);
             }
 		}
