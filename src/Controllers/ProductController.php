@@ -83,7 +83,6 @@
 
 		public function queue_down(ServerRequestInterface $request, ResponseInterface $response){
 			$body_data = json_decode($request -> getbody() -> getcontents(),true);
-			$size = $body_data["size"];
 			$index = $body_data["index"];
 			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price", "order_index"]);
 			$i = 0;
@@ -103,7 +102,23 @@
 		}
 
 		public function queue_up(ServerRequestInterface $request, ResponseInterface $response, array $args){
-
+			$body_data = json_decode($request -> getbody() -> getcontents(),true);
+			$index = $body_data["index"];
+			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price", "order_index"]);
+			$i = 0;
+			if (null == product::where("order_index", "=", $index + 1)->get()){
+				$response -> getBody() -> write(json_encode(["Status" => "error API request!"]));
+				return $response -> withStatus(400);
+			}
+			for ($i = 0;$i <= 2; $i ++){
+				if($product_data[$i]["order_index"] == $index + 1){
+					product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index]);
+				}else if($product_data[$i]["order_index"] == $index){
+					product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index + 1 ]);
+				}
+			}
+			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
+			return $response -> withStatus(200);
 		}
 	}
 ?>
