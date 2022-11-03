@@ -81,7 +81,7 @@
 			return $response -> withStatus(200);
 		}
 
-		public function queue_down(ServerRequestInterface $request, ResponseInterface $response){
+		public function queue_up(ServerRequestInterface $request, ResponseInterface $response){
 			$body_data = json_decode($request -> getbody() -> getcontents(),true);
 			$index = $body_data["index"];
 			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price", "order_index"]);
@@ -101,7 +101,7 @@
 			return $response -> withStatus(200);
 		}
 
-		public function queue_up(ServerRequestInterface $request, ResponseInterface $response, array $args){
+		public function queue_down(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			$body_data = json_decode($request -> getbody() -> getcontents(),true);
 			$index = $body_data["index"];
 			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price", "order_index"]);
