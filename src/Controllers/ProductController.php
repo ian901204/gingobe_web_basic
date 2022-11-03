@@ -93,9 +93,9 @@
 			}
 			for ($i = 0;$i <= 2; $i ++){
 				if($product_data[$i]["queue_index"] - 1 == $index -1){
-					product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index]);
+					$prodict = product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index]);
 				}else if($product_data[$i]["queue_index"] == $index){
-					product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index -1]);
+					$test = product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index -1]);
 				}
 			}
 			$response -> getBody() -> write(json_encode(["Status" => "Success"]));
