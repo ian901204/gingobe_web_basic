@@ -26,6 +26,7 @@
                 $data = json_decode($request -> getbody() -> getcontents(),true);
 				$index_count = product::get() -> count();
 				$data["order_index"] = $index + 1;
+				echo $data;
                 $product_data = product::create($data);
                 $response -> getBody() -> write(json_encode(["Status" => "Success"]));
                 return $response -> withStatus(200);
