@@ -37,11 +37,6 @@ $capsule->addConnection($dbSettings);
 $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
-//暫時的測試頁面
-$app -> get("/",  function (Request $request, Response $response) {
-    include __DIR__."/common_component/blank.php";
-    return $response -> withStatus(200);
-});
 
 //後台 token 認證 API
 $app -> post("/verify", "App\Controllers\AuthController:verify");
