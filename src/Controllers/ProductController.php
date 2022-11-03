@@ -92,9 +92,9 @@
 				return $response -> withStatus(400);
 			}
 			for ($i = 0;$i <= 2; $i ++){
-				if($product_data[$i]["queue_index"] == $index -1){
+				if($product_data[$i]["order_index"] == $index -1){
 					product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index]);
-				}else if($product_data[$i]["queue_index"] == $index){
+				}else if($product_data[$i]["order_index"] == $index){
 					product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index -1]);
 				}
 			}
