@@ -38,9 +38,9 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
+                                            <th>#</th>
                                             <th>產品尺寸</th>
                                             <th>產品價格</th>
-                                            <th></th>
                                             <th>產品編輯</th>
                                         </tr>
                                     </thead>
@@ -49,16 +49,16 @@
                                             $flag = 1;
                                             foreach($product_data as $data){
                                                 echo "<tr>";
+                                                echo "<td>".$data["queue_index"]."</td>";
                                                 echo "<td> <span class='name'>".$data["size"]."</td>";
                                                 echo "<td> <span class='product'>".$data["price"]."</td>";
-                                                echo "<td></td>";
                                                 echo "<td><div class = 'row'><div class = 'col-4'>";
                                                 if ($flag != 1){
-                                                    echo "<button onclick = \"move_up('" . $data["size"]. "')\" class = 'btn btn-success btn-block'>往上</button>";
+                                                    echo "<button onclick = \"move_up()\" class = 'btn btn-success btn-block'>往上</button>";
                                                 }
                                                 echo "</div><div class = 'col-4'>";
                                                 if ($flag != count($product_data)){
-                                                    echo "<button onclick = \"move_down(\'".$data["size"]."\')\" class = 'btn btn-danger btn-block'>往下</button>";
+                                                    echo "<button onclick = \"move_down()\" class = 'btn btn-danger btn-block'>往下</button>";
                                                 }
                                                 echo "</div></div></td>";
                                                 echo "</tr>";
@@ -82,9 +82,9 @@
 
     <!-- Scripts -->
     <script>
-        function move_up(size){
+        function move_up(){
             $.ajax({
-                    url:  $(location).attr('origin') +  "/product/queue/up/" + size,
+                    url:  $(location).attr('origin') +  "/product/queue/up/",
                     type: "post",
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
@@ -97,9 +97,9 @@
                     }
                 });
         }
-        function move_down(size){
+        function move_down(){
             $.ajax({
-                    url:  $(location).attr('origin') +  "/product/queue/down/" + size,
+                    url:  $(location).attr('origin') +  "/product/queue/down/",
                     type: "post",
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
