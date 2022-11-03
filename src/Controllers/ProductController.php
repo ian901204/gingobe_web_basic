@@ -8,14 +8,14 @@
 	{
 		//前台取得產品資訊 
 		public function get_select(ServerRequestInterface $request, ResponseInterface $response){
-			$product_data = product::get(["id", "size", "price"]);
+			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price"]);
 			$response -> getBody() -> write(json_encode($product_data));
 			return $response -> withStatus(200);
 		}
 
 		//後台顯示現有產品列表 
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
-            $product_data = product::get(["id", "size", "price"]);
+            $product_data = product::product::orderBy("order_index", "desc") -> get(["id", "size", "price"]);
 			include __DIR__."/../../backend/product/product.php";
 			return $response -> withStatus(200);
 		}
@@ -28,7 +28,6 @@
                 $response -> getBody() -> write(json_encode(["Status" => "Success"]));
                 return $response -> withStatus(200);
             }catch(\Exception $e){
-				echo $e;
                 $response -> getBody() -> write(json_encode(["Status" => "add failed!"]));
                 return $response -> withStatus(400);
             }
@@ -77,13 +76,28 @@
 		}
 
 		public function queue_list(ServerRequestInterface $request, ResponseInterface $response){
-			$product_data = product::get(["id", "size", "price"]);
+			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price"]);
 			include __DIR__."/../../backend/product/product_queue.php";
 			return $response -> withStatus(200);
 		}
 
-		public function queue_down(ServerRequestInterface $request, ResponseInterface $response, array $args){
-			
+		public function queue_down(ServerRequestInterface $request, ResponseInterface $response){
+			$body_data = json_decode($request -> getbody() -> getcontents(),true);
+			$size = $body_data["size"];
+			$index = $body_data["index"];
+			$product_data = product::orderBy("order_index", "desc") -> get(["id", "size", "price", "order_index"]);
+			$i = 0;
+			for ($i = 0;$i <= 2; $i ++){
+				if ($product_data[$i]["order_index"] - 1 == 0){
+					$response -> getBody() -> write(json_encode(["Status" => "error API request!"]));
+					return $response -> withStatus(400);
+				}else if($product_data[$i]["queue_index"] - 1 == $index -1){
+					$product_data[$i]["queue_index"] = $index;
+				}else if($product_data[$i]["queue_index"] == $index){
+					$product_data[$i]["queue_index"] = $index -1;
+				}
+			}
+			$product_data -> save();
 		}
 
 		public function queue_up(ServerRequestInterface $request, ResponseInterface $response, array $args){
