@@ -55,7 +55,7 @@
                                                 echo "<td></td>";
                                                 echo "<td><div class = 'row'><div class = 'col-4'>";
                                                 echo "<button onclick = 'get_detail(\"" . $data["size"]. "\")' class = 'btn btn-success btn-block'>編輯</button>";
-                                                echo "</div><div class = 'col-4'><button onclick = 'product_delete(".$data["id"]."," . $data["size"]. ")' class = 'btn btn-danger btn-block'>刪除</button>";
+                                                echo "</div><div class = 'col-4'><button onclick = 'product_delete(".$data["id"].",\"" . $data["size"]. "\")' class = 'btn btn-danger btn-block'>刪除</button>";
                                                 echo "</div></div></td>";
                                                 echo "</tr>";
                                             }
