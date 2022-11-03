@@ -92,8 +92,8 @@
 				$response -> getBody() -> write(json_encode(["Status" => "error API request!"]));
 				return $response -> withStatus(400);
 			}
-			for ($i = 0;$i <= 2; $i ++){
-				if($product_data[$i]["order_index"] == $index -1){
+			for ($i = 0;$i < $product_data -> count(); $i ++){
+				if($product_data[$i]["order_index"] == $index - 1){
 					product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index]);
 				}else if($product_data[$i]["order_index"] == $index){
 					product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index -1]);
@@ -112,7 +112,7 @@
 				$response -> getBody() -> write(json_encode(["Status" => "error API request!"]));
 				return $response -> withStatus(400);
 			}
-			for ($i = 0;$i <= 2; $i ++){
+			for ($i = 0;$i < $product_data -> count(); $i ++){
 				if($product_data[$i]["order_index"] == $index + 1){
 					product::where("id", "=", $product_data[$i]["id"])->update(["order_index" => $index]);
 				}else if($product_data[$i]["order_index"] == $index){
