@@ -86,6 +86,10 @@
             $.ajax({
                     url:  $(location).attr('origin') +  "/product/queue/up",
                     type: "post",
+                    data: JSON.stringify({
+                        "size":$("#size").val(),
+                        "index":$("#index").val()
+                    }),
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
@@ -101,6 +105,10 @@
             $.ajax({
                     url:  $(location).attr('origin') +  "/product/queue/down",
                     type: "post",
+                    data: JSON.stringify({
+                        "size":$("#size").val(),
+                        "index":$("#index").val()
+                    }),
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
                     contentType: "application/json;charset=utf-8",
