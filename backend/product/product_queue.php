@@ -49,7 +49,7 @@
                                             $flag = 1;
                                             foreach($product_data as $data){
                                                 echo "<tr>";
-                                                echo "<td>".$data["queue_index"]."</td>";
+                                                echo "<td>".$data["order_index"]."</td>";
                                                 echo "<td> <span class='name'>".$data["size"]."</td>";
                                                 echo "<td> <span class='product'>".$data["price"]."</td>";
                                                 echo "<td><div class = 'row'><div class = 'col-4'>";
