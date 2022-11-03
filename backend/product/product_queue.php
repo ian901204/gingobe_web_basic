@@ -84,7 +84,7 @@
     <script>
         function move_up(){
             $.ajax({
-                    url:  $(location).attr('origin') +  "/product/queue/up/",
+                    url:  $(location).attr('origin') +  "/product/queue/up",
                     type: "post",
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
@@ -99,7 +99,7 @@
         }
         function move_down(){
             $.ajax({
-                    url:  $(location).attr('origin') +  "/product/queue/down/",
+                    url:  $(location).attr('origin') +  "/product/queue/down",
                     type: "post",
                     headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
                     dataType: "json",
