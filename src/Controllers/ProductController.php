@@ -54,6 +54,7 @@
 				$body_data = json_decode($request -> getbody() -> getcontents(),true);
 				$product_data = product::where("id", "=", $data["id"])->get(["size", "price"]);
 				unset($body_data["id"]);
+				print_r($body_data);
 				foreach($body_data as $key-> $value){
 					$product_data -> $key = $value;
 				}
