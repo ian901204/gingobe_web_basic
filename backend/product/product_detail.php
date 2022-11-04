@@ -105,7 +105,7 @@
                 });
         }catch(err){
             alert("編輯失敗！");
-            location.refresh();
+            location.reload(true);
             return;
         }
         $("input").each(function(){
