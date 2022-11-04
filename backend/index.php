@@ -53,6 +53,7 @@ $app -> post("/login", "App\Controllers\AuthController:login");
 //前端頁面取得資訊用API
 $app -> group("/frontend", function (RouteCollectorProxy $group){
     $group -> post("/product", "App\Controllers\ProductController:get_select");
+
     $group -> post("/seller", "App\Controllers\SellerController:select");
 });
 
@@ -62,23 +63,16 @@ $app -> group("/product", function (RouteCollectorProxy $group){
         include __DIR__."/product/product_add.php";
         return $response -> withStatus(200);
     });
-
-    $group -> get("/list", "App\Controllers\ProductController:list");
-
+    $group -> get("/", "App\Controllers\ProductController:list");
     $group -> get("/{size}", "App\Controllers\ProductController:get_data");
-
-    $group -> get("/queue", "App\Controllers\ProductController:queue_list");
-
-    $group -> post("/queue", "App\Controllers\ProductController:queue")-> add(authMiddleware::class);
-
-    $group -> post("/queue/down", "App\Controllers\ProductController:queue_down");
-
-    $group -> post("/queue/up", "App\Controllers\ProductController:queue_up");
-
+    $group -> group("/queue", function (RouteCollectorProxy $queue){
+        $queue -> get("/", "App\Controllers\ProductController:queue_list");
+        $group -> post("/", "App\Controllers\ProductController:queue") -> add(authMiddleware::class);
+        $group -> post("/down", "App\Controllers\ProductController:queue_down");
+        $group -> post("/up", "App\Controllers\ProductController:queue_up");   
+    });
     $group -> post("/edit", "App\Controllers\ProductController:edit");
-
     $group -> post("/delete/{id}", "App\Controllers\ProductController:delete")-> add(authMiddleware::class);
-
     $group -> post("/add", "App\Controllers\ProductController:add")-> add(authMiddleware::class);
 });
 
