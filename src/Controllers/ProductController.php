@@ -59,7 +59,7 @@
 				}
 				$body_data-> save();
 			}catch(\Exception $e){
-				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
+				$response -> getBody() -> write(json_encode(["Status" => "failed!",$e]));
 				return $response -> withStatus(400);
 			}
 		}
