@@ -105,6 +105,7 @@
                 });
         }catch(err){
             alert("編輯失敗！");
+            console.log(err);
             location.reload(true);
             return;
         }
