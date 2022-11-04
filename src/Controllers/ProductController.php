@@ -52,8 +52,9 @@
 		public function edit(ServerRequestInterface $request, ResponseInterface $response){
 			try{
 				$body_data = json_decode($request -> getbody() -> getcontents(),true);
+				$id = $body_data["id"];
 				unset($body_data["id"]);
-				product::where("id", "=", $data["id"])->update($body_data);
+				product::where("id", "=", $id)->update($body_data);
 				$response -> getBody() -> write(json_encode(["Status" => "Success"]));
 				return $response -> withStatus(200);
 			}catch(\Exception $e){
