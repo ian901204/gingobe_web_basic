@@ -85,7 +85,7 @@
     function finish(){
         try{
             var order_data = JSON.stringify({
-                "id" : $("$product_id").val(),
+                "id" : $("#product_id").val(),
                 "size" : $("#size").val(),
                 "price" : $("#price").val(),
             });
