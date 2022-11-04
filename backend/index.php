@@ -65,11 +65,15 @@ $app -> group("/product", function (RouteCollectorProxy $group){
 
     $group -> get("/list", "App\Controllers\ProductController:list");
 
-    $group -> get("/{id}", "App\Controllers\ProductController:get_data");
+    $group -> get("/{size}", "App\Controllers\ProductController:get_data");
 
-    $group -> get("/queue", "App\Controllers\ProductController:queue_list");
 
     $group -> group("/queue", function (RouteCollectorProxy $queue){
+
+        $group -> get("", "App\Controllers\ProductController:queue_list");
+
+        $group -> post("", "App\Controllers\ProductController:queue")-> add(authMiddleware::class);
+
         $queue -> post("/down", "App\Controllers\ProductController:queue_down");
 
         $queue -> post("/up", "App\Controllers\ProductController:queue_up");
@@ -80,8 +84,6 @@ $app -> group("/product", function (RouteCollectorProxy $group){
     $group -> post("/delete/{id}", "App\Controllers\ProductController:delete")-> add(authMiddleware::class);
 
     $group -> post("/add", "App\Controllers\ProductController:add")-> add(authMiddleware::class);
-
-    $group -> post("/queue", "App\Controllers\ProductController:queue")-> add(authMiddleware::class);
 });
 
 //業務員功能區域
