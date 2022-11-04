@@ -84,7 +84,7 @@
             window.location.href =  $(location).attr('origin') +  "/product/queue"
         }
         function get_detail(size){
-            window.location.href = $(location).attr('origin')+ "/product/" + size
+            window.location.href = $(location).attr('origin')+ "/product/get/" + size
         }
         function product_delete(id, size){
             if(confirm("已存在訂單可能會受到影響，確定要刪除產品名稱" + size + " ?")){
