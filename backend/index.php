@@ -63,7 +63,7 @@ $app -> group("/product", function (RouteCollectorProxy $group){
         include __DIR__."/product/product_add.php";
         return $response -> withStatus(200);
     });
-    $group -> get("/", "App\Controllers\ProductController:list");
+    $group -> get("/list", "App\Controllers\ProductController:list");
     $group -> get("/{size}", "App\Controllers\ProductController:get_data");
     $group -> group("/queue", function (RouteCollectorProxy $queue){
         $queue -> get("/", "App\Controllers\ProductController:queue_list");
