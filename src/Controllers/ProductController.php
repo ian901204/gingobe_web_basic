@@ -52,7 +52,7 @@
 		public function edit(ServerRequestInterface $request, ResponseInterface $response){
 			try{
 				$body_data = json_decode($request -> getbody() -> getcontents(),true);
-				$product_data = product::where("id", "=", $data["id"])->get(["size", "price", "amount"]);
+				$product_data = product::where("id", "=", $data["id"])->get(["size", "price"]);
 				unset($body_data["id"]);
 				foreach($body_data as $key-> $value){
 					$product_data -> $key = $value;
