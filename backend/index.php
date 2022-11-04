@@ -65,7 +65,7 @@ $app -> group("/product", function (RouteCollectorProxy $group){
 
     $group -> get("/list", "App\Controllers\ProductController:list");
 
-    $group -> get("/get/{id}", "App\Controllers\ProductController:get_data");
+    $group -> get("/{id}", "App\Controllers\ProductController:get_data");
 
     $group -> get("/queue", "App\Controllers\ProductController:queue_list");
 
