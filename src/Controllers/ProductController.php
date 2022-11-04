@@ -37,14 +37,8 @@
 
 		//後台取得產品詳細資訊
 		public function get_data(ServerRequestInterface $request, ResponseInterface $response, array $args){
-			try{
-				$product_data = product::where("size", "=", $args["size"]) -> first(["id","size","price"]);
-			}catch(\Exception $e){
-				echo $e;
-				$response -> getBody() -> write(json_encode(["Status" => "failed!"]));
-				return $response -> withStatus(400);
-			}
-			include __DIR__."/../../backend/product/product_detail.php";
+			$product_data = product::orderBy("order_index", "asc") -> get(["id", "size", "price"]);
+			include __DIR__."/../../backend/product/product.php";
 			return $response -> withStatus(200);
 		}
 
