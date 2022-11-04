@@ -52,13 +52,10 @@
 		public function edit(ServerRequestInterface $request, ResponseInterface $response){
 			try{
 				$body_data = json_decode($request -> getbody() -> getcontents(),true);
-				$product_data = product::where("id", "=", $data["id"])->get(["size", "price"]);
 				unset($body_data["id"]);
-				print_r($body_data);
-				foreach($body_data as $key-> $value){
-					$product_data -> $key = $value;
-				}
-				$body_data-> save();
+				product::where("id", "=", $data["id"])->update($body_data);
+				$response -> getBody() -> write(json_encode(["Status" => "Success"]));
+				return $response -> withStatus(200);
 			}catch(\Exception $e){
 				$response -> getBody() -> write(json_encode(["Status" => "failed!",$e]));
 				return $response -> withStatus(400);
