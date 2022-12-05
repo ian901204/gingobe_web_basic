@@ -38,6 +38,8 @@ $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
 
+$app -> get("/",  "App\Controllers\ProductController:list");
+
 //後台 token 認證 API
 $app -> post("/verify", "App\Controllers\AuthController:verify");
 
