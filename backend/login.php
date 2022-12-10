@@ -51,7 +51,7 @@
                     if (xhr.statusCode == "400"){
                         alert(xhr.responseText);
                     }else{
-                        alert(xhr.responseText["Status"]);
+                        alert(xhr.responseText);
                         if (xhr.responseText["Status"] == "account"){
                             $("#account").addClass("is-invalid");
                             $("#password").removeClass("is-invalid");
