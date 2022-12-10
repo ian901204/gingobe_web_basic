@@ -11,12 +11,12 @@
 <body class="bg-dark">
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
+        <div class="alerts"></div>
             <div class="login-logo">
                 <a >
-                    <img class="align-content" src="images/金勾杯股份有限公司-LOGO.png" alt="" width = 600 heigh = 400>
+                    <img class="align-content" src="images/金勾杯股份有限公司-LOGO.png" alt="" width = 300 heigh = 100>
                 </a>
             </div>
-            <div class="alerts"></div>
             <div class="login-content">
                 <div class="login-form">
                         <div class="form-group">
