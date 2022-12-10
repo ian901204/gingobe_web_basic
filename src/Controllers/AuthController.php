@@ -13,8 +13,6 @@
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$user = admin::whereRaw("BINARY `account`= ?",[$data["account"]])->first();
-            echo $data["account"];
-            echo $user["account"];
             if ($user != null){
                 if ($user -> check_password($data["password"])){
                     $jwt_data = [
