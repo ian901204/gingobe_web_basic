@@ -13,7 +13,7 @@
         <div class="container">
             <div class="login-logo">
                 <a >
-                    <img class="align-content" src="images/金勾杯股份有限公司-LOGO.png" alt="">
+                    <img class="align-content" src="images/金勾杯股份有限公司-LOGO.png" alt="" width = 600 heigh = 400>
                 </a>
             </div>
             <div class="alerts"></div>
