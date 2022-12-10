@@ -12,8 +12,8 @@
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
             <div class="alerts">
-                <div class="sufee-alert alert with-close alert-secondary alert-dismissible fade show">
-                    <span class="badge badge-pill badge-secondary">Success</span>
+                <div id = "check_error" class="sufee-alert alert with-close alert-secondary alert-dismissible fade show">
+                    <span class="badge badge-pill badge-secondary">錯誤</span>
                     You successfully read this important alert.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -56,19 +56,23 @@
                     window.location.href = $(location).attr("origin") + "/order/list";
                 },
                 error: function(xhr, ajaxOptions, thrownError){
+                    var error_message = "";
                     if (xhr.statusCode == "400"){
-                        alert(xhr.responseText);
+                        error_message = xhr.responseText;
                     }else{
                         var responseData = $.parseJSON(xhr.responseText);
                         if (responseData["Status"] == "account"){
-                            
+                            error_message = "帳號錯誤!";
                             $("#account").addClass("is-invalid");
                             $("#password").removeClass("is-invalid");
                         }else if(responseData["Status"] == "password"){
+                            error_message = "密碼錯誤!";
                             $("#password").addClass("is-invalid");
                             $("#account").removeClass("is-invalid");
                         }
                     }
+                    $("#check_error").text(error_message)
+                    $("check_error").addClass("show");
                 }
             });
         }
