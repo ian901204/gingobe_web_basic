@@ -11,14 +11,8 @@
 <body class="bg-dark">
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
-            <div id = "error" class="alerts">
-                <div id = "check_error" class="sufee-alert alert with-close alert-secondary alert-dismissible fade">
-                    <span class="badge badge-pill badge-secondary">錯誤</span>
-                    You successfully read this important alert.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+            <div id = "error_alert" class="alerts">
+                
             </div>
             <div class="login-content">
                 <div class="login-form">
@@ -66,8 +60,7 @@
                             $("#account").removeClass("is-invalid");
                         }
                     }
-                    $("#check_error").text(error_message)
-                    $("#check_error").addClass("show");
+                    $(".alerts").html("<div id = 'check_error' class='sufee-alert alert with-close alert-secondary alert-dismissible fade show'><span class='badge badge-pill badge-secondary'>錯誤</span>" + error_message +"<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
                 }
             });
         }
