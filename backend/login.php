@@ -51,10 +51,10 @@
                     if (xhr.statusCode == "400"){
                         alert(xhr.responseText);
                     }else{
-                        if (xhr.responseText == "帳號"){
+                        if (xhr.responseText == "account"){
                             $("#password").removeClass("is-invalid");
                             $("#account").addClass("is-invalid");
-                        }else if(xhr.responseText == "密碼"){
+                        }else if(xhr.responseText == "password"){
                             $("#password").addClass("is-invalid");
                             $("#account").removeClass("is-invalid");
                         }
