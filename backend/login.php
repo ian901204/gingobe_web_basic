@@ -11,8 +11,10 @@
 <body class="bg-dark">
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
-            <div class="alert alert-dark" role="alert">
-                This is a dark alert—check it out!
+            <div class="alerts">
+                <div class="alert alert-dark" role="alert">
+                    This is a dark alert—check it out!
+                </div>
             </div>
             <div class="login-content">
                 <div class="login-logo">
