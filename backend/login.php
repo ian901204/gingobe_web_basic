@@ -48,7 +48,17 @@
                     window.location.href = $(location).attr("origin") + "/order/list";
                 },
                 error: function(xhr, ajaxOptions, thrownError){
-                    alert(xhr.responseText);
+                    if (xhr.statusCode == "400"){
+                        alert(xhr.responseText);
+                    }else{
+                        if (xhr.responseText == "帳號"){
+                            $("#password").removeClass("is-invalid");
+                            $("#account").addClass("is-invalid");
+                        }else if(xhr.responseText == "密碼"){
+                            $("#password").addClass("is-invalid");
+                            $("#account").removeClass("is-invalid");
+                        }
+                    }
                 }
             });
         }

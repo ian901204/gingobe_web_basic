@@ -12,9 +12,8 @@
         //登入function
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
-            echo $_POST["account"];
 			$user = admin::where("account", "=", $data["account"])->first();
-            if ($user -> id != null){
+            if ($user != null){
                 if ($user -> check_password($data["password"])){
                     $jwt_data = [
                         "id" => $user->id,
@@ -26,11 +25,11 @@
                     $response -> getBody() -> write(json_encode(["token"=> $jwtToken]));
                     return $response ->withHeader('content-type', 'application/json') -> withStatus(200);
                 }else{
-                    $response -> getBody() -> write(json_encode(["Status"=> "Password incorrect!"]));
+                    $response -> getBody() -> write(json_encode(["Status"=> "password"]));
                     return $response -> withHeader("content-type", "applocation/json") -> withStatus(403);
                 }
             }else{
-                $response -> getBody() -> write(json_encode(["Status"=> "account not found!"]));
+                $response -> getBody() -> write(json_encode(["Status"=> "account"]));
                 return $response->withHeader('content-type', 'application/json') -> withStatus(403);
             }
             $response -> getBody() -> write(json_encode(["Status" => "something went wrong on server!"]));
