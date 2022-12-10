@@ -12,7 +12,7 @@
         //登入function
 		public function login(ServerRequestInterface $request, ResponseInterface $response){
 			$data = json_decode($request -> getbody() -> getcontents(),true);
-			$user = admin::where(admin::raw('BINARY `account`'), $data["account"])->first();
+			$user = admin::whereRaw("BINARY `account`= ?",[$data["account"]])->first();
             echo $data["account"];
             echo $user["account"];
             if ($user != null){
