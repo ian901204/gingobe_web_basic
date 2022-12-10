@@ -21,11 +21,11 @@
                 <div class="login-form">
                         <div class="form-group">
                             <label>管理員帳戶</label>
-                            <input id = "account" type="account" class="form-control" placeholder="account">
+                            <input id = "account" class="form-control" placeholder="輸入帳號">
                         </div>
                         <div class="form-group">
                             <label>密碼</label>
-                            <input id = "password" type="password" class="form-control" placeholder="Password">
+                            <input id = "password" type="password" class="form-control" placeholder="輸入密碼">
                         </div>
                         <button onclick = "login()" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
                 </div>
@@ -53,8 +53,8 @@
                     }else{
                         alert(xhr.responseText["Status"]);
                         if (xhr.responseText["Status"] == "account"){
-                            $("#password").removeClass("is-invalid");
                             $("#account").addClass("is-invalid");
+                            $("#password").removeClass("is-invalid");
                         }else if(xhr.responseText["Status"] == "password"){
                             $("#password").addClass("is-invalid");
                             $("#account").removeClass("is-invalid");
