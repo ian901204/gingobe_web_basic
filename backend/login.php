@@ -11,9 +11,12 @@
 <body class="bg-dark">
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
-            <div id = "error_alert" class="alerts">
-                
+            <div class="login-logo">
+                <a >
+                    <img class="align-content" src="images/金勾杯股份有限公司-LOGO.png" alt="">
+                </a>
             </div>
+            <div class="alerts"></div>
             <div class="login-content">
                 <div class="login-form">
                         <div class="form-group">
@@ -51,7 +54,7 @@
                     }else{
                         var responseData = $.parseJSON(xhr.responseText);
                         if (responseData["Status"] == "account"){
-                            error_message = "帳號錯誤!";
+                            error_message = "查無此帳號!";
                             $("#account").addClass("is-invalid");
                             $("#password").removeClass("is-invalid");
                         }else if(responseData["Status"] == "password"){
