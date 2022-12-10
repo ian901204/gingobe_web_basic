@@ -1191,7 +1191,9 @@ header .form-inline {
 .notification-show + .dropdown-menu,
 .message-show + .dropdown-menu,
 .language-show + .dropdown-menu {
-  display: block; }
+  display: block; 
+  animation: 300ms;
+}
 
 .content {
   float: left;
