@@ -12,7 +12,7 @@
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
             <div class="alerts">
-                <div class="sufee-alert alert with-close alert-secondary alert-dismissible fade">
+                <div class="sufee-alert alert with-close alert-secondary alert-dismissible fade show">
                     <span class="badge badge-pill badge-secondary">Success</span>
                     You successfully read this important alert.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
