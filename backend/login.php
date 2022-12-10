@@ -9,7 +9,10 @@
     ?>
 </head>
 <body class="bg-dark">
-
+    <div class="content">
+        <div class="animated fadeIn">
+        </div>
+    </div>
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
             <div class="login-content">
@@ -20,11 +23,11 @@
                 </div>
                 <div class="login-form">
                         <div class="form-group">
-                            <label>管理員帳戶</label>
+                            <label id = "account_label">管理員帳戶</label>
                             <input id = "account" class="form-control" placeholder="輸入帳號">
                         </div>
                         <div class="form-group">
-                            <label>密碼</label>
+                            <label id = "password_label">密碼</label>
                             <input id = "password" type="password" class="form-control" placeholder="輸入密碼">
                         </div>
                         <button onclick = "login()" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
@@ -51,9 +54,9 @@
                     if (xhr.statusCode == "400"){
                         alert(xhr.responseText);
                     }else{
-                        alert(xhr.responseText);
                         var responseData = $.parseJSON(xhr.responseText);
                         if (responseData["Status"] == "account"){
+                            
                             $("#account").addClass("is-invalid");
                             $("#password").removeClass("is-invalid");
                         }else if(responseData["Status"] == "password"){
