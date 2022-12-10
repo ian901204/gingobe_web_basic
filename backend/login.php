@@ -11,8 +11,8 @@
 <body class="bg-dark">
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
-            <div class="alerts">
-                <div id = "check_error" class="sufee-alert alert with-close alert-secondary alert-dismissible fade show">
+            <div id = "error" class="alerts">
+                <div id = "check_error" class="sufee-alert alert with-close alert-secondary alert-dismissible fade">
                     <span class="badge badge-pill badge-secondary">錯誤</span>
                     You successfully read this important alert.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -21,11 +21,6 @@
                 </div>
             </div>
             <div class="login-content">
-                <div class="login-logo">
-                    <a href="index.html">
-                        <img class="align-content" src="images/logo.png" alt="">
-                    </a>
-                </div>
                 <div class="login-form">
                         <div class="form-group">
                             <label id = "account_label">管理員帳戶</label>
@@ -35,7 +30,7 @@
                             <label id = "password_label">密碼</label>
                             <input id = "password" type="password" class="form-control" placeholder="輸入密碼">
                         </div>
-                        <button onclick = "login()" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+                        <button onclick = "login()" class="btn btn-success btn-flat m-b-30 m-t-30">登入</button>
                 </div>
             </div>
         </div>
@@ -72,7 +67,7 @@
                         }
                     }
                     $("#check_error").text(error_message)
-                    $("check_error").addClass("show");
+                    $("#check_error").addClass("show");
                 }
             });
         }
