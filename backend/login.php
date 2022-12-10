@@ -9,12 +9,11 @@
     ?>
 </head>
 <body class="bg-dark">
-    <div class="content">
-        <div class="animated fadeIn">
-        </div>
-    </div>
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
+            <div class="alert alert-dark" role="alert">
+                This is a dark alert—check it out!
+            </div>
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">
