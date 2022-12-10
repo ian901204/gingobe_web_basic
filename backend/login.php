@@ -20,11 +20,11 @@
                 </div>
                 <div class="login-form">
                         <div class="form-group">
-                            <label>admin account</label>
+                            <label>管理員帳戶</label>
                             <input id = "account" type="account" class="form-control" placeholder="account">
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
+                            <label>密碼</label>
                             <input id = "password" type="password" class="form-control" placeholder="Password">
                         </div>
                         <button onclick = "login()" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
@@ -51,10 +51,10 @@
                     if (xhr.statusCode == "400"){
                         alert(xhr.responseText);
                     }else{
-                        if (xhr.responseText == "account"){
+                        if (xhr.responseText["Status"] == "account"){
                             $("#password").removeClass("is-invalid");
                             $("#account").addClass("is-invalid");
-                        }else if(xhr.responseText == "password"){
+                        }else if(xhr.responseText["Status"] == "password"){
                             $("#password").addClass("is-invalid");
                             $("#account").removeClass("is-invalid");
                         }
