@@ -52,10 +52,11 @@
                         alert(xhr.responseText);
                     }else{
                         alert(xhr.responseText);
-                        if (xhr.responseText["Status"] == "account"){
+                        var responseData = $.parseJSON(xhr.responseText);
+                        if (responseData["Status"] == "account"){
                             $("#account").addClass("is-invalid");
                             $("#password").removeClass("is-invalid");
-                        }else if(xhr.responseText["Status"] == "password"){
+                        }else if(responseData["Status"] == "password"){
                             $("#password").addClass("is-invalid");
                             $("#account").removeClass("is-invalid");
                         }
