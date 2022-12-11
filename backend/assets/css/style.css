@@ -579,10 +579,6 @@ aside.left-panel {
 .small-device .right-panel {
   margin-left: 83px; }
 
-a.on-left{
-  float:left;
-}
-
 .navbar {
   background: #fff;
   border-radius: 0;
@@ -1098,7 +1094,9 @@ header .form-inline {
   float: right;
   padding-right: 0;
   position: relative;
-  padding-left: 10px; }
+  padding-left: 20px; 
+  box-sizing: border-box;
+}
   .user-area .user-menu {
     background: #fff;
     border: none;
@@ -1117,11 +1115,26 @@ header .form-inline {
     .user-area .user-menu .nav-link {
       color: #607d8b;
       display: block;
-      font-size: 20px;
+      font-size: 13px;
       line-height: 22px;
-      padding: 0px 0; }
+      padding: 5px 0; }
       .user-area .user-menu .nav-link > i {
-        margin-right: 20px; }
+        margin-right: 10px; }
+  .user-area .logout-btn{
+    position: relative;
+    margin: 5px;
+    color: white;
+    border: none;
+    background-color: lightgrey;
+
+  }
+  .user-area .logout-btn i{
+    padding: 5px;
+    justify-self: center;
+  }
+  .user-area .logout-btn:hover{
+    background-color: #dc3545;
+  }
   .user-area .user-avatar {
     float: right;
     width: 40px; }
@@ -1728,19 +1741,15 @@ header .form-inline {
       font-size: 14px; }
 
 .login-logo {
-  float: left;
   text-align: center;
-  margin-bottom: 0px; }
+  margin-bottom: 15px; }
   .login-logo span {
     color: #ffffff;
     font-size: 24px; }
 
 .login-content {
-  float: left;
-  width: 540px;
-  margin: auto; 
-  text-align: center;
-}
+  max-width: 540px;
+  margin: 8vh auto; }
 
 .login-form {
   background: #ffffff;
