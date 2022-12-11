@@ -38,8 +38,10 @@ $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
 
-$app -> get("/",  "App\Controllers\ProductController:list");
-
+$app -> get("/",  function (Request $request, Response $response) {
+    include __DIR__."/login.php";
+    return $response -> withStatus(200);
+});
 //後台 token 認證 API
 $app -> post("/verify", "App\Controllers\AuthController:verify");
 
