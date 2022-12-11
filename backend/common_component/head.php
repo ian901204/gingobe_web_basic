@@ -1,9 +1,8 @@
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>金勾杯後台</title>
-    <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="https://admin.ian-shen.live/" target="_self">
+    <base href="/" target="_self">
     <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
     <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
 
@@ -22,4 +21,5 @@
         $('link[href="assets/css/style.css"]').attr('href',$(location).attr('origin') + '/assets/css/style.css');
         $('link[href="assets/css/cs-skin-elastic.css"]').attr('href',$(location).attr('origin') + '/assets/css/cs-skin-elastic.css');
         $('script[src="assets/js/verify_login.js"]').attr('src',$(location).attr('origin') + '/assets/js/verify_login.js');
+        $('base[href="/"]').attr('href',$(location).attr('origin'));
     </script> 

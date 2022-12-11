@@ -2330,6 +2330,9 @@ footer.site-footer {
   .navbar .main-menu {
     padding: 0; }
 
+  #menu_li a:hover{
+    background-color: gray;
+  }
   #language-select,
   .user-area .dropdown-toggle,
   header .form-inline {
