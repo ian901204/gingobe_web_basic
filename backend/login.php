@@ -9,7 +9,9 @@
     ?>
 </head>
 <body class="login-bg">
-        <div class="alerts"></div>
+    <div class= "alert-box">
+    <div class="alerts"></div>
+    </div>
         <div class="login-logo">
                 <a >
                     <img class="align-content" src="images/金勾杯股份有限公司-LOGO.png" alt="" >

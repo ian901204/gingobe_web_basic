@@ -1751,6 +1751,14 @@ header .form-inline {
     .social-box ul li span {
       font-size: 14px; }
 
+.alert-box{
+  position: absolute;
+  right: 0%;
+  width: 500px;
+  height: 100px;
+  z-index: 3;
+}
+
 .login-logo {
   position: absolute;
   top: 50%;
