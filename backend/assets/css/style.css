@@ -354,12 +354,10 @@ body {
   height: 100vh;
   width: 100%; }
 
-  body.login-bg {
-    background-color: #343a40;
-    
-    width: 100%;
-
-  }
+body.login-bg {
+  background-color: #343a40;
+  width: 100%;
+}
 
 p {
   font-size: 16px;
@@ -1794,7 +1792,6 @@ header .form-inline {
   color: #878787; }
 
 .login-form button {
-  position: absolute;
   margin-top: 10px;
   max-width: 440px;
 }
@@ -2512,6 +2509,11 @@ footer.site-footer {
 
   .small-device .right-panel {
     margin-left: 0; }
+
+  .login-form{
+    width: 300px;
+  }
+
 
   #left-panel {
     max-width: 100%;
