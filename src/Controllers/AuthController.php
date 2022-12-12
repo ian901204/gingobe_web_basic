@@ -48,8 +48,8 @@
             }
             $jwtToken = str_replace("Bearer ", "", $request->getHeader("Authorization")[0]);
             try {
-                $jwtBody = JWT::decode($jwtToken, new Key($_ENV["JWT_SECRET"], 'HS256'));
-                $response -> getBody() -> write(json_encode(["Status" => "Success"]));
+                $jwtBody = (array) JWT::decode($jwtToken, new Key($_ENV["JWT_SECRET"], 'HS256'));
+                $response -> getBody() -> write(json_encode(["Status" => "Success", "name" => $jwtBody["name"]]));
                 return $response ->withHeader('content-type', 'application/json')
                 ->withStatus(200);
             } catch (\Exception $e) {

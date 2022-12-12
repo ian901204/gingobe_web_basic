@@ -345,11 +345,21 @@ Googel Fonts  */
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
+
+
 body {
   display: table;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
+  height: 100vh;
   width: 100%; }
+
+  body.login-bg {
+    background-color: #343a40;
+    
+    width: 100%;
+
+  }
 
 p {
   font-size: 16px;
@@ -589,7 +599,7 @@ aside.left-panel {
   vertical-align: top; }
   .navbar .main-menu {
     float: left;
-    padding: 0;
+    padding-top: 20px;
     padding-bottom: 50px; }
   .navbar .menu-title {
     color: #41434d;
@@ -1675,6 +1685,9 @@ header .form-inline {
   clear: both;
   overflow: hidden; }
 
+
+
+
 .icon-container {
   width: 240px;
   padding: .7em 0;
@@ -1741,20 +1754,36 @@ header .form-inline {
       font-size: 14px; }
 
 .login-logo {
-  text-align: center;
-  margin-bottom: 15px; }
-  .login-logo span {
-    color: #ffffff;
-    font-size: 24px; }
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  margin-top: -200px;
+  margin-left: -500px;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 15px; 
+
+}
+.login-logo span {
+  color: #ffffff;
+  font-size: 24px; }
 
 .login-content {
   max-width: 540px;
   margin: 8vh auto; }
 
 .login-form {
+  position: absolute;
   background: #ffffff;
   padding: 30px 30px 20px;
-  border-radius: 2px; }
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+  width: 500px;
+  height: 300px;
+  border-radius: 5px; 
+}
 
 .login-form h4 {
   color: #878787;
@@ -1763,6 +1792,12 @@ header .form-inline {
 
 .login-form .checkbox {
   color: #878787; }
+
+.login-form button {
+  position: absolute;
+  margin-top: 10px;
+  max-width: 440px;
+}
 
 .login-form .checkbox label {
   text-transform: none; }

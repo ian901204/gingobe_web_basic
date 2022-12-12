@@ -7,7 +7,6 @@
     <?php
         include __DIR__."/../common_component/head.php";
     ?>
-    <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css">
 </head>
 
 <body>
@@ -131,12 +130,12 @@
     <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
     <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
     <script src="assets/js/init/datatables-init.js"></script>
-
-
+    
     <script type="text/javascript">
         $(document).ready(function() {
           $('#bootstrap-data-table-export').DataTable();
       } );
-    </script>
+  </script>
+
 </body>
 </html>

@@ -9,7 +9,11 @@
 <div class="top-right">
     <div class="header-menu">
         <div class="user-area">
+            <a id = "user-name"></a>
             <button class="btn btn-danger logout-btn" onclick="logout()"><i class="fa fa-power-off"></i>Logout</button>
         </div>
     </div>
 </div>
+<script>
+    $("#user-name").text("您好," + get_name());
+</script>

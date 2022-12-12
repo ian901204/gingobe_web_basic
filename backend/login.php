@@ -8,16 +8,13 @@
         include __DIR__."/common_component/head.php";
     ?>
 </head>
-<body class="bg-dark">
-    <div class="sufee-login d-flex align-content-center flex-wrap">
-        <div class="container">
+<body class="login-bg">
         <div class="alerts"></div>
-            <div class="login-logo">
+        <div class="login-logo">
                 <a >
-                    <img class="align-content" src="images/金勾杯股份有限公司-LOGO.png" alt="" width = 300 heigh = 100>
+                    <img class="align-content" src="images/金勾杯股份有限公司-LOGO.png" alt="" >
                 </a>
             </div>
-            <div class="login-content">
                 <div class="login-form">
                         <div class="form-group">
                             <label id = "account_label">管理員帳戶</label>
@@ -29,9 +26,6 @@
                         </div>
                         <button onclick = "login()" class="btn btn-success btn-flat m-b-30 m-t-30">登入</button>
                 </div>
-            </div>
-        </div>
-    </div>
     <script>
         var dataJSON = {};
         function login(){

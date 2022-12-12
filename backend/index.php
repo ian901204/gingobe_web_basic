@@ -51,7 +51,7 @@ $app -> get("/login",  function (Request $request, Response $response) {
     return $response -> withStatus(200);
 });
 
-//後台登入APIp
+//後台登入API
 $app -> post("/login", "App\Controllers\AuthController:login");
 
 //前端頁面取得資訊用API
@@ -59,6 +59,7 @@ $app -> group("/frontend", function (RouteCollectorProxy $group){
     $group -> post("/product", "App\Controllers\ProductController:get_select");
 
     $group -> post("/seller", "App\Controllers\SellerController:select");
+
 });
 
 //產品選項區域

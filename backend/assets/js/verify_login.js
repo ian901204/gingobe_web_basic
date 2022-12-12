@@ -2,7 +2,7 @@ var script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
 document.getElementsByTagName('head')[0].appendChild(script);
 var pathname = $(location).attr('pathname');
-
+var admin_name = "none";
 if ((pathname != "/login") && (pathname != "/")){
     $.ajax({
         url: $(location).attr('origin') + "/verify",
@@ -10,6 +10,9 @@ if ((pathname != "/login") && (pathname != "/")){
         type: "POST",
         dataType: "json",
         contentType: "application/json;charset=utf-8",
+        success: function(returnData){
+            window.admin_name = returnData["name"];
+        },
         error: function(xhr, ajaxOptions, thrownError){
             localStorage.removeItem('token');
             var status = JSON.parse(xhr.responseText)["Status"];
@@ -22,6 +25,11 @@ if ((pathname != "/login") && (pathname != "/")){
         }
     });
 }
+
+function get_name(){
+    return admin_name;
+}
+
 function logout(){
     window.location.replace($(location).attr('origin') + "/login");
     window.localStorage.removeItem("token");
