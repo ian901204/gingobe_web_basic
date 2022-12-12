@@ -1760,7 +1760,6 @@ header .form-inline {
   width: 400px;
   height: 400px;
   margin-bottom: 15px; 
-
 }
 .login-logo span {
   color: #ffffff;
@@ -2514,6 +2513,15 @@ footer.site-footer {
     width: 300px;
   }
 
+  .login-logo {
+    position: absolute;
+    top: 56%;
+    left: 65%;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+  }
 
   #left-panel {
     max-width: 100%;
