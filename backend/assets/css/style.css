@@ -2515,9 +2515,10 @@ footer.site-footer {
 
   .login-logo {
     position: absolute;
-    top: 56%;
-    left: 65%;
-    margin-left: 10px;
+    top: 50%;
+    left: 50%;
+    margin-top: -145px;
+    margin-left: 100px;
     width: 50px;
     height: 50px;
     z-index: 2;
