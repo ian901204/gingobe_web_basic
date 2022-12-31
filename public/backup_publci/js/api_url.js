@@ -1,1 +1,0 @@
-<script> var APIUrl = "https://admin.admin-shen.live"</script>
