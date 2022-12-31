@@ -15,5 +15,25 @@
     </div>
 </div>
 <script>
-    $("#user-name").text("您好," + get_name());
+    var admin_name = "none";
+    $.ajax({
+        url: $(location).attr('origin') + "/frontend/name",
+        headers: {"Authorization":"Bearer " + localStorage.getItem('token')},
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json;charset=utf-8",
+        success: function(returnData){
+            $("#user-name").text("您好," + returnData["name"]);
+        },
+        error: function(xhr, ajaxOptions, thrownError){
+            localStorage.removeItem('token');
+            var status = JSON.parse(xhr.responseText)["Status"];
+            if (status == "Token is invalid!"){
+                alert("認證已過期，請重新登入！");
+            }else{
+                alert("認證遺失，請重新登入！");
+            }
+            window.location.replace($(location).attr('origin') + "/login");
+        }
+    });
 </script>

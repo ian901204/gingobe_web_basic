@@ -61,5 +61,31 @@
                     ->withStatus(403);
             }
 		}
+
+        //取得管理員名稱
+        public function get_name(ServerRequestInterface $request, ResponseInterface $response){
+			if(!isset($request->getHeader("Authorization")[0])){
+                $response->getBody()->write(json_encode([
+                    "Status" => "No token provided!"
+                ]));
+                return $response
+                    ->withHeader('content-type', 'application/json')
+                    ->withStatus(403);
+            }
+            $jwtToken = str_replace("Bearer ", "", $request->getHeader("Authorization")[0]);
+            try {
+                $jwtBody = (array) JWT::decode($jwtToken, new Key($_ENV["JWT_SECRET"], 'HS256'));
+                $response -> getBody() -> write(json_encode(["name" => $jwtBody["name"]]));
+                return $response ->withHeader('content-type', 'application/json')
+                ->withStatus(200);
+            } catch (\Exception $e) {
+                $response->getBody()->write(json_encode([
+                    "Status" => "Token is invalid!",
+                ]));
+                return $response
+                    ->withHeader('content-type', 'application/json')
+                    ->withStatus(403);
+            }
+		}
 	}
 ?>

@@ -60,6 +60,7 @@ $app -> group("/frontend", function (RouteCollectorProxy $group){
 
     $group -> post("/seller", "App\Controllers\SellerController:select");
 
+    $group -> post("/name", "App\Controllers\AuthController:get_name");
 });
 
 //產品選項區域
