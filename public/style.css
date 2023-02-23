@@ -1,12 +1,12 @@
 :root {
-    --logo_top:100px;
+    --logo_top:20px;
   }
 body{
     margin: auto;
     display: flex;
     width: 100%;
     max-width: 2000px;
-    min-width: 1442px;
+    min-width: 1500px;
     height: 2400px;
     flex-direction: column;
     object-position: center top;
@@ -26,7 +26,7 @@ body{
     position: absolute;
     margin: 0px;
     width: 100%;
-    height: 100px;
+    height: 130px;
     object-fit: fill;
     object-position: center 0%;
     z-index: 2;
@@ -41,8 +41,8 @@ body{
 
 .bg1 .about_us{
     position: absolute;
-    --width: 320px;
-    height: 270px;
+    --width: 450px;
+    height: 400px;
     width: var(--width);
     top: var(--logo_top);
     left: calc((100%/2) - (var(--width)/2));
@@ -52,12 +52,12 @@ body{
 }
 .bg1 .content .about_us_content{
     position: absolute;
-    --width: 100%;
     height: 700px;
-    width: var(--width);
+    width: 100%;
     max-width: 1000px;
     z-index: 4;
-    top: calc(var(--logo_top) + 200px); 
+    left: calc(50% - 500px);
+    top: calc(var(--logo_top) + 320px); 
     object-fit: fill;
     object-position: center top;
 }
@@ -66,20 +66,86 @@ body{
     position: absolute;
     margin: 0px;
     --width: 100%;
-    height: 800px;
-    top: 200px;
+    height: 900px;
+    top: calc(var(--logo_top) + 100px);
 }
 .bg1 .side_dot.left{
-    left: calc(50% - (var(--width)/2));
+    right: calc(50% + 340px);
     object-fit: fill;
     object-position: center top;
     clip-path: inset(100px 100px);
     z-index: 2;
 }
 .bg1 .side_dot.right{
-    right: calc(50% - (var(--width)/2) - 30px);
+    left:calc(50% + 325px);
     object-fit: fill;
     object-position: center top;
     clip-path: inset(100px 100px);
     z-index: 2;
+}
+.bg1 .bottom_dot{
+    position: absolute;
+    margin: 0px;
+    width: 100%;
+    height: 250px;
+    bottom: -50px;
+    object-fit: fill;
+    object-position: center 0%;
+    z-index: 2;
+}
+
+.bg1.second .recycle_content{
+    position: absolute;
+    bottom: 30px;
+    --width: 1400px;
+    max-width: 1500px;
+    left: calc((100% - var(--width))/2 );
+    width: var(--width);
+    height: 1000px;
+}
+
+.bg1.second .recycle_content .recycle_background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center top;
+    z-index: 2;
+}
+
+
+.bg1.second .cloud{
+    position: absolute;
+    top: -160px;
+    width: 100%;
+    height: 170px;
+    object-fit: fill;
+    object-position: center 0%;
+    z-index: 1;
+}
+
+.bg1.second .recycle_content_string{
+    position:absolute;
+    object-fit: fill;
+    left: 70px;
+    height: 700px;
+    bottom: 40px;
+    width: 1300px;
+    z-index: 2;
+}
+.bg1.second .icon{
+    position:absolute;
+    right: 125px;
+    width: 350px;
+    height: 350px;
+    top: 100px;
+    background-color: coral;
+    border-radius: 100%;
+    z-index: 2;
+}
+.bg1.second .icon .icon_cup{
+    position: absolute;
+    right: 125px;
+    top: 100px;
+    object-fit: fill;
 }
