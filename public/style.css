@@ -211,7 +211,7 @@ body{
     position: absolute;
     object-fit: fill;
     --width: 100%;
-    width: calc(var(--width) + 50px);
+    width: calc(var(--width));
     height: 1600px;
     bottom: 50px;
     left: -10px;
