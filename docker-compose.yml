@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+        database:
+                container_name: cup_database
+                image: mysql
+                restart: always
+                environment: 
+                - MYSQL_ROOT_PASSWORD= ${MYSQL_PASSWORD}
+                - MYSQL_DATABASE= ${MYSQL_DATABASE}
+                - MYSQL_USER= ${MYSQL_USER}
+                - MYSQL_PASSWORD= ${MYSQL_PASSWORD}
+        nginx:
+                container_name: cup_nginx
+                image: nginx:latest
+                restart: always
+                ports:
+                        - 80:80
+                volumes:
+                - /var/www/slim_project/:/code
+                - /var/www/slim_project/nginx.conf:/etc/nginx/nginx.conf
+        phpmyadmin:
+                container_name: cup_phpmyadmin
+                image: phpmyadmin
+                restart: always
+                environment:
+                - PMA_HOST = ${MYSQL_DATABASE}
+                - PMA_ABSOLUTE_URL = "https://phpmyadmin.ian-shen.live"
+                depends_on:
+                - database
+                - web
+        web:
+                container_name: php8.1
+                image: php:8.1.0-fpm
+                restart: always
+                        
+
+
