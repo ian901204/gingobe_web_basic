@@ -19,7 +19,8 @@ services:
                 - /var/www/slim_project/:/code
                 - ./slim_project/nginx.conf:/etc/nginx/nginx.conf
                 build:
-                        dockerfile: ./dockerfile
+                        context: .
+                        dockerfile: dockerfile
 
         phpmyadmin:
                 container_name: cup_phpmyadmin
