@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx
 
 RUN mkdir -p /etc/nginx
 COPY nginx.conf.example /etc/nginx/nginx.conf

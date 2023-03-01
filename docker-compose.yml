@@ -20,11 +20,11 @@ services:
                         dockerfile: dockerfile
                 volumes:
                 - ./slim_project/:/code
-                  #       - ./nginx.conf:/etc/nginx/conf.d/default.conf
+                #- ./nginx:/etc/nginx
 
         phpmyadmin:
                 container_name: cup_phpmyadmin
-                image: phpmyadmin
+                image: phpmyadmin/phpmyadmin
                 restart: always
                 environment:
                 - PMA_HOST = ${MYSQL_DATABASE}

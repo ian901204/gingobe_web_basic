@@ -1,4 +1,4 @@
 vendor
 *.env
-.DS_Store
 nginx.conf
+.DS_Store
