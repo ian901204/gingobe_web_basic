@@ -8,7 +8,7 @@ body{
     width: 100%;
     max-width: 2000px;
     min-width: 1400px;
-    height: 7700px;
+    height: 8200px;
     flex-direction: column;
     object-position: center top;
     font-family: 'Noto Serif TC', serif;
@@ -259,7 +259,7 @@ body{
     height: 1200px;
     margin: 0%;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
     background-size: cover;
 }
 
@@ -306,8 +306,8 @@ body{
     object-fit: fill;
     width: 275px ;
     height: 275px;
-    bottom: 225px;
-    right: 550px;
+    bottom: -20px;
+    right: -150px;
 }
 
 .bg4 .cloud{
@@ -315,6 +315,27 @@ body{
     object-fit: fill;
     width: 400px ;
     height: 182px;
-    bottom: 180px;
-    right: 550px;
+    bottom: -75px;
+    right: -175px;
+}
+
+.bg5{
+    position: relative;
+    background-image: url("element_img/background_5.png");
+    width: 100%;
+    height: 1200px;
+    margin: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg5 .title{
+    position: absolute;
+    object-fit: fill;
+    --width: 400px;
+    width: var(--width);
+    height: 173px;
+    top: 50px;
+    left: calc(50% - var(--width) / 2 + 20px);
 }
