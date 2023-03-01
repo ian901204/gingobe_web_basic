@@ -7,7 +7,7 @@ http {
 	server{
 		listen 80;
 		index index.php index.html;
-		server_name admin.ian-shen.live;
+		server_name ${ADMIN_URL};
 		error_log /var/log/nginx/error.log;
 		access_log /var/log/nginx/access.log;
 		root /code/backend;
@@ -29,7 +29,7 @@ http {
 	server{
 		listen 80;
 		index index.php index.html;
-		server_name www.ian-shen.live;
+		server_name ${CLIENT_URL};
 		access_log /var/log/nginx/access.log;
 		error_log /var/log/nginx/error.log;
 		root /code/public;

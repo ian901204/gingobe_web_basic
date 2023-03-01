@@ -18,6 +18,9 @@ services:
                 build:
                         context: .
                         dockerfile: dockerfile
+                environment:
+                        - ADMIN_URL= ${ADMIN_URL}
+                        - CLIENT_URL= ${CLIENT_URL}
                 volumes:
                 - ./slim_project/:/code
                 #- ./nginx:/etc/nginx
