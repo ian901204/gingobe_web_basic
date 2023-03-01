@@ -15,12 +15,12 @@ services:
                 restart: always
                 ports:
                         - 80:80
-                volumes:
-                - /var/www/slim_project/:/code
-                - ./slim_project/nginx.conf:/etc/nginx/nginx.conf
                 build:
                         context: .
                         dockerfile: dockerfile
+                volumes:
+                - /var/www/slim_project/:/code
+                - ./slim_project/nginx.conf:/etc/nginx/nginx.conf
 
         phpmyadmin:
                 container_name: cup_phpmyadmin
