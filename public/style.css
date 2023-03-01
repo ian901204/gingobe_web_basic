@@ -8,9 +8,10 @@ body{
     width: 100%;
     max-width: 2000px;
     min-width: 1400px;
-    height: 5400px;
+    height: 7700px;
     flex-direction: column;
     object-position: center top;
+    font-family: 'Noto Serif TC', serif;
 }
 .bg1{
     position: relative;
@@ -216,4 +217,104 @@ body{
     height: 1600px;
     bottom: 50px;
     left: -10px;
+}
+
+.bg3{
+    position: relative;
+    background-image: url("element_img/background_3.png");
+    width: 100%;
+    height: 1200px;
+    margin: 0%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    z-index: 1;
+}
+
+.bg3 .title{
+    position: absolute;
+    object-fit: fill;
+    --width: 500px;
+    width: var(--width);
+    height: 200px;
+    top: 100px;
+    left: calc(50% - var(--width) / 2 + 20px);
+}
+
+.bg3 .feature{
+    position: absolute;
+    object-fit: fill;
+    --width: calc(100% - 400px);
+    width: var(--width);
+    height: 950px;
+    top: 230px;
+    left: calc(50% - var(--width) / 2);
+}
+
+
+.bg4{
+    position: relative;
+    background-image: url("element_img/background_4.png");
+    width: 100%;
+    height: 1200px;
+    margin: 0%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.bg4 .title{
+    position: absolute;
+    object-fit: fill;
+    --width: 400px;
+    width: var(--width);
+    height: 150px;
+    top: 100px;
+    left: calc(50% - var(--width) / 2 - 10px);
+}
+.bg4 .top_dot{
+    position: absolute;
+    object-fit: fill;
+    --width: calc(100% - 200px);
+    width: var(--width) ;
+    height: 200px;
+    top: 25px;
+    left: calc(50% - var(--width) / 2);
+}
+
+.bg4 .contact_us{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    --width: 600px;
+    width: var(--width);
+    height: 600px;
+    border: black 2px solid;
+    left: calc(50% - var(--width) / 2);
+    top: 350px;
+    padding: 50px 50px 50px 50px;
+    box-sizing: border-box;   
+}
+
+.bg4 .contact_us_content{
+    font-size: 24px;
+    margin: 20px 0px;
+    text-align: center;
+}
+.bg4 .logo{
+    position: absolute;
+    object-fit: fill;
+    width: 275px ;
+    height: 275px;
+    bottom: 225px;
+    right: 550px;
+}
+
+.bg4 .cloud{
+    position: absolute;
+    object-fit: fill;
+    width: 400px ;
+    height: 182px;
+    bottom: 180px;
+    right: 550px;
 }
