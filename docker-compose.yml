@@ -19,7 +19,6 @@ services:
                 - /var/www/slim_project/:/code
                 - ./slim_project/nginx.conf:/etc/nginx/nginx.conf
                 build:
-                        context: backen
                         dockerfile: ../backend.Dockerfile
 
         phpmyadmin:
