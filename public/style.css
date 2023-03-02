@@ -8,7 +8,7 @@ body{
     width: 100%;
     max-width: 2000px;
     min-width: 1400px;
-    height: 8200px;
+    height: 8100px;
     flex-direction: column;
     object-position: center top;
     font-family: 'Noto Serif TC', serif;
@@ -299,6 +299,7 @@ body{
 .bg4 .contact_us_content{
     font-size: 24px;
     margin: 20px 0px;
+    font-weight: 600;
     text-align: center;
 }
 .bg4 .logo{
@@ -323,7 +324,7 @@ body{
     position: relative;
     background-image: url("element_img/background_5.png");
     width: 100%;
-    height: 1200px;
+    height: 1100px;
     margin: 0%;
     background-repeat: no-repeat;
     background-position: center;
@@ -336,26 +337,226 @@ body{
     --width: 400px;
     width: var(--width);
     height: 173px;
-    top: 50px;
+    top: 15px;
     left: calc(50% - var(--width) / 2 + 20px);
 }
 
 .bg5 .order_section{
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    --width: 600px;
+    --width: 620px;
     height: 800px;
     width: var(--width);
-    top: 300px;
+    top: 125px;
     left: calc(50% - var(--width) / 2 );
     padding: 50px;
     box-sizing: border-box;   
 }
+.bg5 .input_section{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.bg5 .row_section{
+    display: flex;
+    flex-direction: row;
+}
+.bg5 .input_section a{
+    color:rgba(0, 0, 0, 0.50)
+}
+.bg5 input{
+    padding-left: 10px;
+}
 
 .bg5 .input_large{
-    font-size: 28px;
-    position: absolute;
-    width: calc(100% - 100px);
+    margin-top: 10px;
+    font-size: 16px;
+    width: 500px;
     height: 50px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
+    
 }
+.bg5 .input_md{
+    margin-top: 10px;
+    font-size: 16px;
+    width: 240px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+}
+
+.bg5 textarea{
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 500px;
+    height: 200px;
+    border: none;
+    border-radius: 20px;
+    resize: none;
+}
+
+button {
+    width: 500px;
+    height: 60px;
+    font-size: 16pt;
+    background: rgba(113, 172,179, 1);
+    border-radius: 25px;
+  }
+  
+  button a {
+    color: rgba(0,0,0,0.65);
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  
+  /* let's shape */
+  button span.shape {
+    height: 60px;
+    width: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  button span span {
+    content:"";
+    position: absolute;
+    margin: auto;
+    height: 8px;
+    width: 2px;
+    background: rgba(113, 172,179, 1);
+    opacity: 0;
+  }
+  
+  button span span:nth-of-type(1) {
+    top: -20px;
+    left: 0;
+    right: 0;
+  }
+  
+  button span span:nth-of-type(2) {
+    bottom: -20px;
+    left: 0;
+    right: 0;
+  }
+  
+  button span span:nth-of-type(3) {
+    top:0;
+    bottom: 0;
+    left: -10px;
+  }
+  
+  button span span:nth-of-type(4) {
+    top:0;
+    bottom: 0;
+    right: -10px;
+  }
+  
+  button span span:nth-of-type(5) {
+    top: -20px;
+    left: -70%;
+    right: 0;
+    transform:rotate(-30deg);
+  }
+  
+  button span span:nth-of-type(6) {
+    top: -20px;
+    left: 0;
+    right: -70%;
+    transform:rotate(30deg);
+  }
+  
+  button span span:nth-of-type(7) {
+    bottom: -20px;
+    right: 0;
+    left: -70%;
+    transform:rotate(30deg);
+  }
+  
+  button span span:nth-of-type(8) {
+    bottom: -20px;
+    left: 0;
+    right: -70%;
+    transform:rotate(-30deg);
+  }
+  
+  /* let's animate this */
+  @keyframes bounce {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+  }
+  
+  button.active {
+    animation: bounce 0.3s ease-out 1;
+  }
+  
+  button.active span span:nth-of-type(1) {
+    animation: anim1 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(2) {
+    animation: anim2 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(3) {
+    animation: anim3 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(4) {
+    animation: anim4 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(5) {
+    animation: anim5 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(6) {
+    animation: anim6 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(7) {
+    animation: anim7 0.4s ease-out 1;
+  }
+  button.active span span:nth-of-type(8) {
+    animation: anim8 0.4s ease-out 1;
+  }
+  
+  @keyframes anim1 {
+    0%{transform: scaleY(0.5);opacity: 0;}
+    50%{transform: translateY(-10px) scaleY(1.4); opacity: 1;}
+    100%{transform: translateY(-20px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim2 {
+    0%{transform: scaleY(1);opacity: 0;}
+    50%{transform: translateY(10px) scaleY(1.4); opacity: 1;}
+    100%{transform: translateY(20px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim3 {
+    0%{transform: rotate(90deg) scaleX(0.5);opacity: 0;}
+    50%{transform: rotate(90deg) translateY(10px) scaleX(1.4); opacity: 1;}
+    100%{transform: rotate(90deg) translateY(20px) scaleX(0.5);opacity: 0;}
+  }
+  @keyframes anim4 {
+    0%{transform: rotate(90deg) scaleX(0.5);opacity: 0;}
+    50%{transform: rotate(90deg) translateY(-10px) scaleX(1.4); opacity: 1;}
+    100%{transform: rotate(90deg) translateY(-20px) scaleX(0.5);opacity: 0;}
+  }
+  @keyframes anim5 {
+    0%{transform: rotate(-30deg) scaleY(0.5);opacity: 0;}
+    50%{transform: rotate(-30deg) translateY(-8px) scaleY(1.4); opacity: 1;}
+    100%{transform: rotate(-30deg) translateY(-16px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim6 {
+    0%{transform: rotate(30deg) scaleY(0.5);opacity: 0;}
+    50%{transform: rotate(30deg) translateY(-8px) scaleY(1.4); opacity: 1;}
+    100%{transform: rotate(30deg) translateY(-16px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim7 {
+    0%{transform: rotate(30deg) scaleY(0.5);opacity: 0;}
+    50%{transform: rotate(30deg) translateY(8px) scaleY(1.4); opacity: 1;}
+    100%{transform: rotate(30deg) translateY(16px) scaleY(0.5);opacity: 0;}
+  }
+  @keyframes anim8 {
+    0%{transform: rotate(-30deg) scaleY(0.5);opacity: 0;}
+    50%{transform: rotate(-30deg) translateY(8px) scaleY(1.4); opacity: 1;}
+    100%{transform: rotate(-30deg) translateY(16px) scaleY(0.5);opacity: 0;}
+  }
