@@ -5,6 +5,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="order.js"></script>
     </head>
     <body>
             <div class = "bg1">
@@ -29,11 +30,13 @@
             </div>
             <div class = "bg2">
                 <img class = "title" src = "element_img/third_page/title.png">
-                <div class = "icon">
-                    <img class = "icon_background" src = "element_img/third_page/cup_background.png">
-                    <img class = "icon_cup" src = "element_img/third_page/cup_icon.png">
+                <div class="icon_infomation">
+                    <div class = "icon">
+                        <img class = "icon_background" src = "element_img/third_page/cup_background.png">
+                        <img class = "icon_cup" src = "element_img/third_page/cup_icon.png">
+                    </div>
+                    <img class = "cup_infomation" src = "element_img/third_page/cup_infomation.png">
                 </div>
-                <img class = "cup_infomation" src = "element_img/third_page/cup_infomation.png">
                 <img class = "detail_table" src="element_img/third_page/detail_table.png">
             </div>
             <div class = "bg3">
@@ -59,54 +62,39 @@
                 <div class="order_section">
                     <div class = "input_section">
                         <a>姓名：</a>
-                        <input class = "input_large" type = "text">
+                        <input id = "name" class = "input_large" type = "text">
                     </div>
                     <div class = "row_section">
                         <div class = "input_section">
                             <a>電話（市話）：</a>
-                            <input class = "input_md" type = "text">
+                            <input id = "telephone" class = "input_md" type = "text">
                         </div>
                         <div class = "input_section" type = "text">
                             <a>手機：</a>
-                            <input class = "input_md" type = "text">
+                            <input id = "phone" class = "input_md" type = "text">
                         </div>
                     </div>
                     <div class = "input_section">
                         <a>訂購數量（1000入/1箱）：</a>
-                        <input class = "input_large" type = "number">
+                        <input id = "amount" class = "input_large" type = "number">
                     </div>
                     <div class = "input_section">
                         <a>業務員編號：</a>
-                        <input class = "input_large" type = "number">
+                        <select class = "input_large">
+                            <option value = 0></option>
+                        </select>
                     </div>
                     <div class="input_section">
                         <a>備註：</a>
                         <textarea></textarea>
                     </div>
-                    <div class="box">
-                        <button class="cta">
-                          <a>送出</a>
-                          <span class="shape">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </span>
-                        </button>
-                      </div>
+                    <button class="btn">送出</button>
+                </div>
+                <div class="footer">
+                    <img src="element_img/sixth_page/footer.png">
                 </div>
             </div>
     </body>
     <script>
-        $(".cta").click(function(){
-  $(this).addClass("active").delay(300).queue(function(next){
-    $(this).removeClass("active");
-    next();
-  });
-});
     </script>
 </html>
