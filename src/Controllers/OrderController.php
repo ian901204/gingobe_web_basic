@@ -15,12 +15,12 @@
 			$data = json_decode($request -> getbody() -> getcontents(),true);
 			$order = Order:: create(
 				[
-					"client_name" => $data["name"],
-					"client_phone" => $data["phone"],
-					"order_address" => $data["address"],
-					"product_size" => $data["size"],
-					"product_amount" => $data["amount"],
-					"seller_id" => $data["seller"]
+					"name" => $data["name"],
+					"telephone" => $data["telephone"];
+					"phone" => $data["phone"],
+					"amount" => $data["amount"],
+					"seller_id" => $data["seller"],
+					"note" => $data["note"]
 				]);
 			$order -> save();
 			$response -> getBody() -> write(json_encode(["Status"=> "Success", "id" => $order -> id]));
@@ -47,7 +47,7 @@
 
 		//後台訂單列表 function
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
-			$order_data = Order::get(["id", "client_name", "product_size", "product_amount", "client_phone", "order_address", "seller_id", "order_time"]);
+			$order_data = Order::get(["id", "name", "amount", "phone", "seller_id", "order_time"]);
 			foreach ($order_data as $data){
 				if ($data["seller_id"] != 0){
 					$seller_data = sellers::where("id", "=", $data["seller_id"])->first();
@@ -63,7 +63,7 @@
 		//後台取得訂單資訊 function
 		public function get(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
-				$order_data = Order::where("id", "=", $args["id"]) -> first(["id", "client_name", "client_phone", "order_address", "product_size", "product_amount", "seller_id", "description"]);
+				$order_data = Order::where("id", "=", $args["id"]) -> first(["id", "name", "phone", "amount", "seller_id", "note"]);
 				$seller_data = sellers::get(["id", "name"]);
 				$product_data = product::get(["size"]);
 			}catch(\Exception $e){

@@ -32,7 +32,7 @@
 		public function list(ServerRequestInterface $request, ResponseInterface $response){
 			$seller_data = sellers::get(["id", "name", "phone"]);
 			foreach($seller_data as $data){
-				$order_data = Order::where("seller_id", "=", $data["id"]) -> get(["product_amount", "product_size"]);
+				$order_data = Order::where("seller_id", "=", $data["id"]) -> get(["amount"]);
 				$data["order_data"] = $order_data;
 			}
 			include __DIR__."/../../backend/seller/seller.php";
@@ -41,7 +41,7 @@
 
 		//後台取得業務員經手的所有訂單
 		public function order_list(ServerRequestInterface $request, ResponseInterface $response, array $args){
-			$order_data = Order::where("seller_id", "=", $args["id"]) -> get(["id", "client_name", "product_size", "product_amount", "client_phone", "order_address", "seller_id", "order_time"]);
+			$order_data = Order::where("seller_id", "=", $args["id"]) -> get(["id", "name","amount", "phone", "seller_id", "order_time"]);
 			foreach ($order_data as $data){
 				if ($data["seller_id"] != 0){
 					$seller_data = sellers::where("id", "=", $data["seller_id"])->first();
@@ -55,7 +55,7 @@
 		//後台取得業務員經手的訂單資訊
 		public function order_detail(ServerRequestInterface $request, ResponseInterface $response, array $args){
 			try{
-				$order_data = Order::where("id", "=", $args["id"]) -> first(["id", "client_name", "client_phone", "order_address", "product_size", "product_amount", "seller_id", "description"]);
+				$order_data = Order::where("id", "=", $args["id"]) -> first(["id", "name", "phone", "address", "amount", "seller_id", "note"]);
 				$seller_data = sellers::get(["id", "name"]);
 				$product_data = product::get(["size"]);
 			}catch(\Exception $e){
