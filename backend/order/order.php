@@ -43,10 +43,9 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>客戶姓名</th>
+                                            <th>客戶市話</th>
                                             <th>客戶電話</th>
-                                            <th>產品尺寸</th>
-                                            <th>產品數量</th>
-                                            <th>訂單地址</th>
+                                            <th>訂購數量</th>
                                             <th>業務員</th>
                                             <th>訂單成立時間</th>
                                             <th>動作</th>
@@ -57,11 +56,10 @@
                                             foreach($order_data as $data){
                                                 echo "<tr>";
                                                 echo "<td>".$data["id"]."</td>";
-                                                echo "<td> ".$data["client_name"]."</td>";
-                                                echo "<td> ".$data["client_phone"]."</td>";
-                                                echo "<td>".$data["product_size"]."</td>";
-                                                echo "<td> ".$data["product_amount"]."</td>";
-                                                echo "<td> ".$data["order_address"]."</td>";
+                                                echo "<td> ".$data["name"]."</td>";
+                                                echo "<td> ".$data["telephone"]."</td>";
+                                                echo "<td>".$data["phone"]."</td>";
+                                                echo "<td> ".$data["amount"]."</td>";
                                                 echo "<td> ".$data["seller_id"]."</td>";
                                                 echo "<td> ".$data["order_time"]."</td>";
                                                 echo "<td>";
