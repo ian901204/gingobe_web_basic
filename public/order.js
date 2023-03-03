@@ -52,17 +52,6 @@ $( "#send_order" ).click(function(){
 	}
 });
 $.ajax({
-	url: APIUrl + "/frontend/product",
-	type: "POST",
-	contentType: "application/json;charset=utf-8",
-	dataType:"json",
-	success: function(select_data){
-	$.each(select_data, function(index, data){
-		$('#size').append($('<option>', {value: data["size"],text: data["size"]}));
-	});
-	}
-});
-$.ajax({
 	url: APIUrl + "/frontend/seller",
 	type: "POST",
 	contentType: "application/json;charset=utf-8",

@@ -24,10 +24,10 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__."/..");
 $dotenv->load();
 $dbSettings = [
     "driver" => "mysql",
-    "host" => $_ENV["DB_HOST"],
-    "database" => $_ENV["DB_NAME"],
-    "username" => $_ENV["DB_USER"],
-    "password" => $_ENV["DB_PASSWORD"],
+    "host" => $_ENV["MYSQL_HOST"],
+    "database" => $_ENV["MYSQL_DATABASE"],
+    "username" => $_ENV["MYSQL_USER"],
+    "password" => $_ENV["MYSQL_PASSWORD"],
     "charset" => "utf8",
     "collation" => "utf8_unicode_ci",
     "prefix" => "",
@@ -37,6 +37,7 @@ $capsule->addConnection($dbSettings);
 $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
+return $capsule;
 
 $app -> get("/",  function (Request $request, Response $response) {
     include __DIR__."/login.php";
