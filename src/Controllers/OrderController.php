@@ -16,7 +16,7 @@
 			$order = Order:: create(
 				[
 					"name" => $data["name"],
-					"telephone" => $data["telephone"];
+					"telephone" => $data["telephone"],
 					"phone" => $data["phone"],
 					"amount" => $data["amount"],
 					"seller_id" => $data["seller"],
