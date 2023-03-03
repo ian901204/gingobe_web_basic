@@ -27,12 +27,11 @@ body{
 
 .bg1 .cloud{
     position: absolute;
-    margin: 0px;
-    width: 100%;
+    width: 1600px;
     height: 130px;
     object-fit: fill;
     object-position: center 0%;
-    z-index: 2;
+    left: calc(50% - 800px);
 }
 .bg1 .content{
     position: absolute;
@@ -86,11 +85,12 @@ body{
 .bg1 .bottom_dot{
     position: absolute;
     margin: 0px;
-    width: 100%;
+    width: 1400px;
     height: 200px;
     bottom: -50px;
     object-fit: fill;
     object-position: center 0%;
+    left: calc(50% - 700px);
     z-index: 2;
 }
 
@@ -121,6 +121,7 @@ body{
     height: 150px;
     object-fit: fill;
     object-position: center 0%;
+    left: 0px;
     z-index: 1;
 }
 
