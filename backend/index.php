@@ -37,8 +37,6 @@ $capsule->addConnection($dbSettings);
 $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
-return $capsule;
-
 $app -> get("/",  function (Request $request, Response $response) {
     include __DIR__."/login.php";
     return $response -> withStatus(200);
