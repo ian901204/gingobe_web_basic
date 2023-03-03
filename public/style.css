@@ -223,7 +223,7 @@ body{
 }
 
 .bg2 table,
-td, th{
+td, th{                            
     padding-left: 10px;
     padding-right: 10px;
     border-collapse: collapse;
