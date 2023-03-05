@@ -1,12 +1,12 @@
 const APIUrl = "https://admin.ian-shen.live"
 var dataJSON = {};
 var label_data = {
-	"name":"姓名",
-	"telephone":"市話",
-	"phone":"手機",
-	"amount":"欲訂購的箱數(1000杯/箱)",
+	"name":"姓名：",
+	"telephone":"電話（市話）：",
+	"phone":"手機：",
+	"amount":"訂購數量（1000入/1箱）：",
 	"seller":"業務員編號：",
-	"note":"備註"
+	"note":"備註："
 };
 $( "#send_order" ).click(function(){
 	var data_missing = 0;
@@ -17,23 +17,21 @@ $( "#send_order" ).click(function(){
 	dataJSON["amount"] = $("#amount").val();
 	dataJSON["note"] = $("#note").val();
 	$.each(dataJSON, function(index, value){
-		console.log(value.length);
-		if ((value == "") || (value == null)){
-			$("#" + index + "_label").css("color", 'red');
-			data_missing = 1;
-		}else if(index == "amount" && !$.isNumeric(value)){
-			$("#" + index + "_label").text($("#" + index + "_label").text() + "，請輸入正確數量！");
-			$("#" + index + "_label").css("color", 'red');
-			data_missing = 1;
-		}else if(index == "phone" && !$.isNumeric(value) && (value.length == 8 || value.length == 10)){
-			$("#" + index + "_label").text($("#" + index + "_label").text() + "，請輸入正確的電話號碼！");
+		if (index != "telephone" && index != "note" && ((value == "") || (value == null))){
 			$("#" + index + "_label").css("color", 'red');
 			data_missing = 1;
 		}else{
-			$("#" + index + "_label").text(label_data[index]);
-			$("#" + index + "_label").css("color", 'white');
+			$("#" + index + "_label").css("color", '');
 		}
 	});
+	if((!$.isNumeric(dataJSON["phone"])) || (dataJSON["phone"].length != 8 && dataJSON["phone"].length != 10)){
+		$("#phone_label").css("color", 'red');
+		data_missing = 1;
+	}
+	if((!$.isNumeric(dataJSON["amount"]))){
+		$("#amount_label").css("color", 'red');
+		data_missing = 1;
+	}
 	if (data_missing == 0){
 		$.ajax({
 		url: "https://admin.ian-shen.live/order/add",

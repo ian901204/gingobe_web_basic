@@ -148,31 +148,32 @@
                 <img class = "title" src="element_img/sixth_page/title.png">
                 <div class="order_section">
                     <div class = "input_section">
-                        <a>姓名：</a>
+                        <a id = "name_label">姓名：</a>
                         <input id = "name" class = "input_large" type = "text">
                     </div>
                     <div class = "row_section">
                         <div class = "input_section">
-                            <a>電話（市話）：</a>
+                            <a id = "telephone_label">電話（市話）：</a>
                             <input id = "telephone" class = "input_md" type = "text">
                         </div>
                         <div class = "input_section" type = "text">
-                            <a>手機：</a>
+                            <a id = "phone_label">手機：</a>
                             <input id = "phone" class = "input_md" type = "text">
                         </div>
                     </div>
                     <div class = "input_section">
-                        <a>訂購數量（1000入/1箱）：</a>
+                        <a id = "amount_label">訂購數量（1000入/1箱）：</a>
                         <input id = "amount" class = "input_large" type = "number">
                     </div>
                     <div class = "input_section">
-                        <a>業務員編號：</a>
+                        <a id = "seller_label">業務員編號：</a>
                         <select id = "seller" class = "input_large">
-                            <option value = 0></option>
+                            <option value = "" selected disabled>請選擇業務員</option>
+                            <option value = 0 >無</option>
                         </select>
                     </div>
                     <div class="input_section">
-                        <a>備註：</a>
+                        <a id = "note_label">備註：</a>
                         <textarea id = "note"></textarea>
                     </div>
                     <button id = "send_order" class="btn">送出</button>
@@ -181,6 +182,11 @@
             <div class="bg6">
                 <div class="footer">
                     <img src="element_img/sixth_page/footer.png">
+                </div>
+            </div>
+            <div class = "send_success">
+                <div class = "message_box">
+                    <a>送出成功!</a>
                 </div>
             </div>
     </body>
