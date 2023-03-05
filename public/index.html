@@ -184,9 +184,13 @@
                     <img src="element_img/sixth_page/footer.png">
                 </div>
             </div>
-            <div class = "send_success">
-                <div class = "message_box">
-                    <a>送出成功!</a>
+            <div id = "success_background" class = "send_success">
+                <div id = "message_box" class = "message_box">
+                    <a onclick = "close_message()" class="close">x</a>
+                    <div class="message_box content">
+                        <a>訂單送出成功!</a>
+                        <img class="pass_icon" src = "element_img/pass.png">
+                    </div>
                 </div>
             </div>
     </body>

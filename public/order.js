@@ -8,7 +8,16 @@ var label_data = {
 	"seller":"業務員編號：",
 	"note":"備註："
 };
+function open_message(){
+	$("#success_background").css("height", "100%");
+	$(".message_box").css("visibility", "visible");
+}
+function close_message(){
+	$("#success_background").css("height", "0%");
+	$(".message_box").css("visibility", "hidden");
+}
 $( "#send_order" ).click(function(){
+	$("#send_order").prop('disabled', true);
 	var data_missing = 0;
 	dataJSON["name"] = $("#name").val();
 	dataJSON["telephone"] = $("#telephone").val();
@@ -40,14 +49,14 @@ $( "#send_order" ).click(function(){
 		dataType: "json",
 		contentType: "application/json;charset=utf-8",
 		success: function(returnData){
-			alert("訂單送出成功");
-			window.location.replace(window.location.origin);
+			open_message();
 		},
 		error: function(xhr, ajaxOptions, thrownError){
 			alert("送出訂單時發生了問題，請稍後在試!");
 		}
 		});
 	}
+	$("#send_order").prop('disabled', false);
 });
 $.ajax({
 	url: APIUrl + "/frontend/seller",
