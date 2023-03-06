@@ -49,7 +49,7 @@
                             <label class=" form-control-label">客戶姓名</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                <input id = "name" class="form-control" value = "<?php echo $order_data -> client_name ?>" disabled>
+                                <input id = "name" class="form-control" value = "<?php echo $order_data -> name ?>" disabled>
                             </div>
                         </div>
                         
@@ -57,39 +57,21 @@
                             <label class=" form-control-label">客戶電話</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                <input id = "phone" class="form-control" value = "<?php echo $order_data["client_phone"]; ?>" disabled>
+                                <input id = "phone" class="form-control" value = "<?php echo $order_data["phone"]; ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class=" form-control-label">訂單地址</label>
+                            <label class=" form-control-label">客戶市話</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-truck"></i></div>
-                                <input id = "address" class="form-control" value = "<?php echo $order_data["order_address"] ?>" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class=" form-control-label">產品尺寸</label>
-                            <div class="input-group">
-                                <div class="input-group-addon"><i class="fa fa-beer"></i></div>
-                                <select id="product_size" class="form-control" disabled>
-                                        <option value="-1">請選擇產品尺寸</option>
-                                        <?php   
-                                            foreach($product_data as $data){
-                                                if ($data["size"] == $order_data["product_size"]){
-                                                    echo "<option value = '".$data["size"]."'selected>".$data["size"]."</option>";
-                                                }else{
-                                                    echo "<option value = '".$data["size"]."'>".$data["size"]."</option>";
-                                                }
-                                            }
-                                        ?>
-                                    </select>
+                                <input id = "address" class="form-control" value = "<?php echo $order_data["telephone"] ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">產品數量(箱)</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-archive"></i></div>
-                                <input id = "amount" class="form-control" value = "<?php echo $order_data["product_amount"] ?>" disabled>
+                                <input id = "amount" class="form-control" value = "<?php echo $order_data["amount"] ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group">
