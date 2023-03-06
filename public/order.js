@@ -8,6 +8,7 @@ var label_data = {
 	"seller":"業務員編號：",
 	"note":"備註："
 };
+
 function open_message(){
 	$("#success_background").css("height", "100%");
 	$(".message_box").css("visibility", "visible");
@@ -15,6 +16,8 @@ function open_message(){
 function close_message(){
 	$("#success_background").css("height", "0%");
 	$(".message_box").css("visibility", "hidden");
+	$(".loader").css("visibility", "hidden");
+	$(".pass_icon").css("visibility", "hidden");
 }
 $( "#send_order" ).click(function(){
 	$("#send_order").prop('disabled', true);
@@ -42,6 +45,9 @@ $( "#send_order" ).click(function(){
 		data_missing = 1;
 	}
 	if (data_missing == 0){
+		open_message();
+		$("#send_message").text("訂單送出中");
+		$(".loader").css("visibility", "visible");
 		$.ajax({
 		url: "https://admin.ian-shen.live/order/add",
 		data: JSON.stringify(dataJSON),
@@ -49,7 +55,9 @@ $( "#send_order" ).click(function(){
 		dataType: "json",
 		contentType: "application/json;charset=utf-8",
 		success: function(returnData){
-			open_message();
+			$("#send_message").text("訂單送出成功!");
+			$(".loader").css("visibility", "hidden");
+			$(".pass_icon").css("visibility", "visible");
 		},
 		error: function(xhr, ajaxOptions, thrownError){
 			alert("送出訂單時發生了問題，請稍後在試!");
