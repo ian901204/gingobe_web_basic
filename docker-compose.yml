@@ -21,7 +21,7 @@ services:
                         context: .
                         dockerfile: dockerfile
                 volumes:
-                        - ${PWD}/nginx.conf:/etc/nginx/nginx.conf
+                        - $(pwd)/nginx.conf:/etc/nginx/nginx.conf
                         - ./:/code
                 links:
                 - web-php
@@ -31,7 +31,7 @@ services:
                 restart: always
                 environment:
                 - PMA_HOST = ${MYSQL_HOST}
-                - PMA_ABSOLUTE_URL = "https://admin.ian-shen.live/phpmyadmin/"
+                - PMA_ABSOLUTE_URL = "http://admin.ian-shen.live/phpmyadmin/"
                 depends_on:
                 - database
                 - web-php
