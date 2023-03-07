@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost:3306
--- 產生時間： 2022 年 12 月 05 日 15:55
--- 伺服器版本： 8.0.31-0ubuntu0.20.04.2
+-- 產生時間： 2023 年 03 月 07 日 05:27
+-- 伺服器版本： 8.0.32-0ubuntu0.20.04.2
 -- PHP 版本： 8.1.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -56,14 +56,13 @@ CREATE TABLE `client` (
 
 CREATE TABLE `orders` (
   `id` int NOT NULL,
-  `client_name` text NOT NULL,
-  `client_phone` text NOT NULL,
-  `order_address` text NOT NULL,
+  `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `telephone` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `phone` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `seller_id` int DEFAULT NULL,
-  `product_amount` int NOT NULL,
-  `product_size` text NOT NULL,
+  `amount` int NOT NULL,
   `order_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci
+  `note` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
