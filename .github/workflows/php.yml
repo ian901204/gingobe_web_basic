@@ -21,7 +21,7 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        root: ${{ secrets.USERNAME }}
+        username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: | 
           cd /var/www/slim_project
