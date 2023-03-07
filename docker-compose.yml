@@ -21,7 +21,7 @@ services:
                         context: .
                         dockerfile: dockerfile
                 volumes:
-                        - type: bind
+                        - type: Volumes
                           source: ./nginx.conf
                           target: /etc/nginx/nginx.conf
                         - ./:/code
@@ -46,5 +46,6 @@ services:
                 volumes:
                         - ./:/code
                         
-
+volumes:
+        myapp:
 
