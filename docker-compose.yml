@@ -11,7 +11,7 @@ services:
                 - MYSQL_USER= ${MYSQL_USER}
                 - MYSQL_PASSWORD= ${MYSQL_PASSWORD}
                 volumes:
-                        -./slim_project.sql:/docker-entrypoint-initdb.d
+                        -./data:/docker-entrypoint-initdb.d/
         nginx:
                 container_name: cup_nginx
                 restart: always
