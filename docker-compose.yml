@@ -41,16 +41,11 @@ services:
                 container_name: php8.0
                 image: php:8.0.10-fpm
                 restart: always
-                networks:
-                        - mynet
                 expose:
                         - "9000"
                 volumes:
                         - ./:/code
 
-networks:
-        mynet:
-                external: true
 volumes:
         myapp:
 
