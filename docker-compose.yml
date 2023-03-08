@@ -5,6 +5,8 @@ services:
                 container_name: cup_database
                 image: mysql
                 restart: always
+                networks:
+                        - network_name
                 environment: 
                 - MYSQL_ROOT_PASSWORD= ${MYSQL_PASSWORD}
                 - MYSQL_DATABASE= ${MYSQL_DATABASE}
@@ -23,6 +25,8 @@ services:
                 volumes:
                         - ./nginx.conf:/etc/nginx/nginx.conf
                         - ./:/code
+                networks:
+                        - network_name
                 links:
                 - web-php
         phpmyadmin:
@@ -35,6 +39,8 @@ services:
                 depends_on:
                 - database
                 - web-php
+                networks:
+                        - network_name
                 links:
                 - web-php
         web-php:
@@ -43,8 +49,13 @@ services:
                 restart: always
                 expose:
                         - "9000"
+                networks:
+                        - network_name
                 volumes:
                         - ./:/code
+
+networks:
+  network_name:
 
 volumes:
         myapp:
