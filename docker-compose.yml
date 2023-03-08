@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile.php
     restart: always
     volumes:
-      - ./app:/var/www/html
+      - ./web:/code
     networks:
       - app-network
 
@@ -19,7 +19,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./app:/var/www/html
+      - ./web:/code
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./nginx/log:/var/log/nginx
     networks:
