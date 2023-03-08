@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   php:
+    container_name: php
     build:
       context: .
       dockerfile: dockerfile.php
@@ -12,6 +13,7 @@ services:
       - app-network
 
   nginx:
+    container_name: nginx
     build:
       context: .
       dockerfile: dockerfile.nginx
@@ -26,6 +28,7 @@ services:
       - app-network
 
   mysql:
+    container_name: mysql
     image: mysql:latest
     restart: always
     environment:
@@ -34,11 +37,12 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
-      - ./data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - app-network
 
   phpmyadmin:
+    container_name: pma
     image: phpmyadmin/phpmyadmin:latest
     restart: always
     environment:
