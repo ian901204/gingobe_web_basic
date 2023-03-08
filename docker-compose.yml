@@ -1,65 +1,57 @@
-version: "3.8"
+version: '3.8'
 
 services:
-        database:
-                container_name: cup_database
-                image: mysql
-                restart: always
-                networks:
-                        - network_name
-                environment: 
-                - MYSQL_ROOT_PASSWORD= ${MYSQL_PASSWORD}
-                - MYSQL_DATABASE= ${MYSQL_DATABASE}
-                - MYSQL_USER= ${MYSQL_USER}
-                - MYSQL_PASSWORD= ${MYSQL_PASSWORD}
-                volumes:
-                        - ./data:/docker-entrypoint-initdb.d/
-                depends_on:
-                        - nginx
-        nginx:
-                container_name: cup_nginx
-                restart: always
-                ports:
-                        - 80:80
-                build:
-                        context: .
-                        dockerfile: dockerfile
-                volumes:
-                        - ./nginx.conf:/etc/nginx/nginx.conf
-                        - ./:/code
-                networks:
-                        - network_name
-                links:
-                - web-php
-        phpmyadmin:
-                container_name: cup_phpmyadmin
-                image: phpmyadmin/phpmyadmin
-                restart: always
-                environment:
-                - PMA_HOST = ${MYSQL_HOST}
-                - PMA_ARBITRARY = 1
-                depends_on:
-                - database
-                - web-php
-                networks:
-                        - network_name
-                links:
-                - web-php
-        web-php:
-                container_name: php8.1
-                build:
-                        context: ./php-fpm/dockerfile
-                restart: always
-                ports:
-                        - 9000:9000
-                networks:
-                        - network_name
-                volumes:
-                        - ./:/code
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    restart: always
+    volumes:
+      - ./app:/var/www/html
+    networks:
+      - app-network
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/var/www/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/log:/var/log/nginx
+    networks:
+      - app-network
+
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./data:/var/lib/mysql
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    networks:
+      - app-network
 
 networks:
-  network_name:
-
-volumes:
-        myapp:
-
+  app-network:
+    driver: bridge
