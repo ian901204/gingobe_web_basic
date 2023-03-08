@@ -31,7 +31,7 @@ services:
                 restart: always
                 environment:
                 - PMA_HOST = ${MYSQL_HOST}
-                - PMA_ABSOLUTE_URL = "http://admin.ian-shen.live/phpmyadmin/"
+                - PMA_ARBITRARY = 1
                 depends_on:
                 - database
                 - web-php
