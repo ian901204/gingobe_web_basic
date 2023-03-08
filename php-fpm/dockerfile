@@ -15,7 +15,7 @@ COPY ./ /code
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-
+RUN  composer install
 
 RUN git config --global user.email "you@example.com" \
     && git config --global user.name "Your Name"
