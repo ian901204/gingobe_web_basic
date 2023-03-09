@@ -37,16 +37,6 @@ $capsule->addConnection($dbSettings);
 $capsule->bootEloquent();
 $capsule->setAsGlobal();
 
-$c = $app->getContainer();
-$c['notAllowedHandler'] = function ($c) {
-    return function ($request, $response, $methods) use ($c) {
-        return $response->withStatus(405)
-            ->withHeader('Allow', implode(', ', $methods))
-            ->withHeader('Content-type', 'text/html')
-            ->write('Method must be one of: ' . implode(', ', $methods));
-    };
-};
-
 $app -> get("/",  function (Request $request, Response $response) {
     include __DIR__."/login.php";
     return $response -> withStatus(200);
