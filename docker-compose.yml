@@ -23,6 +23,7 @@ services:
     volumes:
       - ./web:/code
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./log:/var/log/nginx
     networks:
       - app-network
 

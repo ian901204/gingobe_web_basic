@@ -2,3 +2,4 @@ vendor
 *.env
 nginx/
 .DS_Store
+log/
