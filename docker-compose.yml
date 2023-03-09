@@ -14,15 +14,17 @@ services:
 
   nginx:
     container_name: nginx
-    build:
-      context: .
-      dockerfile: dockerfile.nginx
+    image: jonasal/nginx-certbot:latest
     restart: always
+    environment:
+      - CERTBOT_EMAIL = ${CERTBOT_EMAIL}
     ports:
-      - "80:80"
+      - 80:80
+      - 443:443
     volumes:
       - ./web:/code
-      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./www.conf:/etc/nginx/conf.d/www.conf
+      - ./admin.conf:/etc/nginx/conf.d/admin.conf
       - ./log:/var/log/nginx
     networks:
       - app-network
