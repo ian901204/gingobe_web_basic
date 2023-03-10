@@ -7,7 +7,7 @@ body{
     display: flex;
     width: 100%;
     max-width: 2000px;
-    min-width: 1400px;
+    min-width: 1500px;
     height: 7800px;
     flex-direction: column;
     object-position: center top;
@@ -27,7 +27,7 @@ body{
 
 .bg1 .cloud{
     position: absolute;
-    width: 1400px;
+    width: 1500px;
     height: 130px;
     object-fit: fill;
     object-position: center 0%;
