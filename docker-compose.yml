@@ -11,6 +11,7 @@ services:
       - ./web:/code
     networks:
       - app-network
+    
 
   nginx:
     container_name: nginx
@@ -20,13 +21,15 @@ services:
     restart: always
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./web:/code
       - ./www.conf:/etc/nginx/conf.d/www.conf
       - ./admin.conf:/etc/nginx/conf.d/admin.conf
       - ./log:/var/log/nginx
     depends_on:
-      - php
+      php:
+        condition: service_completed_successfully
     networks:
       - app-network
 
