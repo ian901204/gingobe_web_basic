@@ -27,11 +27,13 @@ body{
 
 .bg1 .cloud{
     position: absolute;
-    width: 1400px;
+    --width: 100%;
+    width: var(--width);
+    max-width: 1600px;
     height: 130px;
     object-fit: fill;
     object-position: center 0%;
-    left: calc(50% - 700px);
+    left: calc(50% - 800px - (50% - 800px));
 }
 .bg1 .content{
     position: absolute;
