@@ -31,7 +31,7 @@ body{
     height: 130px;
     object-fit: fill;
     object-position: center 0%;
-    left: calc(50% - 800px);
+    left: calc(50% - 700px);
 }
 .bg1 .content{
     position: absolute;
