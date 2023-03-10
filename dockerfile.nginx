@@ -6,7 +6,7 @@ WORKDIR /etc/nginx/conf.d/
 RUN rm default.conf
 COPY ./www.conf ./
 COPY ./admin.conf ./
-RUN apt-get update
-RUN apt-get install -y certbot python3-certbot-nginx
-RUN echo ${CERTBOT_EMAIL} 
-RUN certbot --nginx -n --agree-tos -d admin.ian-shen.live -d www.ian-shen.live -m scckate444@gmail.com --redirect
+# RUN apt-get update
+# RUN apt-get install -y certbot python3-certbot-nginx
+# RUN echo ${CERTBOT_EMAIL} 
+# RUN certbot --nginx -n --agree-tos -d admin.ian-shen.live -d www.ian-shen.live -m scckate444@gmail.com --redirect
