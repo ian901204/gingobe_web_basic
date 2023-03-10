@@ -25,6 +25,8 @@ services:
       - ./www.conf:/etc/nginx/conf.d/www.conf
       - ./admin.conf:/etc/nginx/conf.d/admin.conf
       - ./log:/var/log/nginx
+    depends_on:
+      - php
     networks:
       - app-network
 
