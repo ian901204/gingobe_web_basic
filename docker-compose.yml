@@ -28,8 +28,7 @@ services:
       - ./admin.conf:/etc/nginx/conf.d/admin.conf
       - ./log:/var/log/nginx
     depends_on:
-      php:
-        condition: service_completed_successfully
+      - php
     networks:
       - app-network
 
