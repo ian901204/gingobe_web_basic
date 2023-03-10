@@ -4,6 +4,6 @@ RUN rm default.conf
 COPY ./www.conf ./
 COPY ./admin.conf ./
 RUN apt-get update
-RUN apt-get install -y certbot python-certbot-nginx
+RUN apt-get install -y certbot python3-certbot-nginx
 RUN certbot run -n --nginx --agree-tos -d ${ADMIN_URL}  -m  ${CERTBOT_EMAIL}  --redirect
 RUN certbot run -n --nginx --agree-tos -d ${WWW_URL}  -m  ${CERTBOT_EMAIL}  --redirect
