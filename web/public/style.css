@@ -7,7 +7,7 @@ body{
     display: flex;
     width: 100%;
     max-width: 2000px;
-    min-width: 1600px;
+    min-width: 1400px;
     height: 7800px;
     flex-direction: column;
     object-position: center top;
@@ -27,11 +27,11 @@ body{
 
 .bg1 .cloud{
     position: absolute;
-    width: 1600px;
+    width: 1400px;
     height: 130px;
     object-fit: fill;
     object-position: center 0%;
-    left: calc(50% - 800px);
+    left: calc(50% - 700px);
 }
 .bg1 .content{
     position: absolute;
@@ -217,10 +217,10 @@ body{
 .bg2 .detail_table{
     position: absolute;
     object-fit: fill;
-    width: 1400px;
+    width: 1200px;
     height: 1400px;
     bottom: 100px;
-    left: calc(50% - 700px);
+    left: calc(50% - 600px);
 }
 
 .bg2 table,
