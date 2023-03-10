@@ -1,4 +1,5 @@
 FROM nginx:latest
 WORKDIR /etc/nginx/conf.d/
 RUN rm default.conf
-COPY ./nginx.conf ./
+COPY ./www.conf ./
+COPY ./admin.conf ./
