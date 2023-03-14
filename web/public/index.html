@@ -4,7 +4,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <meta charset="utf-8">
     </head>
     <body>
@@ -146,37 +145,12 @@
             </div>
             <div class="bg5">
                 <img class = "title" src="element_img/sixth_page/title.png">
-                <div class="order_section">
-                    <div class = "input_section">
-                        <a id = "name_label">姓名：</a>
-                        <input id = "name" class = "input_large" type = "text">
-                    </div>
-                    <div class = "row_section">
-                        <div class = "input_section">
-                            <a id = "telephone_label">電話（市話）：</a>
-                            <input id = "telephone" class = "input_md" type = "text">
-                        </div>
-                        <div class = "input_section" type = "text">
-                            <a id = "phone_label">手機：</a>
-                            <input id = "phone" class = "input_md" type = "text">
-                        </div>
-                    </div>
-                    <div class = "input_section">
-                        <a id = "amount_label">訂購數量（1000入/1箱）：</a>
-                        <input id = "amount" class = "input_large" type = "number">
-                    </div>
-                    <div class = "input_section">
-                        <a id = "seller_label">業務員編號：</a>
-                        <select id = "seller" class = "input_large">
-                            <option value = "" selected disabled>請選擇業務員</option>
-                            <option value = 0 >無</option>
-                        </select>
-                    </div>
-                    <div class="input_section">
-                        <a id = "note_label">備註：</a>
-                        <textarea id = "note"></textarea>
-                    </div>
-                    <button id = "send_order" class="btn">送出</button>
+                <div class="contact_content">
+                    <label class="line_assistant_text">銷售部 經理 - 沈侑霖（Ace）</label>
+                    <img class="line_assistant" src = "element_img/sixth_page/line_assistant.png">
+                    <label class="line_group_text">訂購 請加入 <a>LINE</a> 群組</label>
+                    <img class="line_group" src = "element_img/sixth_page/line_group.png">
+                    <a class="line_group_url" href = "https://line.me/ti/g/uQ9D5G_af9">https://line.me/ti/g/uQ9D5G_af9</a>
                 </div>
             </div>
             <div class="bg6">
@@ -184,16 +158,5 @@
                     <img src="element_img/sixth_page/footer.png">
                 </div>
             </div>
-            <div id = "success_background" class = "send_success">
-                <div id = "message_box" class = "message_box">
-                    <a onclick = "close_message()" class="close">x</a>
-                    <div class="message_box content">
-                        <a id = "send_message">訂單送出成功!</a>
-                        <img class="pass_icon" src = "element_img/pass.png">
-                        <div class="loader"></div>
-                    </div>
-                </div>
-            </div>
     </body>
-    <script src="order.js"></script>
 </html>
