@@ -347,7 +347,7 @@ td, th{
 
 .bg5 .contact_content{
     position: absolute;
-    height: 800px;
+    height: 600px;
     width: 1200px;
     top: calc(50% - 250px);
     left: calc(50% - 600px);
@@ -384,14 +384,23 @@ td, th{
     color: green;
 }
 
+.bg5 .line_group_url{
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    font-size: 40px;
+    color: black;
+    text-decoration: none; 
+}
+
 .bg5 .title{
     position: absolute;
     object-fit: fill;
-    --width: 400px;
+    --width: 500px;
     width: var(--width);
-    height: 123px;
+    height: 197px;
     top: 15px;
-    left: calc(50% - 200px);
+    left: calc(50% - 250px);
 }
 
 .bg5 .order_section{
