@@ -393,6 +393,10 @@ td, th{
     text-decoration: none; 
 }
 
+.bg5 .line_group_url:focus{
+    background-color: blue;
+}
+
 .bg5 .title{
     position: absolute;
     object-fit: fill;
