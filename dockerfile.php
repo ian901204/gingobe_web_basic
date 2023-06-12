@@ -19,5 +19,5 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 WORKDIR /code
 
 COPY ./web .
-
+RUN ls
 RUN composer install --no-dev --no-interaction --no-progress
